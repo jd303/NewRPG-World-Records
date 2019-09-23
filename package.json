@@ -1,0 +1,20 @@
+{
+	"name": "newrpgtools",
+	"version": "1.0.0",
+	"description": "Tools for NewRPG",
+	"main": "index.js",
+	"scripts": {
+		"serve_dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
+		"serve_prod": "tsc && node ./build/app.js",
+		"build_dev": "tsc; cd angular; ng build; cd ..; cp package.json ./build; cp package-lock.json ./build; cp .gitignore ./build"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/express": "^4.17.1",
+		"express": "^4.17.1",
+		"path": "^0.12.7",
+		"ts-node-dev": "^1.0.0-pre.43",
+		"typescript": "^3.6.3"
+	}
+}

@@ -1,0 +1,30 @@
+<div class="ui">
+	<h1>Choose sources to display</h1>
+	<div class="option"><input type="checkbox" id="source-innate" (change)="updateSources('source-innate');" [(ngModel)]="showing.innate"><label for="source-innate">Innate</label></div>
+	<div class="option"><input type="checkbox" id="source-flow" (change)="updateSources('source-flow');" [(ngModel)]="showing.flow"><label for="source-flow">The Flow</label></div>
+	<div class="option"><input type="checkbox" id="source-tapped" (change)="updateSources('source-tapped');" [(ngModel)]="showing.tapped"><label for="source-tapped">Tapped</label></div>
+	<div class="option"><input type="checkbox" id="source-life" (change)="updateSources('source-life');" [(ngModel)]="showing.life"><label for="source-life">Life</label></div>
+	<div class="option"><input type="checkbox" id="source-yearns" (change)="updateSources('source-yearns');" [(ngModel)]="showing.yearns"><label for="source-yearns">That which yearns to grow</label></div>
+	<div class="option"><input type="checkbox" id="source-granted" (change)="updateSources('source-granted');" [(ngModel)]="showing.granted"><label for="source-granted">Granted</label></div>
+</div>
+
+<h1>MAGIC: Effects</h1>
+
+<div class="spell_effect" *ngFor="let se of spell_effects; let i = index" [id]="'se'+i">
+	<header>
+		<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('se'+i)"></div>
+		<div class="box-purchased"></div>
+		<div class="name">{{se.name}}</div>
+		<div class="desc">{{se.desc}}</div>
+		<div class="save" *ngIf="se.save">SV {{se.save}}</div>
+		<div class="time"><img src="assets/images/ico.time.svg">{{se.time}}</div>
+	</header>
+	<div class="row-effects">
+		<div class="shapes">
+			<div class="shape" *ngFor="let shape of se.shapes | keyvalue">{{shape.key}} {{shape.value !== null && shape.value || "-"}}</div>
+		</div>
+		<div class="effects">
+			<div class="effect" *ngFor="let effect of se.effects"><span class="dc">DC {{effect.dc}}</span> <span>{{effect.effect}}</span></div>
+		</div>
+	</div>
+</div>

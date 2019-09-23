@@ -1,0 +1,32 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  IMPORTS
+import { Component, OnInit }		from '@angular/core';
+import { DataTransportService }		from '../services/data-transport.service';
+import { DataHandlerService }		from '../services/data-handler.service';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  DEFINE COMPONENT
+@Component({
+  selector: 'app-page-main',
+  templateUrl: './page-main.component.html',
+  styleUrls: ['./page-main.component.scss']
+})
+
+//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  EXPORT CLASS
+export class PageMainComponent implements OnInit {
+
+	////////////////////////////////////
+	constructor(private sDataTransport:DataTransportService, private sDataHandler:DataHandlerService) { }
+	ngOnInit() {
+		this.sDataHandler.dataSub$.subscribe(this.dataUpdate);
+		this.sDataTransport.get();
+		this.sDataTransport.save();
+	}
+
+	////////////////////////////////////
+	dataUpdate(data) {
+		console.log("Data updated", data);
+	}
+
+}

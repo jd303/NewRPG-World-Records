@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Lite du'Ave (Avery)",
+		"descs": [
+			"A talented half-elven lutist, flutist, pianist, citolier, dulcimerist, historian, and highly regarded charmismat.  Sister to Lo’ath, Lita is the collected, analytical side of the dynamic Bardic duo.  Her talents in performing and speechcraft are exceptional, though she errs towards their methodical use.  Critics have coined her works sublime, though lacking the emotion of other bards.  This displeases her, as she cannot understand where she is lacking.",
+			"Slim, black-haired and tall, Lita moves with intention and not grace.  Her actions are precise and her decisions are quick and without risk.",
+			"She was born with the Life Source, and gained the Granted at a later date.",
+			"Her Granted Source is demonic in nature, and was the reason that the siblings began to believe that they could enact their plan."
+		],
+		"tags": [
+			0
+		]
+	},
+	{
+		"name": "Lo'ath du'Ave (Avery)",
+		"descs": [
+			"A talented half-elven lutist, pianist, singer, poet, storyteller, historian, and highly regarded charmismat.  Brother to Lita, Lo’ath is the passionate, emotional side of the dynamic Bardic duo.  Lo’ath leans into human connection and feelings and believes our deep emotional well is the strongest part of us.",
+			"Slim, blonde and average height.  Lo’ath moves with a softer, more graceful motion; his actions have cadence and he is carefree with his touch, as he enjoys the sensation to experience and bond with places and things.  He rarely stops moving, continually sensing and things.",
+			"He was born with the Flow, Innate and Yearns Sources, but burned out his Flow Source to transfer the bodies of himself and his sister.",
+			"He believes his sister was touched and he yearns to bring out her potential to bring their family back to power."
+		],
+		"tags": [
+			0
+		]
+	}
+]
