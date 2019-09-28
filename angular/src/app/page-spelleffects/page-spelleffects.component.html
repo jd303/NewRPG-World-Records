@@ -8,6 +8,15 @@
 	<div class="option"><input type="checkbox" id="source-granted" (change)="updateSources('source-granted');" [(ngModel)]="showing.granted"><label for="source-granted">Granted</label></div>
 </div>
 
+<div class="ui">
+	<h2>Instructions for print</h2>
+	<ul>
+		<li>Check the checkbox to the left of spell effects you don't want to print.  Also check only the Source(s) you wish to print.</li>
+		<li>Make sure you print in landscape</li>
+		<li>For best effects, print with backgrounds, to get the best design contrast and readability</li>
+	</ul>
+</div>
+
 <h1>MAGIC: Effects</h1>
 
 <div class="spell_effect" *ngFor="let se of spell_effects; let i = index" [id]="'se'+i">
