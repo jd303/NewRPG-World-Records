@@ -17,12 +17,22 @@
 	</ul>
 </div>
 
-<h1>MAGIC: Effects</h1>
+<h1>MAGIC: Shapes</h1>
+<div class="ct-shapes">
+	<img src="assets/images/ico-shapes.svg">
+	<div class="grey">
+		<div class="option" *ngFor="let shape of spell_shapes">
+			<div class="sheet-checkbox" [attr.data-checked]="shape.checked"></div>
+			{{shape.name}}
+		</div>
+	</div>
+</div>
 
+<h1>MAGIC: Effects</h1>
 <div class="spell_effect" *ngFor="let se of spell_effects; let i = index" [id]="'se'+i">
 	<header>
 		<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('se'+i)"></div>
-		<div class="box-purchased"></div>
+		<div class="sheet-checkbox"></div>
 		<div class="name">{{se.name}}</div>
 		<div class="desc">{{se.desc}}</div>
 		<div class="save" *ngIf="se.save">SV {{se.save}}</div>

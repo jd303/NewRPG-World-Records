@@ -1,5 +1,3 @@
-import { ɵNgStyleImpl } from '@angular/common';
-
 interface shape_def  { cst:number; tch:number; svt:number; cne:number; aur:number; vol:number; wll:number; bem:number; pln:number; }
 interface effect_def { dc:number; effect:string; }
 interface source_def { innate:boolean, flow:boolean, tapped:boolean, life:boolean, yearns:boolean, granted:boolean }
@@ -28,7 +26,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"8 Damage and major effect" },
 			{ dc:5, effect:"10 Damage and major effect" }
 		],
-		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:false }
+		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Acid",
@@ -124,7 +122,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"8 Damage and major effect" },
 			{ dc:5, effect:"10 Damage and major effect" }
 		],
-		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
+		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Create Energy: Laceration",
@@ -203,7 +201,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"3 damage + moderate effect" },
 			{ dc:5, effect:"4 damage + moderate effect" }
 		],
-		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:false }
+		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
 	{
 		name: "Imbue Item: Acid",
@@ -287,7 +285,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"3 damage + moderate effect" },
 			{ dc:5, effect:"4 damage + moderate effect" }
 		],
-		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
+		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Imbue Item: Laceration",
@@ -360,7 +358,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"Reduce damage by 4" },
 			{ dc:5, effect:"Reduce damage by 5" },
 		],
-		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:false }
+		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
 	{
 		name: "Suppress Energy: Acid",
@@ -456,7 +454,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"Reduce damage by 4" },
 			{ dc:5, effect:"Reduce damage by 5" },
 		],
-		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
+		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Suppress Energy: Laceration",

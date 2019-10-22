@@ -16,6 +16,7 @@ import { spell_effects }				from '../../assets/json/spell_effects';
 export class PageSpellEffectsComponent {
 
 	// CORE
+	spell_shapes:any[] = [ { name:"Caster (CST)", checked:true }, { name:"Touch (TCH)", checked:true }, { name:"One Visible (SVT)", checked:false }, { name:"Cone (CNE)", checked:false }, { name:"Circle from you (AUR)", checked:false }, { name:"Sphere/Cube (VOL)", checked:false }, { name:"Wall (WLL)", checked:false }, { name:"Beam (BEM)", checked:false }, { name:"One Target on Plane (PLN)", checked:false } ];
 	all_spell_effects: any[];
 	spell_effects: any[];
 	showing = {
