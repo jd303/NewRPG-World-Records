@@ -721,6 +721,18 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
+		name: "Dispel Magic",
+		desc: "You dissipate an ongoing spell effect, or temporarily nullify the effects of an enchantment. The DM will decide the DC; enchantments are usually difficult.",
+		save: null,
+		time: "1 Minute",
+		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
+		effects: [
+			{ dc:0, effect:"You unravel a spell effect" },
+			{ dc:0, effect:"The effects of an enchanted item are temporarily reduced." },
+		],
+		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
+	},
+	{
 		name: "Scry",
 		desc: "You gaze on a target remotely, seeing and hearing their activity. The difficulty changes depending on your familiarity with the target.	When casting this on an item you can see, the duration raises to 8 hours, and you can see and hear from that item as if you were there.",
 		save: null,	

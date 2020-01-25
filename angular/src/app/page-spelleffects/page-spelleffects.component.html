@@ -40,7 +40,7 @@
 	</header>
 	<div class="row-effects">
 		<div class="shapes">
-			<div class="shape" *ngFor="let shape of se.shapes | keyvalue">{{shape.key}} {{shape.value !== null && shape.value || "-"}}</div>
+			<div class="shape" *ngFor="let shape of se.shapes | keyvalue">{{shape.key}} {{getShapeValue(shape)}}</div>
 		</div>
 		<div class="effects">
 			<div class="effect" *ngFor="let effect of se.effects"><span class="dc">DC {{effect.dc}}</span> <span>{{effect.effect}}</span></div>

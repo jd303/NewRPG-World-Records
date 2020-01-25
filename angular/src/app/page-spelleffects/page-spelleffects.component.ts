@@ -15,7 +15,7 @@ import { spell_effects }				from '../../assets/json/spell_effects';
 ////////////////////////////////////////////////////////////  EXPORT CLASS
 export class PageSpellEffectsComponent {
 
-	// CORE
+	// CORE 
 	spell_shapes:any[] = [ { name:"Caster (CST)", checked:true }, { name:"Touch (TCH)", checked:true }, { name:"One Visible (SVT)", checked:false }, { name:"Cone (CNE)", checked:false }, { name:"Circle from you (AUR)", checked:false }, { name:"Sphere/Cube (VOL)", checked:false }, { name:"Wall (WLL)", checked:false }, { name:"Beam (BEM)", checked:false }, { name:"One Target on Plane (PLN)", checked:false } ];
 	all_spell_effects: any[];
 	spell_effects: any[];
@@ -53,5 +53,11 @@ export class PageSpellEffectsComponent {
 	////////////////////////////////////
 	toggleDisplayClass(id) {
 		document.getElementById(id).classList.toggle("hidden");
+	}
+
+	////////////////////////////////////
+	getShapeValue(shape) {
+		if (shape.value == null) return "-";
+		else return shape.value;
 	}
 }
