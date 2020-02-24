@@ -1009,13 +1009,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: The Truth",
-		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.",
-		save: null,	
-		time: "5 Mins",
+		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a spell has been cast on them.",
+		save: "WIS",	
+		time: "1 Mins",
 		shapes: { cst:null, tch:0, svt:0, cne:2, aur:2, vol:2, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Divine the spoken truth." },
-			{ dc:3, effect:"Divine the purpose of an item." },
+			{ dc:3, effect:"Divine the spoken truth." },
+			{ dc:4, effect:"Divine the purpose of an item." },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
