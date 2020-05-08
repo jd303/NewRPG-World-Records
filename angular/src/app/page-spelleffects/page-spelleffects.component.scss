@@ -14,12 +14,12 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 
 .spell_effect {
 
-	margin-bottom:10px;
+	margin-bottom:5px;
 	color:#333;
 
 	&.hidden { opacity:0.5; }
 	
-	header {
+	label {
 		display:flex; align-items:center;
 		justify-content:space-between;
 		flex-direction:row;
@@ -30,13 +30,13 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 
 		.name {
 			flex:none;
-			color:#000; font-size:0.85rem; font-weight:bold;
+			color:#000; font-size:1rem; font-weight:bold;
 			margin-right:10px;
 		}
 
 		.desc {
 			flex:1;
-			font-size:0.65rem;
+			font-size:0.85rem;
 		}
 
 		.save, .time {
@@ -70,8 +70,9 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 
 		.shapes {
 			display:flex;
-			padding-right:4px;
+			padding-right:4px; padding-top:3px;
 			border-right:2px solid black;
+			align-self:stretch;
 
 			.shape {
 				display:inline-block;
@@ -86,6 +87,7 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 		}
 		.effects {
 			display:flex;
+			flex-wrap:wrap;
 			margin-left:4px;
 
 			.effect {
@@ -103,12 +105,22 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 					border-radius:4px;
 					background:#333;
 				}
+
+				span:last-child {
+					display:inline-block;
+					padding-top:3px;
+				}
 			}
 		}
 	}
 }
 
 @media print {
+	h1 { font-size:1rem; }
+	.spell_effect label {
+		.name { font-size:0.65rem; }
+		.desc { font-size:0.5rem; }
+	}
 	.ui { display:none; }
 	.spell_effect.hidden { display:none; }
 	.spell_effect { page-break-inside:avoid; }

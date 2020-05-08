@@ -8,19 +8,21 @@ import { Routes, RouterModule }		from '@angular/router';
 ////////////////////////////////////////////////////////////  PAGE IMPORTS
 import { PageMainComponent }			from './page-main/page-main.component';
 import { PageSpellEffectsComponent }	from './page-spelleffects/page-spelleffects.component';
+import { PagePerksComponent } 			from './page-perks/page-perks.component';
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  DEFINE ROUTES
 const routes: Routes = [
-	{ path: '',				redirectTo: '/spelleffects', pathMatch: 'full' },
+	{ path: '',				component: PageMainComponent },
 	{ path: 'home',			component: PageMainComponent },
 	{ path: 'spelleffects', component: PageSpellEffectsComponent },
+	{ path: 'perks', 		component: PagePerksComponent },
 ];
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  DEFINE MODULE
 @NgModule({
-	imports: [RouterModule.forRoot(routes)],
+	imports: [RouterModule.forRoot(routes, { useHash: true })],
 	exports: [RouterModule]
 })
 

@@ -23,8 +23,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -39,8 +41,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -55,8 +59,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -71,8 +77,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -87,8 +95,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -103,14 +113,16 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Radiant",
-		desc: "Create sound in the shape you’ve chosen, dealing damage and potentially deafening creatures.",
+		desc: "Create radiant light in the shape you’ve chosen, dealing damage and potentially blinding creatures.",
 		save: "CON",
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
@@ -119,8 +131,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -135,8 +149,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -151,8 +167,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -167,8 +185,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -183,8 +203,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"2 Damage or minor effect" },
 			{ dc:2, effect:"4 Damage and minor effect" },
 			{ dc:3, effect:"6 Damage and moderate effect" },
+			{ dc:3, effect:"2 Damage per round for 5 rounds. Minor effect." },
 			{ dc:4, effect:"8 Damage and major effect" },
-			{ dc:5, effect:"10 Damage and major effect" }
+			{ dc:5, effect:"10 Damage and major effect" },
+			{ dc:5, effect:"3 Damage per round for 5 rounds. Moderate effect." }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -512,7 +534,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Moments",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:null, vol:null, wll:null, bem:2, pln:null },
 		effects: [
-			{ dc:2, effect:"You destroy non-life matter" }, { dc:5, effect:"You destroy living matter" },
+			{ dc:2, effect:"You destroy non-life matter" },
+			{ dc:5, effect:"You destroy living matter" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -523,7 +546,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:null, tch:2, svt:3, cne:5, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:5, effect:"Target(s) die" },
+			{ dc:7, effect:"Target(s) die" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -537,8 +560,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:1, effect:"Restore 2 Stamina" },
 			{ dc:2, effect:"Restore 4 Stamina" },
 			{ dc:3, effect:"Restore 6 Stamina" },
+			{ dc:3, effect:"Restore 2 Stamina per turn for 5 turns" },
 			{ dc:4, effect:"Restore 8 Stamina" },
 			{ dc:5, effect:"Restore 10 Stamina" },
+			{ dc:5, effect:"Restore 3 Stamina per turn for 5 turns" },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -556,15 +581,29 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
 	{
+		name: "Redirect Pain",
+		desc: "You create a magical link between your Source and the life force of a target.  When they would take damage, you instead do.  You may also use this to take on existing wounds and tirednesses.",
+		save: "CON",	
+		time: "1 Minute",
+		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:1, effect:"Up to 5 stamina and 1 Wound are redirected to you." },
+			{ dc:2, effect:"Up to 10 stamina and 2 Wounds are redirected to you." },
+			{ dc:3, effect:"Up to 20 stamina and 5 Wounds are redirected to you." }
+		],
+		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
+	},
+	{
 		name: "Restoration",
 		desc: "Remove or suppress a reduction in a statistic, speed, or skill.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"No malady has no effect this turn." },
-			{ dc:2, effect:"The malady goes dormant for the spell duration." },
-			{ dc:4, effect:"Remove the malady." },
+			{ dc:0, effect:"Maladies have no effect this turn." },
+			{ dc:2, effect:"Maladies go dormant for 4 hours." },
+			{ dc:3, effect:"Remove 1 malady.  Subject marks a heal." },
+			{ dc:4, effect:"Remove 1 malady.  Subject doesn't mark a heal." },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -575,9 +614,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"No malady has no effect this turn." },
-			{ dc:2, effect:"The malady goes dormant for the spell duration." },
-			{ dc:4, effect:"Remove the malady." },
+			{ dc:0, effect:"Maladies have no effect this turn." },
+			{ dc:2, effect:"Maladies go dormant for 4 hours." },
+			{ dc:3, effect:"Remove 1 malady.  Subject marks a heal." },
+			{ dc:4, effect:"Remove 1 malady.  Subject doesn't mark a heal." },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -642,9 +682,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10DC Mins",
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Object up to 1 foot" },
-			{ dc:2, effect:"Object up to 2 foot, 1 Damage" },
-			{ dc:3, effect:"Object up to 3 foot, 2 Damage" },
+			{ dc:2, effect:"Object up to 1 foot" },
+			{ dc:3, effect:"Object up to 2 foot, 1 Damage" },
+			{ dc:4, effect:"Object up to 3 foot, 2 Damage" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -739,10 +779,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:2 },
 		effects: [
-			{ dc:1, effect:"Cast on item only (lasts 30 mins)" },
-			{ dc:2, effect:"You’ve met this entity." },
-			{ dc:3, effect:"You know a great deal about this entity, but haven’t met." },
-			{ dc:4, effect:"You’ve neither met nor know much about this entity" },
+			{ dc:3, effect:"Cast on item only (lasts 30 mins)" },
+			{ dc:4, effect:"You’ve met this entity." },
+			{ dc:5, effect:"You know a great deal about this entity, but haven’t met." },
+			{ dc:6, effect:"You’ve neither met nor know much about this entity" },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -754,9 +794,10 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:2, vol:3, wll:2, bem:2, pln:4 },
 		effects: [
 			{ dc:0, effect:"Create a sound or sight that you’ve experienced before" },
-			{ dc:1, effect:"Create sights and sounds that you’ve experienced before" },
+			{ dc:1, effect:"Create a few sights and sounds that you’ve experienced before" },
 			{ dc:2, effect:"You create mirror images of yourself" },
 			{ dc:3, effect:"Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance)." },
+			{ dc:6, effect:"Create complex illusion" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -792,10 +833,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
 		effects: [
-			{ dc:2, effect:"Travel up to 50 meters" },
-			{ dc:3, effect:"Travel up to 1 kilometer" },
-			{ dc:4, effect:"Travel to a space marked by Teleport Destination" },
-			{ dc:5, effect:"Travel up to 500km" },
+			{ dc:3, effect:"Travel up to 50 meters" },
+			{ dc:4, effect:"Travel up to 1 kilometer" },
+			{ dc:5, effect:"Travel to a space marked by Teleport Destination" },
+			{ dc:6, effect:"Travel up to 500km" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:false, granted:true }
 	},
@@ -832,8 +873,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "24 Hours",
 		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
 		effects: [
-			{ dc:1, effect:"Create a lock." },
-			{ dc:2, effect:"Create a lock with a passcode." },
+			{ dc:1, effect:"Create a pickable lock." },
+			{ dc:2, effect:"Create a picakble lock with a passcode." },
+			{ dc:5, effect:"Create an unpicakble lock with a passcode." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -869,10 +911,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "30 Mins",
 		shapes: { cst:null, tch:null, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"Small, agile." },
-			{ dc:0, effect:"Medium, 1 Damage. Spider climb." },
-			{ dc:0, effect:"Medium, 2 Damage." },
-			{ dc:0, effect:"Large, 3 Damage. Flying." },
+			{ dc:2, effect:"Small, agile." },
+			{ dc:3, effect:"Medium, 1 Damage. Spider climb." },
+			{ dc:4, effect:"Medium, 2 Damage." },
+			{ dc:5, effect:"Large, 3 Damage. Flying." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -883,10 +925,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Varies",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:null, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"5 Small animals or Small Swarm" },
-			{ dc:2, effect:"2 Medium animals or medium swarm" },
-			{ dc:3, effect:"1 Large animal or swarm" },
-			{ dc:4, effect:"4 Medium or 2 large animals" },
+			{ dc:2, effect:"5 Small animals or Small Swarm" },
+			{ dc:3, effect:"2 Medium animals or medium swarm" },
+			{ dc:4, effect:"1 Large animal or swarm" },
+			{ dc:5, effect:"4 Medium or 2 large animals" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -934,8 +976,8 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:0, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"Conjure items and objects" },
-			{ dc:3, effect:"Conjure a dwelling" },
-			{ dc:4, effect:"Conjure both" },
+			{ dc:4, effect:"Conjure a dwelling" },
+			{ dc:6, effect:"Conjure both" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -946,7 +988,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Banish a creature or item" },
+			{ dc:3, effect:"Banish a creature or item" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -957,7 +999,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:5, effect:"Divine Purpose" },
+			{ dc:6, effect:"Divine Purpose" },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:false, yearns:true, granted:true }
 	},
@@ -968,9 +1010,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"You’ve touched this item before." },
-			{ dc:3, effect:"You’ve only seen this item before" },
-			{ dc:4, effect:"You know of this item." },
+			{ dc:3, effect:"You’ve touched this item before." },
+			{ dc:4, effect:"You’ve only seen this item before" },
+			{ dc:6, effect:"You know of this item." },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -981,7 +1023,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:0, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Divine Intention" },
+			{ dc:6, effect:"Divine Intention" },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -992,7 +1034,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Minute",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Divine Illusions" },
+			{ dc:2, effect:"Divine Invisibility" },
+			{ dc:3, effect:"Divine Minor" },
+			{ dc:5, effect:"Divine any illusion" },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -1009,13 +1053,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: The Truth",
-		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a spell has been cast on them.",
+		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a truth spell has been cast on them.",
 		save: "WIS",	
 		time: "1 Mins",
 		shapes: { cst:null, tch:0, svt:0, cne:2, aur:2, vol:2, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Divine the spoken truth." },
-			{ dc:4, effect:"Divine the purpose of an item." },
+			{ dc:4, effect:"Divine the spoken truth." },
+			{ dc:5, effect:"Divine the magical enchantments of an item." },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -1026,7 +1070,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:1, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Detect Poisons and Diseases" },
+			{ dc:2, effect:"Choose to Detect Poisons OR Diseases" },
+			{ dc:3, effect:"Detect Poisons AND Diseases" },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1037,7 +1082,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:1, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Detect Traps and machinery" },
+			{ dc:2, effect:"Choose to Detect Traps OR machinery" },
+			{ dc:3, effect:"Detect Traps and machinery" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -1120,8 +1166,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Your target becomes blind." },
-			{ dc:2, effect:"Your target becomes deaf" },
+			{ dc:3, effect:"Your target becomes blind." },
+			{ dc:4, effect:"Your target becomes deaf" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -1132,8 +1178,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Varies",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Your target is infected." },
-			{ dc:3, effect:"A creature is affected and the disease is advanced" },
+			{ dc:3, effect:"Your target is infected." },
+			{ dc:4, effect:"A creature is affected and the disease is advanced" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -1144,9 +1190,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "DC Hours",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Light sleep, basic noises wake." },
-			{ dc:2, effect:"Deep sleep, only loud noises or jostling wakes." },
-			{ dc:5, effect:"Attacking won’t wake subject." },
+			{ dc:2, effect:"Light sleep, basic noises wake." },
+			{ dc:3, effect:"Deep sleep, only loud noises or jostling wakes." },
+			{ dc:6, effect:"Attacking won’t wake subject." },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1157,7 +1203,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"-1 DR, slowed" },
+			{ dc:2, effect:"-1 DR, Target's speed is reduced to 75%" },
+			{ dc:5, effect:"-1 DR, Target's speed is reduced to 75% and it skips every second turn" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1168,7 +1215,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"+1 DR, hastened" },
+			{ dc:2, effect:"+1 DR, Target's speed is raised to 150%" },
+			{ dc:5, effect:"+1 DR, Target's speed is raised to 150% and it takes two moves every second turn" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1186,13 +1234,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Magical Deflection",
-		desc: "You create an enchantment around you or your subjects’ bodies, deflecting  and disrupting magics that target you.",
+		desc: "You create an enchantment around you or your subjects’ bodies, deflecting and disrupting magics that target you.",
 		save: null,	
 		time: "10 Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"-1 Magic Damage, +1 Defy Danger" },
-			{ dc:3, effect:"-2 Magic Damage, +2 Defy Danger" },
+			{ dc:2, effect:"-1 Magic Damage, +1 Defy Danger (and Wits adds your WIS)" },
+			{ dc:3, effect:"-2 Magic Damage, +2 Defy Danger (and Wits adds your WIS)" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -1203,9 +1251,34 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Blur" },
+			{ dc:2, effect:"Blur a creature up to Large in size" },
+			{ dc:5, effect:"Blur a creature or item up to Huge in size" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
+	},
+	{
+		name: "Light",
+		desc: "You create light of any colour in the shape you create or on an object you touch, casting brilliant light up to 6 metres, and dimmer light for an additional 9.",
+		save: null,	
+		time: "1 hour",
+		shapes: { cst:0, tch:1, svt:0, cne:0, aur:1, vol:0, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:2, effect:"Your spell illuminates in the shape or on the object you've chosen." },
+			{ dc:0, effect:"Your spell illuminates in the shape or on the object you've chosen, and you attempt to use it to dispel unnatural darkness.  The DC will be 2 plus a DC appropriate to the darkness that stops you." },
+		],
+		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
+	},
+	{
+		name: "Darkness",
+		desc: "You create inky blackness that light cannot enter or escape.  It spreads 10 metres from an object you touch or fills the shape you have chosen.",
+		save: null,	
+		time: "1 hour",
+		shapes: { cst:0, tch:1, svt:0, cne:0, aur:1, vol:0, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:2, effect:"Creatures without special sensory abilities are blind while in the darkness effect, including yourself." },
+			{ dc:4, effect:"Even creatures with no special sensory abilities are blind, but you are immune to the effect." },
+		],
+		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:true }
 	},
 	{
 		name: "Enlarge",
@@ -1346,8 +1419,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "20 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Enhance one sense." },
-			{ dc:2, effect:"Enhance up to 5 senses." },
+			{ dc:2, effect:"Enhance one sense." },
+			{ dc:3, effect:"Enhance up to 5 senses." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1358,9 +1431,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Varies",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:0, vol:0, wll:0, bem:0, pln:null },
 		effects: [
-			{ dc:1, effect:"Minor shift / movement of terrain" },
-			{ dc:2, effect:"Shape earth and plantlife" },
-			{ dc:3, effect:"Shape stone" },
+			{ dc:2, effect:"Minor shift / movement of terrain" },
+			{ dc:3, effect:"Shape earth and plantlife" },
+			{ dc:5, effect:"Shape stone" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:true, granted:true }
 	},
@@ -1396,7 +1469,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"The subject fears the subject and will not willingly approach." },
+			{ dc:3, effect:"The subject fears the subject and will not willingly approach." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1407,8 +1480,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Fascination in a creature or item." },
-			{ dc:3, effect:"Enthrallment in a creature or item." },
+			{ dc:2, effect:"Fascination in a creature or item." },
+			{ dc:4, effect:"Enthrallment in a creature or item." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:true }
 	},
@@ -1430,7 +1503,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Enrage your target(s)" },
+			{ dc:2, effect:"Enrage your target(s)" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1441,13 +1514,13 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Subjects experience no emotions" },
+			{ dc:3, effect:"Subjects experience no emotions" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Charm",
-		desc: "The subject(s) of your magic look upon you favourably, as your magic plays with their opinions of you.  You are treated as if you were good friends, even if you have never met.  People who are already antagonistic or mistrustful of you may only have their opinion slightly raised.",
+		desc: "The subject(s) of your magic look upon you favourably, as your magic plays with their opinions of you.  You are treated as if you were good friends, even if you have never met.  People who are already antagonistic or mistrustful of you may only have their opinion slightly raised.  When the spell wears off, your subjects will be suspicious or outright angry.",
 		save: "CHA",	
 		time: "5 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
@@ -1476,7 +1549,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:null, pln:null },
 		effects: [
-			{ dc:4, effect:"Cause insanity in a sentient creature" },
+			{ dc:6, effect:"Cause insanity in a sentient creature" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1487,11 +1560,11 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:0, tch:0, svt:0, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"0 Feet per second, weightless" },
-			{ dc:1, effect:"1/2 foot per second" },
-			{ dc:2, effect:"5 feet per second" },
-			{ dc:3, effect:"25 feet per second" },
-			{ dc:4, effect:"60 feet per second" },
+			{ dc:1, effect:"0 Feet per second, weightless" },
+			{ dc:2, effect:"1/2 foot per second" },
+			{ dc:3, effect:"5 feet per second" },
+			{ dc:4, effect:"25 feet per second" },
+			{ dc:5, effect:"60 feet per second" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:false }
 	},
@@ -1525,13 +1598,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Comprehension",
-		desc: "You look upon a subject, and their intentions speak loudly to you.  The target(s) of the spell can understand written and spoken languages of sentient creatures, animals and even plantlife, and gain +3 SKILL when using Persuasion / Intimidation, Performance, or Animal Handling for your target.",
+		desc: "You look upon a subject, and there is no language barrier.  The target(s) of the spell can understand written and spoken languages of sentient creatures, animals and even plantlife, and gain +3 SKILL when using Persuasion / Intimidation, Performance, or Animal Handling for your target.",
 		save: null,	
 		time: "5 Mins",
 		shapes: { cst:0, tch:0, svt:0, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Comprehend a single creature or artistic / written work." },
-			{ dc:3, effect:"Comprehend all visible creatures or artistic / written works." },
+			{ dc:3, effect:"Comprehend a single creature or artistic / written work." },
+			{ dc:4, effect:"Comprehend all visible creatures or artistic / written works." },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:true, granted:true }
 	},
@@ -1555,8 +1628,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "4 Hours",
 		shapes: { cst:null, tch:null, svt:0, cne:null, aur:null, vol:3, wll:null, bem:null, pln:2 },
 		effects: [
-			{ dc:2, effect:"You invade the subjects’ dreams." },
-			{ dc:3, effect:"You invade their dreams and disrupt their sleep" },
+			{ dc:3, effect:"You invade the subjects’ dreams." },
+			{ dc:4, effect:"You invade their dreams and disrupt their sleep" },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1567,8 +1640,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 mins",
 		shapes: { cst:null, tch:0, svt:0, cne:1, aur:1, vol:1, wll:null, bem:null, pln:2 },
 		effects: [
-			{ dc:2, effect:"You may ask 2 questions" },
-			{ dc:4, effect:"You may discuss with the dead for 5 minutes" },
+			{ dc:3, effect:"You may ask 2 questions" },
+			{ dc:5, effect:"You may discuss with the dead for 5 minutes" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:true }
 	},
@@ -1580,7 +1653,8 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:0, effect:"You create a little wonder" },
-			{ dc:1, effect:"Your subjects can walk on water" },
+			{ dc:1, effect:"You can turn one mundane form of food or drink into another." },
+			{ dc:2, effect:"Your subjects can walk on water" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1591,10 +1665,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Varies",
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Lasts 30 seconds." },
+			{ dc:3, effect:"Lasts 15 seconds." },
 			{ dc:4, effect:"Lasts 15 minutes" },
-			{ dc:5, effect:"Lasts 1 day" },
-			{ dc:7, effect:"Permanent" },
+			{ dc:6, effect:"Lasts 1 day" },
+			{ dc:8, effect:"Permanent" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:true, yearns:true, granted:false }
 	},
@@ -1617,7 +1691,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "20 Secs",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:0, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:6, effect:"Stop time" },
+			{ dc:7, effect:"Stop time" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:true }
 	},

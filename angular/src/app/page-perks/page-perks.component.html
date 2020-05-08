@@ -1,0 +1,40 @@
+<div class="ui">
+	<main-nav></main-nav>
+</div>
+
+<div class="ui">
+	<h2>Instructions for print</h2>
+	<ul>
+		<li>Check the checkbox to the left of perks that you want to print.  Also check only the categories(s) you wish to print.</li>
+		<li>Make sure you print in landscape</li>
+		<li>For best effects, print with backgrounds, to get the best design contrast and readability.</li>
+		<li>Each character can have a maximum of 8 perks from any category.</li>
+	</ul>
+</div>
+
+<div class="ui">
+	<h1>Choose Categories to display</h1>
+	<div class="option"><input type="checkbox" id="cat-general" (change)="updateShowing('general');" checked=checked><label for="cat-general">General</label></div>
+	<div class="option"><input type="checkbox" id="cat-combat" (change)="updateShowing('combat');" checked=checked><label for="cat-combat">Combat</label></div>
+	<div class="option"><input type="checkbox" id="cat-magic" (change)="updateShowing('magic');" checked=checked><label for="cat-magic">Magic</label></div>
+	<div class="option"><input type="checkbox" id="cat-profession" (change)="updateShowing('profession');" checked=checked><label for="cat-profession">Professional</label></div>
+	<div class="option"><input type="checkbox" id="cat-special" (change)="updateShowing('special');" checked=checked><label for="cat-special">Special</label></div>
+</div>
+
+<div class="ui">
+	<h1>Perk Toggles</h1>
+	<div class="option"><button (click)="flipToggles(true);" checked=checked>Toggle All</button></div>
+	<div class="option"><button (click)="flipToggles(false);" checked=checked>Toggle None</button></div>
+</div>
+
+<div class="category" *ngFor="let category of categories; let i = index" [hidden]="!showing[category]">
+	<h2>PERKS: <span>{{ category }}</span></h2>
+	<div class="perk hidden" *ngFor="let perk of perksByCategory(category); let n = index" [id]="'perk'+i+'-'+n">
+		<label [for]="'perktoggle'+i+'-'+n">
+			<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('perk'+i+'-'+n)" [id]="'perktoggle'+i+'-'+n"  [attr.data-index]="i+'-'+n" #toggle></div>
+			<div class="sheet-checkbox"></div>
+			<div class="name">{{perk.name}}</div>
+			<div class="desc" [innerHTML]="prepareDesc(perk.desc)"></div>
+		</label>
+	</div>
+</div>

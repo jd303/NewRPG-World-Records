@@ -1,4 +1,0 @@
-<?php
-
-	print("SAved DATA");
-?>

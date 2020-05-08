@@ -1,4 +1,8 @@
 <div class="ui">
+	<main-nav></main-nav>
+</div>
+
+<div class="ui">
 	<h1>Choose sources to display</h1>
 	<div class="option"><input type="checkbox" id="source-innate" (change)="updateSources('source-innate');" [(ngModel)]="showing.innate"><label for="source-innate">Innate</label></div>
 	<div class="option"><input type="checkbox" id="source-flow" (change)="updateSources('source-flow');" [(ngModel)]="showing.flow"><label for="source-flow">The Flow</label></div>
@@ -11,10 +15,16 @@
 <div class="ui">
 	<h2>Instructions for print</h2>
 	<ul>
-		<li>Check the checkbox to the left of spell effects you don't want to print.  Also check only the Source(s) you wish to print.</li>
+		<li>Check the checkbox to the left of spell effects you want to print.  Also check only the Source(s) you wish to print.</li>
 		<li>Make sure you print in landscape</li>
 		<li>For best effects, print with backgrounds, to get the best design contrast and readability</li>
 	</ul>
+</div>
+
+<div class="ui">
+	<h1>Toggles</h1>
+	<div class="option"><button (click)="flipToggles(true);" checked=checked>Toggle All</button></div>
+	<div class="option"><button (click)="flipToggles(false);" checked=checked>Toggle None</button></div>
 </div>
 
 <h1>MAGIC: Shapes</h1>
@@ -29,15 +39,15 @@
 </div>
 
 <h1>MAGIC: Effects</h1>
-<div class="spell_effect" *ngFor="let se of spell_effects; let i = index" [id]="'se'+i">
-	<header>
-		<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('se'+i)"></div>
+<div class="spell_effect hidden" *ngFor="let se of spell_effects; let i = index" [id]="'se'+i">
+	<label [for]="'setoggle'+i">
+		<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('se'+i)" [id]="'setoggle'+i" [attr.data-index]="i" #toggle></div>
 		<div class="sheet-checkbox"></div>
 		<div class="name">{{se.name}}</div>
 		<div class="desc">{{se.desc}}</div>
 		<div class="save" *ngIf="se.save">SV {{se.save}}</div>
 		<div class="time"><img src="assets/images/ico.time.svg">{{se.time}}</div>
-	</header>
+	</label>
 	<div class="row-effects">
 		<div class="shapes">
 			<div class="shape" *ngFor="let shape of se.shapes | keyvalue">{{shape.key}} {{getShapeValue(shape)}}</div>
