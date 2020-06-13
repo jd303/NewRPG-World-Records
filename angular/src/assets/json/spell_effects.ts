@@ -582,14 +582,27 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Redirect Pain",
-		desc: "You create a magical link between your Source and the life force of a target.  When they would take damage, you instead do.  You may also use this to take on existing wounds and tirednesses.",
+		desc: "You create a magical link between your the life forces of two targets.  When the original target would take damage, the secondary target instead does.  If you are the secondary target, you may also use this to take on pre-existing wounds and Stamina loss.",
 		save: "CON",	
 		time: "1 Minute",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Up to 5 stamina and 1 Wound are redirected to you." },
-			{ dc:2, effect:"Up to 10 stamina and 2 Wounds are redirected to you." },
-			{ dc:3, effect:"Up to 20 stamina and 5 Wounds are redirected to you." }
+			{ dc:1, effect:"Up to 5 stamina and 1 Wound are redirected to a target." },
+			{ dc:2, effect:"Up to 10 stamina and 2 Wounds are redirected to a target." },
+			{ dc:3, effect:"Up to 20 stamina and 5 Wounds are redirected to a target." }
+		],
+		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
+	},
+	{
+		name: "Reflect Pain",
+		desc: "When your target takes stamina or wound damage some is reflected back to either its original source or to a single target chosen from the reflector to within range of the shape you cast this spell with.",
+		save: "CON",	
+		time: "1 Minute",
+		shapes: { cst:null, tch:1, svt:2, cne:2, aur:3, vol:3, wll:3, bem:2, pln:5 },
+		effects: [
+			{ dc:3, effect:"You redirect 1 Stamina per source of pain." },
+			{ dc:5, effect:"You redirect 2 Stamina or 1 Wound per source of pain." },
+			{ dc:7, effect:"You redirect 3 Stamina or 2 Wounds per source of pain." }
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},

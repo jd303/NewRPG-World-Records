@@ -315,6 +315,11 @@ export const perks: perk_def[] = [
 	},
 	{
 		category: "magic",
+		name: "True Life Source",
+		desc: "When using the Life Source and choosing a Wound as payment, multiply the numerical values of the spell, including effects, duration, range and shape size by 1.5 (rounding down)."
+	},
+	{
+		category: "magic",
 		name: "Ancient Ways",
 		desc: "You may use your WIS instead of INT as you bonus for the Cast a Spell, Counterspell and Detect Magic skills, and when resolving a Defy Danger move using the Source Variant."
 	},
@@ -374,7 +379,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Lucky",
-		desc: "Once per rest you may reroll one roll.  You may take either result.  You may choose to use this skill even after declaring the success or failure of the initial roll."
+		desc: "Once per long rest you may reroll one roll.  You may take either result.  You may choose to use this skill even after determining the success or failure of the initial roll."
 	},
 	{
 		category: "general",
@@ -445,7 +450,7 @@ export const perks: perk_def[] = [
 		name: "Inspiring Creation",
 		desc: [
 			"If you have a Source, you can inspire allies who see or hear one of your creations with courage.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
-			"Effects: Allies gain +2 Stamina and gain +1 Resistance to Fear effects.  The stamina bonus does not count towards magical Stamina healing limits.",
+			"Effects: Allies gain +2 Temporary Stamina and gain +1 Resistance to Fear effects.  The stamina bonus does not count towards magical Stamina healing limits.",
 			"Creations:",
 			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
@@ -457,7 +462,7 @@ export const perks: perk_def[] = [
 		name: "Uplifting Performance",
 		desc: [
 			"If you have a Source, you can inspire allies who see or hear one of your creations with ferocity.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation\.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
-			"Allies gain +2 COMB and gain +2 to the Defy Danger Move.",
+			"Allies gain +2 COMB, +2 RANG and gain +2 to the Defy Danger Move.",
 			"Creations:",
 			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
@@ -479,16 +484,22 @@ export const perks: perk_def[] = [
 	{
 		category: "profession",
 		name: "Animal Companion",
-		desc: "When you’ve had the chance to befriend an animal and spend some time with it, it may decide that you’re a worthy companion and travel with you, if you can provide it with a better life than it currently has.  When befriended, it will act loyally to you and can be trained up to the capacity of it’s intelligence, and can be given single word commands, such as attack, fetch, or stay.  It is unable to perform actions outside it’s nature, such as combat for a squirrel or staying calm in a marketplace for a wolf."
+		desc: "When you’ve had the chance to befriend an animal and spend some time with it, it may decide that you’re a worthy companion and travel with you, if you can provide it with a better life than it currently has.  When befriended, it will act loyally to you and can be trained up to the capacity of it’s intelligence.  You can describe an Animal Handling move to give your companion single word commands, such as attack, fetch, or stay (DC 2).  It is unable to perform actions outside it’s nature, such as combat for a squirrel or staying calm in a marketplace for a wolf."
 	},
 	{
 		category: "profession",
-		name: "Natural Selection",
-		desc: "Your animal companions are truly special, and your training with them has been especially effective.  Your animals can be given commands or can act against their nature, such as a mole comfortably living above ground, or an eagle swooping into combat.  Your commands may also be up to 4 words long, such as “attack when safe”, or “sit on that touchplate”."
-	},{
+		name: "Animal Selection",
+		desc: "[Requires Animal Companion] Your animal companions are truly special, and your training with them has been especially effective.  When you describe the way that you perform an Animal Handling move at DC 3, your animal can act against its nature, such as a mole comfortably living above ground, or an eagle swooping into combat.  Your commands may also be up to 4 words long, such as “attack when safe”, or “sit on that touchplate”."
+	},
+	{
+		category: "profession",
+		name: "Animal Kinship",
+		desc: "[Requires Animal Selection] You and your animal companion have an unbreakable bond.  You can describe an Animal Handling move at DC 4 to give your companion commands up to 7 words, such as ”Get the Prince back to safety”.  When it performs this command it gains +1 to all rolls."
+	},
+	{
 		category: "profession",
 		name: "Animal Loyalty",
-		desc: "Your animal companion can use the Defend skill (with a COMB equal to 3 times its SR) when you are it’s target."
+		desc: "[Requires Animal Companion] Your animal companion can use the Defend skill (with a COMB equal to 3 times its SR) when you are it’s target."
 	},
 	{
 	category: "special",
