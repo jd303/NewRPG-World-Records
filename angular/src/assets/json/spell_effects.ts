@@ -1007,7 +1007,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Purpose",
-		desc: "Through magical means you can divine the present and future of a situation.  Use the Discern Realities Move as if passing the Total DC.  Your DM will answer your questions with responses not achievable using mundane means.",
+		desc: "Through magical means you can divine the present and future of a situation.  Use the Discern Realities Move as if passing the Total DC.  Your DM will answer your questions with responses not achievable using mundane means.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -1018,7 +1018,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Item Location",
-		desc: "Through magical means, you can divine the location of an item, if it is still within 50 km of you.",
+		desc: "Through magical means, you can divine the location of an item, if it is still within 50 km of you.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -1031,7 +1031,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Intention",
-		desc: "Through magical means you divine the alignment and 1-3 words describing a target you can see's intentions for the near future.",
+		desc: "Through magical means you divine the alignment and 1-3 words describing a target you can see's intentions for the near future.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:0, vol:null, wll:null, bem:null, pln:null },
@@ -1042,7 +1042,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Illusion",
-		desc: "Through magical means you, or you and other willing creatures see through magical illusions and invisibility.",
+		desc: "Through magical means you, or you and other willing creatures see through magical illusions and invisibility.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: null,	
 		time: "1 Minute",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
@@ -1055,7 +1055,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: The Near Future",
-		desc: "Through magical means, you, or you and other creatures can see the immediate future 1 second before it happens.  You gain +1 DR, require one more point to be disadvantaged and cannot be surprised.",
+		desc: "Through magical means, you, or you and other creatures can see the immediate future 1 second before it happens.  You gain +1 DR, require one more point to be disadvantaged and cannot be surprised.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: null,	
 		time: "1 Min",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
@@ -1066,7 +1066,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: The Truth",
-		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a truth spell has been cast on them.",
+		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a truth spell has been cast on them.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
 		save: "WIS",	
 		time: "1 Mins",
 		shapes: { cst:null, tch:0, svt:0, cne:2, aur:2, vol:2, wll:null, bem:null, pln:null },
@@ -1415,13 +1415,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Buff: Skills",
-		desc: "Your subject looks inside and finds recollects more about their skills than they could even imagine.  All untrained and trained skills are performed better.",
+		desc: "Your subject looks inside and finds recollects more about their skills than they could even imagine.  One chosen untrained or trained skill is performed better.",
 		save: null,	
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"+1 SKILL" },
-			{ dc:2, effect:"+2 SKILL" },
+			{ dc:2, effect:"+1 SKILL" },
+			{ dc:3, effect:"+2 SKILL" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1574,10 +1574,10 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:0, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"0 Feet per second, weightless" },
-			{ dc:2, effect:"1/2 foot per second" },
-			{ dc:3, effect:"5 feet per second" },
-			{ dc:4, effect:"25 feet per second" },
-			{ dc:5, effect:"60 feet per second" },
+			{ dc:3, effect:"1/2 foot per second" },
+			{ dc:4, effect:"5 feet per second" },
+			{ dc:5, effect:"25 feet per second" },
+			{ dc:6, effect:"60 feet per second" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:false }
 	},

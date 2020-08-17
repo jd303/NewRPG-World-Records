@@ -8,6 +8,7 @@ import { Routes, RouterModule }		from '@angular/router';
 ////////////////////////////////////////////////////////////  PAGE IMPORTS
 import { PageMainComponent }			from './page-main/page-main.component';
 import { PageSpellEffectsComponent }	from './page-spelleffects/page-spelleffects.component';
+import { PagePsionicEffectsComponent }	from './page-psioniceffects/page-psioniceffects.component';
 import { PagePerksComponent } 			from './page-perks/page-perks.component';
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -16,6 +17,7 @@ const routes: Routes = [
 	{ path: '',				component: PageMainComponent },
 	{ path: 'home',			component: PageMainComponent },
 	{ path: 'spelleffects', component: PageSpellEffectsComponent },
+	{ path: 'psionics', 	component: PagePsionicEffectsComponent },
 	{ path: 'perks', 		component: PagePerksComponent },
 ];
 

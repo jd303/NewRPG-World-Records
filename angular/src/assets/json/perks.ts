@@ -291,7 +291,7 @@ export const perks: perk_def[] = [
 	{
 		category: "magic",
 		name: "Lay on Hands",
-		desc: "Once per day when you use the Knowledge: Medicine Move on a subject, you may spend a Stamina to also heal them of one wound or 3 stamina if you pass the Partial DC.  This requires the Granted or Yearns source."
+		desc: "Once per day when you use the Knowledge: Medicine Move on a subject, you may spend a Stamina to also heal them of 4 stamina if you pass the Partial DC.  This requires the Granted or Yearns source."
 	},
 	{
 		category: "magic",

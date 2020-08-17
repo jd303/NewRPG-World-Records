@@ -1,0 +1,152 @@
+.ui {
+	margin-bottom:15px;
+
+	.option {
+		display:inline-block;
+		padding:5px; margin:5px 5px 5px 0;
+
+		border-radius:6px;
+		background:#f4f4f4;
+	}
+}
+
+h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
+
+.psionic_effect {
+
+	margin-bottom:5px;
+	color:#333;
+
+	&.hidden { opacity:0.5; }
+	
+	label {
+		display:flex; align-items:start;
+		justify-content:space-between;
+		flex-direction:row;
+		padding:3px 5px;
+
+		border-radius:6px;
+		background:rgba(0, 0, 0, 0.06);
+
+		.title {
+			width:35%;
+
+			.core {
+				display:flex;
+				justify-content:space-between;
+				margin-bottom:5px;
+
+				.meta {
+					width:150px;
+					text-align:right;
+
+					.time, .save {
+						display:inline-block; 
+						vertical-align:top;
+					}
+
+					.save {
+						line-height:100%;
+						padding:3px;
+						text-align:center;
+						border-radius:4px;
+						background:#fff;
+					}
+			
+					.time {
+						width:60px;
+						white-space:nowrap;
+						line-height:1rem;
+						img { height:18px; vertical-align:middle; }
+
+						span { display:inline-block; width:25px; }
+					}
+				}
+			}
+		}
+
+		.name {
+			flex:none;
+			color:#000; font-size:1rem; font-weight:bold;
+			margin-right:10px;
+
+			span.talent, span.talent-min {
+				font-size:0.8em;
+				color:#777;
+				text-transform:capitalize;
+			}
+		}
+
+		.desc {
+			flex:1;
+			font-size:0.85rem;
+		}
+
+		.save, .time {
+			flex:none;
+			width:50px;
+			font-size:0.8rem;
+			overflow:hidden;
+		}
+	}
+
+	.row-effects {
+		display:flex;
+		width:calc(65% - 5px);
+		line-height:0.7rem;
+		align-items:center;
+		margin-top:-2px; margin-left:5px;
+
+		.effects {
+			display:flex;
+			flex-wrap:wrap;
+			margin-left:4px;
+
+			.effect {
+				display:inline-block;
+				font-size:0.65rem; 
+				padding:3px; margin-right:3px;
+				overflow:hidden;
+
+				span {
+					vertical-align:middle;
+				}
+
+				img {
+					height:15px;
+					margin-right:5px;
+				}
+
+				.dc {
+					float:left;
+					box-sizing:border-box;
+					height:17px;
+					font-size:.7rem; color:#fff; text-transform:uppercase;
+					padding:2px; margin-right:4px;
+					border-radius:4px;
+					background:#333;
+
+					span:nth-child(2) { margin:0 2px; color:#ccc; text-transform:lowercase; }
+				}
+
+				> span:last-child {
+					display:inline-block;
+					padding-top:3px;
+				}
+			}
+		}
+	}
+}
+
+@media print {
+	h1 { font-size:1rem; }
+	.psionic_effect label {
+		.name { font-size:0.65rem; }
+		.desc { font-size:0.5rem; }
+		.meta, .dc { transform:scale(0.8); } // Weird property as Chome's print feature won't honour font size
+	}
+	.ui { display:none; }
+	.psionic_effect.hidden { display:none; }
+	.psionic_effect { page-break-inside:avoid; }
+	.psionic_effect input { display:none; }
+}

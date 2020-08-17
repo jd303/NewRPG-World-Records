@@ -1,0 +1,47 @@
+<div class="ui">
+	<main-nav></main-nav>
+</div>
+
+<div class="ui">
+	<h1>Choose Talents to display</h1>
+	<div class="option"><input type="checkbox" id="source-innate" (change)="updateSources('source-kinetics');" [(ngModel)]="showing.kinetics"><label for="source-innate">Kinetics</label></div>
+	<div class="option"><input type="checkbox" id="source-flow" (change)="updateSources('source-clairsentience');" [(ngModel)]="showing.clairsentience"><label for="source-flow">Clairsentience</label></div>
+	<div class="option"><input type="checkbox" id="source-tapped" (change)="updateSources('source-telepathy');" [(ngModel)]="showing.telepathy"><label for="source-tapped">Telepathy</label></div>
+	<div class="option"><input type="checkbox" id="source-life" (change)="updateSources('source-psychometabolism');" [(ngModel)]="showing.psychometabolism"><label for="source-life">Psychometabolism</label></div>
+	<div class="option"><input type="checkbox" id="source-yearns" (change)="updateSources('source-metapsionics');" [(ngModel)]="showing.metapsionics"><label for="source-yearns">Metapsionics</label></div>
+</div>
+
+<div class="ui">
+	<h2>Instructions for print</h2>
+	<ul>
+		<li>Check the Talents you want to print.</li>
+		<li>Make sure you print in landscape</li>
+		<li>For best effects, print with backgrounds, to get the best design contrast and readability</li>
+	</ul>
+</div>
+
+<h1>PSIONICS: Effects</h1>
+
+<div class="psionic_effect" *ngFor="let pe of psionics_effects; let i = index" [id]="'pe'+i">
+	<label [for]="'setoggle'+i">
+		<div class="title">
+			<div class="core">
+				<div class="name">{{pe.name}} <span class="talent">{{pe.talent}}</span> <span class="talent-min"> ({{pe.min}}+)</span></div>
+				<div class="meta">
+					<span class="save" *ngIf="pe.save">SV {{pe.save}}</span>
+					<span class="time"><img src="assets/images/ico.time.svg"><span>{{pe.time}}</span></span>
+				</div>
+			</div>
+			<div class="desc">{{pe.desc}}</div>
+		</div>
+		<div class="row-effects">
+			<div class="effects">
+				<div class="effect" *ngFor="let effect of pe.modifiers">
+					<span class="dc"><span>DC {{effect.dc}}</span> <span *ngIf="effect.repeatable">(ea)</span></span>
+					<!--<span class="repeatable" *ngIf="effect.repeatable"><img src="/assets/images/ico.repeat.svg"></span>-->
+					<span>{{effect.effect}}</span>
+				</div>
+			</div>
+		</div>
+	</label>
+</div>

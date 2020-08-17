@@ -7,6 +7,7 @@ import { AppRoutingModule }				from './app-routing.module';
 import { AppComponent }					from './app.component';
 import { PageMainComponent }			from './page-main/page-main.component';
 import { PageSpellEffectsComponent }	from './page-spelleffects/page-spelleffects.component';
+import { PagePsionicEffectsComponent }	from './page-psioniceffects/page-psioniceffects.component';
 import { PagePerksComponent }			from './page-perks/page-perks.component';
 import { MainNavComponent }			from './component-mainnav/mainnav.component';
 
@@ -15,6 +16,7 @@ import { MainNavComponent }			from './component-mainnav/mainnav.component';
     AppComponent,
 	PageMainComponent,
 	PageSpellEffectsComponent,
+	PagePsionicEffectsComponent,
 	PagePerksComponent,
 	MainNavComponent
   ],
