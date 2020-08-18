@@ -181,7 +181,7 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "WIS",
 		time: "10m",
 		modifiers: [
-			{ dc:0.5, repeatable:true, effect:"You can extend the tistance by 1km" },
+			{ dc:0.5, repeatable:true, effect:"You can extend the distance by 1km" },
 			{ dc:0.5, repeatable:true, effect:"You can extend the duration by 10m" },
 			{ dc:1, repeatable:false, effect:"Your target can communicate back with you" },
 			{ dc:1, repeatable:false, effect:"You (and your target if they can communicate back) can speak freely, rather than in single words." },
