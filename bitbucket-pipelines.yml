@@ -10,6 +10,7 @@ pipelines:
     - step:
        name: Build
        script:
+          - npm install
           - npm run build
           - cd build
           - zip -r application.zip . -x *.git* .DS_Store node_modules/\*
