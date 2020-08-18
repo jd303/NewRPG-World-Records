@@ -10,13 +10,12 @@ pipelines:
     - step:
        name: Build
        script:
-          - apt-get install zip
           - npm install
           - npm run build
           - cd build
-          - zip -r application.zip . -x *.git* .DS_Store node_modules/\*
+          - tar --exclude=.git --exclude=.gitignore --exclude=.DS_Store -cvf application.tar .
        artifacts:
-          - build/application.zip
+          - build/application.tar
     - step:
         name: Deploy to production
         deployment: production
@@ -27,4 +26,4 @@ pipelines:
             variables:
               HEROKU_API_KEY: $HEROKU_API_KEY
               HEROKU_APP_NAME: $HEROKU_APP_NAME
-              ZIP_FILE: build/application.zip
+              ZIP_FILE: build/application.tar
