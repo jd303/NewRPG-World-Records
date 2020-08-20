@@ -234,6 +234,19 @@ export const psionics_effects: spell_effect_def[] = [
 		min: 4
 	},
 	{
+		name: "Emotion",
+		desc: "While in effect, you can mildly agitate or calm a visible target.  Has the effect of a coffee or a deep breath. You can switch targets freely once per round.",
+		save: "WIS",
+		time: "2m",
+		modifiers: [
+			{ dc:1, repeatable:true, effect:"Your power affects an additional target." },
+			{ dc:2, repeatable:false, effect:"You modify your target(s) mood to one of your choosing, such as calmed, angry and joyous; as long as the change would not endanger the target(s)." },
+			{ dc:4, repeatable:false, effect:"Your forcefully anger your target(s), driving them to anger and violence." }
+		],
+		talent: "telepathy",
+		min: 5
+	},
+	{
 		name: "Aversion / Fascination",
 		desc: "While in effect, people will prefer to deal with your allies than you.",
 		save: "WIS",
