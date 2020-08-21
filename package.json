@@ -4,7 +4,7 @@
 	"description": "Tools for NewRPG",
 	"main": "index.js",
 	"scripts": {
-		"start": "npm install; node app.js",
+		"start": "tsc; cd angular; ng build; cd ..; node ./build/app.js",
 			"//": "'start' script is for Heroku, or within build directory only",
 		"serve_dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
 		"serve_prod": "tsc && node ./build/app.js",
