@@ -4,6 +4,7 @@ Uses Bitbucket Pipelines to deploy;
 ## Pipelines method
 - $ git add .; git commit -m "message"
 - $ git push bb master;
+- Pipelines will pick it up and send it to Heroku to build and run
 
 ## Manual method
 - $ npm run build
