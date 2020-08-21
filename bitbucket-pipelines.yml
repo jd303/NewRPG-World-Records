@@ -8,24 +8,14 @@ image: node:10.15.3
 pipelines:
   default:
     - step:
-       name: Build
+       name: Package Build
        script:
-          - npm install
-          - tsc
-          - cd angular
-          - npm install
-          - ng build
-          - cd ..
-          - cp package.json ./build
-          - cp package-lock.json ./build
-          - cp .gitignore ./build
-          - cp Procfile ./build
           - cd build
           - tar --exclude=.git --exclude=.gitignore --exclude=.DS_Store -cvf application.tar .
        artifacts:
           - build/application.tar
     - step:
-        name: Deploy to production
+        name: Deploy Build to production
         deployment: production
         caches:
           - pip
