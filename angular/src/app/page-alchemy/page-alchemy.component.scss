@@ -1,0 +1,93 @@
+@import "../../constants";
+
+.ui {
+	margin-bottom:15px;
+
+	.option {
+		display:inline-block;
+		padding:5px; margin:5px 5px 5px 0;
+
+		border-radius:6px;
+		background:#f4f4f4;
+	}
+}
+
+h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
+h2 { font-size:1.1rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
+
+.alchemy_recipe {
+
+	margin-bottom:5px;
+	color:#333;
+
+	&.hidden { opacity:0.5; }
+	
+	label {
+		display:block;
+		padding:3px;
+
+		border-radius:6px;
+		background:rgba(0, 0, 0, 0.06);
+
+		.main {
+			display:flex;
+			flex-direction:row;
+
+			.toggle { width:25px; }
+
+			.name, .reagents { margin-right:$stPad/2; }
+
+			.name {
+				flex:3;
+				color:#000; font-size:1rem; font-weight:bold;
+				margin-right:10px;
+			}
+
+			.reagents {
+				flex:5;
+				display:flex;
+				
+				.reagent { margin-right:$stPad/2; }
+				.reagent:last-child { margin-right:0; }
+			}
+
+			.time {
+				width:80px;
+				font-size:0.8rem;
+				overflow:hidden;
+				white-space:nowrap;
+				line-height:1rem;
+				img { height:18px; vertical-align:middle; }
+			}
+		}
+
+		.desc {
+			font-size:0.85rem;
+		}
+
+		.effect {
+			font-size:0.85rem;
+			font-weight:bold;
+		}
+	}
+}
+
+@media print {
+	h1 { font-size:1rem; }
+	.alchemy_recipe {
+		display:inline-block;
+		vertical-align:top;
+		width:calc(50% - 10px);
+		
+		&:nth-child(2n) { margin-left:10px; }
+	}
+	.alchemy_recipe label {
+		.name { font-size:0.65rem; }
+		.desc, .effect { font-size:0.5rem; }
+	}
+	.ui { display:none; }
+	.alchemy_recipe.hidden { display:none; }
+	.alchemy_recipe { page-break-inside:avoid; }
+	.toggle { display:none; }
+	#reagents { display:none; }
+}

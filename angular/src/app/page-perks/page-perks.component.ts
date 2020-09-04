@@ -24,6 +24,7 @@ export class PagePerksComponent {
 	showing = {
 		combat: true,
 		magic: true,
+		psionic: true,
 		profession: true,
 		general: true,
 		special: true,

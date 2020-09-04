@@ -1,0 +1,49 @@
+<div class="ui">
+	<main-nav></main-nav>
+</div>
+
+<div class="ui">
+	<h2>Instructions for print</h2>
+	<ul>
+		<li>Check the checkbox to the left of recipes you want to print.</li>
+		<li>Make sure you print in landscape</li>
+		<li>For best effects, print with backgrounds, to get the best design contrast and readability</li>
+	</ul>
+</div>
+
+<div class="col" id="recipes">
+	<h1>Alchemy: Recipes</h1>
+	<div class="ui">
+		<div class="option"><button (click)="flipToggles('recipe', true);" checked=checked>Toggle All</button></div>
+		<div class="option"><button (click)="flipToggles('recipe', false);" checked=checked>Toggle None</button></div>
+		<h2>Find Recipes with</h2>
+		<!--<div class="option"><input type="checkbox" id="source-innate" (change)="updateSources('source-innate');" [(ngModel)]="showing.innate"><label for="source-innate">Innate</label></div>
+		<div class="option"><input type="checkbox" id="source-flow" (change)="updateSources('source-flow');" [(ngModel)]="showing.flow"><label for="source-flow">The Flow</label></div>
+		<div class="option"><input type="checkbox" id="source-tapped" (change)="updateSources('source-tapped');" [(ngModel)]="showing.tapped"><label for="source-tapped">Tapped</label></div>
+		<div class="option"><input type="checkbox" id="source-life" (change)="updateSources('source-life');" [(ngModel)]="showing.life"><label for="source-life">Life</label></div>
+		<div class="option"><input type="checkbox" id="source-yearns" (change)="updateSources('source-yearns');" [(ngModel)]="showing.yearns"><label for="source-yearns">That which yearns to grow</label></div>
+		<div class="option"><input type="checkbox" id="source-granted" (change)="updateSources('source-granted');" [(ngModel)]="showing.granted"><label for="source-granted">Granted</label></div>-->
+	</div>
+	<div class="alchemy_recipe hidden" *ngFor="let rcp of all_recipes; let i = index" [id]="'se'+i">
+		<label [for]="'setoggle'+i">
+			<div class="main">
+				<div class="toggle"><input type="checkbox" (click)="toggleDisplayClass('se'+i)" [id]="'setoggle'+i" [attr.data-index]="i" data-type="recipe" #toggle></div>
+				<div class="name">{{rcp.name}}</div>
+				<div class="reagents">
+					<div class="reagent" *ngFor="let reagent of rcp.reagents">{{reagent}}</div>
+				</div>
+				<div class="time"><img src="assets/images/ico.time.svg">{{rcp.time}}</div>
+			</div>
+			<div class="desc">{{rcp.desc}}</div>
+			<div class="effect">{{rcp.effects}}</div>
+		</label>
+	</div>
+</div>
+<div class="col" id="reagents">
+	<h1>Alchemy: Reagents</h1>
+	<div class="ui">
+		<div class="option"><button (click)="flipToggles('reagents', true);" checked=checked>Toggle All</button></div>
+		<div class="option"><button (click)="flipToggles('reagents', false);" checked=checked>Toggle None</button></div>
+		<h2>Find Reagents with</h2>
+	</div>
+</div>

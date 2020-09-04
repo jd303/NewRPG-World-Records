@@ -138,22 +138,17 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Intimidating Flight",
-		desc: "Once per combat, when retreating from combat or focussing on another target you may make a Provoke/Intimidate Move at your disengaged creature with a +3 bonus.  If you succeed, one of the effects can be: this creature cannot approach within 5 feet of you."
+		desc: "Once per combat, when retreating from combat or focussing on another target you may describe a free and immediate Provoke/Intimidate Move at your disengaged creature with a +3 bonus.  If you succeed, one of the effects can be: this creature cannot approach within 5 feet of you."
 	},
 	{
 		category: "combat",
 		name: "Roaring Defense",
-		desc: "Once per combat, If an opponent attacks you and fails to deal any Stamina or Wound damage, you may make Provoke/Intimidate Move at them with a +3 bonus."
+		desc: "Once per combat, If an opponent attacks you and fails to deal any Wound damage, you may describe a free and immediate Provoke/Intimidate Move at them with a +3 bonus."
 	},
 	{
 		category: "combat",
-		name: "Pulled Punch",
-		desc: "Once per combat, if you fail to hit with a Hack or Slash you may immediately make a Provoke/Intimidate Move against them with a +3 bonus."
-	},
-	{
-		category: "combat",
-		name: "Warning Shot",
-		desc: "Once per combat, if you fail to hit your intended target, you may immediately make a Provoke/Intimidate Move against them with a +3 bonus."
+		name: "Just a warning",
+		desc: "Once per combat, if you fail to hit your intended target with any Hack and Slash or Volley Move, you may describe a free and immediate Provoke/Intimidate Move against them with a +3 bonus."
 	},
 	{
 		category: "combat",
@@ -339,9 +334,39 @@ export const perks: perk_def[] = [
 		desc: "When you engage a creature at least 15 foot from you, you may also describe and resolve the Shapeshifting Move.  If you succeed, you gain +2 to COMB and +2 to DAM for your first attack."
 	},
 	{
-		category: "combat",
+		category: "magic",
 		name: "Magical Rage",
 		desc: "When you or a friend are attacked or when someone acts against your morals, you may enter a rage.  Gain 1 temporary Unburnout, your maximum DC of spell you can cast is 1 higher, and any magical damage you do is increased by 1.  When you stop using spells, lose the Unburnout if it was unused and you trigger a burnout effect of DC 2."
+	},
+	{
+		category: "psionic",
+		name: "Mind and Body",
+		desc: "When you take this perk, choose a Statistic.  When resolving any Psionic Power Moves, replace the INT bonus with your chosen Statistic's bonus."
+	},
+	{
+		category: "psionic",
+		name: "Talented",
+		desc: "You may Spark 2 Talents and Activate 2 Powers, granting you the base effects of two psionic Talents at one time.  You may only Manifest one Power, as normal."
+	},
+	{
+		category: "psionic",
+		name: "Psi Prodigy",
+		desc: "The point investment minimumm requirement for Psionic Powers is reduced by 1, and you no longer need to have a point to use those with a requirement reduced to 0."
+	},
+	{
+		category: "psionic",
+		name: "Split Mind",
+		desc: "When a power has a repeatable effect that reads: 'Your power affects an additional target' or 'Add another Medium or smaller target', you may add your first at a DC cost of 0."
+	},
+	{
+		category: "psionic",
+		name: "Mental Arithmetic",
+		desc: "When a Psionic Power's DC is calculated and ends in a 0.5, you may round it down instead of up."
+	},
+	{
+		category: "psionic",
+		name: "Physical Channels",
+		desc: "If you have at least 1 point in Psychometabolism then once per combat when you incur Stamina loss you may remove 1 Burnout point per Stamina you lost."
 	},
 
 
@@ -405,16 +430,6 @@ export const perks: perk_def[] = [
 		category: "general",
 		name: "Danger seeker",
 		desc: "When you are below half your Wounds or below a third of your Stamina, all rolls gain +1."
-	},
-	{
-		category: "general",
-		name: "Mindful",
-		desc: "When a spell or effect attacks your mind or sense ask your DM how the Mindful Perk alters the effect.  You will gain a mild benefit to the source."
-	},
-	{
-		category: "general",
-		name: "Hearty",
-		desc: "When a spell or effect attacks your health and wellbeing ask your DM how the Hearty Perk alters the effect.  You will gain a mild benefit to the source."
 	},
 	{
 		category: "general",

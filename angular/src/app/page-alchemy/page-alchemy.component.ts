@@ -1,59 +1,50 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  IMPORTS
 import { Component, ViewChildren, QueryList }	from '@angular/core';
-import { psionics_effects }						from '../../assets/json/psionics_effects';
+import { recipe, alchemical_recipes }			from '../../assets/json/alchemical_recipes';
+import { reagent, alchemical_reagents }			from '../../assets/json/alchemical_reagents';
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  DEFINE COMPONENT
 @Component({
-	selector: 'app-page-psioniceffects',
-	templateUrl: './page-psioniceffects.component.html',
-	styleUrls: ['./page-psioniceffects.component.scss']
+	selector: 'app-page-alchemy',
+	templateUrl: './page-alchemy.component.html',
+	styleUrls: ['./page-alchemy.component.scss']
 })
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  EXPORT CLASS
-export class PagePsionicEffectsComponent {
+export class PageAlchemyComponent {
 
 	// CHILDREN
 	@ViewChildren('toggle') toggles: QueryList<any>; 
 
 	// CORE 
-	psionic_shapes:any[] = [ { name:"Caster (CST)", checked:true }, { name:"Touch (TCH)", checked:true }, { name:"One Visible (SVT)", checked:false }, { name:"Cone (CNE)", checked:false }, { name:"Circle from you (AUR)", checked:false }, { name:"Sphere/Cube (VOL)", checked:false }, { name:"Wall (WLL)", checked:false }, { name:"Beam (BEM)", checked:false }, { name:"One Target on Plane (PLN)", checked:false } ];
-	all_psionics_effects: any[];
-	psionics_effects: any[];
-	showing = {
-		psychokinesis:		true,
-		clairsentience:		true,
-		telepathy:			true,
-		psychometabolism:	true
-	}
+	all_recipes: recipe[];
+	recipes: recipe[];
+	all_reagents: reagent[];
+	reagents: reagent[];
 
 	////////////////////////////////////
 	constructor() {
-		this.all_psionics_effects = psionics_effects;
-		this.psionics_effects = this.all_psionics_effects.filter(this.filter.bind(this));
+		this.all_recipes = alchemical_recipes;
+		this.recipes = this.all_recipes.filter(this.filterRecipes.bind(this));
 	}
 
 	////////////////////////////////////
 	updateSources(event) {
-		this.psionics_effects = this.all_psionics_effects.filter(this.filter.bind(this));
+		this.recipes = this.all_recipes.filter(this.filterRecipes.bind(this));
 	}
 
 	////////////////////////////////////
-	filter(psionic_effect) {
-		let hasSource = false;
-		Object.keys(this.showing).forEach(key => {
-			if (this.showing[key] && psionic_effect.talent == key) {
-				hasSource = true;
-			}
-		});
+	filterRecipes(recipe) {
+		let hasSource = true;
+		
 		return hasSource;
 	}
 
 	////////////////////////////////////
 	toggleDisplayClass(id, forceOn = null, forceOff = null) {
-		console.log(id);
 		if (forceOn === true) document.getElementById(id).classList.remove("hidden");
 		else if (forceOff === false) document.getElementById(id).classList.add("hidden");
 		else {
@@ -68,9 +59,10 @@ export class PagePsionicEffectsComponent {
 	}
 
 	////////////////////////////////////
-	flipToggles(state) {
+	flipToggles(which, state) {
 		if (state === true) {
 			this.toggles.forEach(toggl => {
+				if ((toggl.nativeElement as HTMLElement).getAttribute('data-type') != which) return;
 				let el = toggl.nativeElement;
 				el.checked = true;
 				el.setAttribute('checked', 'checked');
@@ -78,6 +70,7 @@ export class PagePsionicEffectsComponent {
 			});
 		} else {
 			this.toggles.forEach(toggl => {
+				if ((toggl.nativeElement as HTMLElement).getAttribute('data-type') != which) return;
 				let el = toggl.nativeElement;
 				el.checked = false;
 				el.removeAttribute('checked');
