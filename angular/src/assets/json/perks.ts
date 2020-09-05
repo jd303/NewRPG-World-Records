@@ -517,6 +517,16 @@ export const perks: perk_def[] = [
 		desc: "[Requires Animal Companion] Your animal companion can use the Defend skill (with a COMB equal to 3 times its SR) when you are it’s target."
 	},
 	{
+		category: "profession",
+		name: "Concentrated Solution",
+		desc: "When your perform the Alchemy Move and you increase the recipe by 2 Reagents (of any type that the Recipe requires), the DC of the Recipe is reduced by 1."
+	},
+	{
+		category: "profession",
+		name: "Spring Loaded Mechanisms",
+		desc: "When creating Alchemical Recipes that have an affect in a radius, you may increase the DC to also increase the radius by the same amount."
+	},
+	{
 	category: "special",
 		name: "Specialty Skill",
 		desc: [

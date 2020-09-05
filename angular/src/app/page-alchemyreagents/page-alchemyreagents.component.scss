@@ -46,11 +46,6 @@ h2 { font-size:1.1rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
 
 			.name, .reagents { margin-right:$stPad/2; }
 
-			.type {
-				font-weight:normal;
-				color:#999;
-			}
-
 			.name {
 				flex:1;
 				color:#000; font-size:1rem; font-weight:bold;
@@ -67,7 +62,7 @@ h2 { font-size:1.1rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
 
 			.dc {
 				flex:0;
-				height:15px;
+				height:17px;
 				margin:0 $stPad/1.5;
 				font-size:0.7rem;
 				text-align:right; color:#fff;
@@ -102,11 +97,20 @@ h2 { font-size:1.1rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
 			font-size:0.85rem;
 		}
 
-		.effect {
+		.effect, .effect-superb {
 			display:inline-block;
 			font-size:0.85rem;
 			font-weight:bold;
 			margin-right:$stPad/2;
+		}
+
+		.effect-superb {
+			font-style:italic;
+			&:before {
+				content: "⭐";
+				display:inline-block;
+				margin-right:$stPad/4;
+			}
 		}
 	}
 }
@@ -118,20 +122,20 @@ h2 { font-size:1.1rem; font-weight:bold; font-style:italic; margin-bottom:2px; }
 		vertical-align:top;
 		width:calc(50% - 10px);
 
-		label { padding:$stPad/4; }
+		label { padding:$stPad/2; }
 		
 		&:nth-child(2n) { margin-left:10px; }
 	}
 	.alchemy_recipe label {
 		.main {
-			margin-bottom:$stPad/8;
+			margin-bottom:$stPad/4;
 
-			.name { font-size:0.7em; }
-			.reagents { font-size:0.6em; }
-			.dc { font-size:0.5em; }
+			.name { font-size:0.85em; }
+			.reagents { font-size:0.75em; }
+			.dc { font-size:0.65em; }
 		}
-		.desc { font-size:0.4rem; }
-		.effect, .effect-superb { font-size:0.5rem; }
+		.desc { font-size:0.5rem; margin-bottom:$stPad/4; }
+		.effect, .effect-superb { font-size:0.65rem; }
 	}
 	.ui { display:none; }
 	.alchemy_recipe.hidden { display:none; }

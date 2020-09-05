@@ -10,6 +10,7 @@ import { PageSpellEffectsComponent } from './page-spelleffects/page-spelleffects
 import { PagePsionicEffectsComponent } from './page-psioniceffects/page-psioniceffects.component';
 import { PagePerksComponent } from './page-perks/page-perks.component';
 import { PageAlchemyComponent } from './page-alchemy/page-alchemy.component';
+import { PageAlchemyReagentsComponent } from './page-alchemyreagents/page-alchemyreagents.component';
 import { MainNavComponent }	from './component-mainnav/mainnav.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MainNavComponent }	from './component-mainnav/mainnav.component';
 	PagePsionicEffectsComponent,
 	PagePerksComponent,
 	PageAlchemyComponent,
+	PageAlchemyReagentsComponent,
 	MainNavComponent
   ],
   imports: [

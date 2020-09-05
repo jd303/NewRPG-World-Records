@@ -28,7 +28,7 @@
 		<label [for]="'setoggle'+i">
 			<div class="main">
 				<div class="toggle"><input type="checkbox" checked="checked" (click)="toggleDisplayClass('se'+i)" [id]="'setoggle'+i" [attr.data-index]="i" data-type="recipe" #toggle></div>
-				<div class="name">{{rcp.name}} <span class="type">{{rcp.type}}</span></div>
+				<div class="name">{{rcp.name}}</div>
 				<div class="reagents">
 					<div class="reagent" *ngFor="let reagent of rcp.reagents" [ngStyle]="{ color:reagent.colour }">{{reagent.name}}</div>
 				</div>
@@ -38,5 +38,13 @@
 			<div class="desc">{{rcp.desc}}</div>
 			<div class="effect">{{rcp.effects}}</div> <div class="effect-superb" *ngIf="rcp.superb_effects">{{rcp.superb_effects}}</div>
 		</label>
+	</div>
+</div>
+<div class="col" id="reagents">
+	<h1>Alchemy: Reagents</h1>
+	<div class="ui">
+		<div class="option"><button (click)="flipToggles('reagents', true);" checked=checked>Toggle All</button></div>
+		<div class="option"><button (click)="flipToggles('reagents', false);" checked=checked>Toggle None</button></div>
+		<h2>Find Reagents with</h2>
 	</div>
 </div>

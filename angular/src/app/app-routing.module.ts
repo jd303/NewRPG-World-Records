@@ -11,16 +11,18 @@ import { PageSpellEffectsComponent }	from './page-spelleffects/page-spelleffects
 import { PagePsionicEffectsComponent }	from './page-psioniceffects/page-psioniceffects.component';
 import { PagePerksComponent } 			from './page-perks/page-perks.component';
 import { PageAlchemyComponent } 		from './page-alchemy/page-alchemy.component';
+import { PageAlchemyReagentsComponent } from './page-alchemyreagents/page-alchemyreagents.component';
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  DEFINE ROUTES
 const routes: Routes = [
-	{ path: '',				component: PageMainComponent },
-	{ path: 'home',			component: PageMainComponent },
-	{ path: 'spelleffects', component: PageSpellEffectsComponent },
-	{ path: 'psionics', 	component: PagePsionicEffectsComponent },
-	{ path: 'perks', 		component: PagePerksComponent },
-	{ path: 'alchemy', 		component: PageAlchemyComponent },
+	{ path: '',					component: PageMainComponent },
+	{ path: 'home',				component: PageMainComponent },
+	{ path: 'spelleffects', 	component: PageSpellEffectsComponent },
+	{ path: 'psionics', 		component: PagePsionicEffectsComponent },
+	{ path: 'perks', 			component: PagePerksComponent },
+	{ path: 'alchemy', 			component: PageAlchemyComponent },
+	{ path: 'alchemyreagents', 	component: PageAlchemyReagentsComponent },
 ];
 
 //////////////////////////////////////////////////////////////////////////////////////////

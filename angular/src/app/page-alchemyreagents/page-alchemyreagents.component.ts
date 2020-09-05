@@ -1,29 +1,29 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  IMPORTS
-import { Component, ViewChildren, ViewChild, QueryList } from '@angular/core';
+import { Component, ViewChildren, QueryList } from '@angular/core';
 import { recipe, RecipeList } from '../../assets/json/alchemical_recipes';
 import { ReagentProperties, ReagentProperty, reagent, ReagentList }	from '../../assets/json/alchemical_reagents';
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  DEFINE COMPONENT
 @Component({
-	selector: 'app-page-alchemy',
-	templateUrl: './page-alchemy.component.html',
-	styleUrls: ['./page-alchemy.component.scss']
+	selector: 'app-page-alchemyreagents',
+	templateUrl: './page-alchemyreagents.component.html',
+	styleUrls: ['./page-alchemyreagents.component.scss']
 })
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  EXPORT CLASS
-export class PageAlchemyComponent {
+export class PageAlchemyReagentsComponent {
 
 	// CHILDREN
 	@ViewChildren('toggle') toggles: QueryList<any>;
-	@ViewChild('reagentFilterForm', {static: false}) reagentFilterForm: HTMLFormElement;
 
 	// CORE 
 	all_recipes: recipe[];
 	recipes: recipe[];
 	all_reagents: reagent[];
+	reagents: reagent[];
 	reagent_properties: any;
 
 	reagent_filters: any;
@@ -32,6 +32,9 @@ export class PageAlchemyComponent {
 	constructor() {
 		this.all_recipes = RecipeList;
 		this.recipes = this.all_recipes.filter(_ => true);
+
+		this.all_reagents = ReagentList;
+		this.reagents = this.all_reagents.filter(_ => true);
 		this.reagent_properties = ReagentProperties;
 
 		this.reagent_filters = {};
@@ -76,6 +79,13 @@ export class PageAlchemyComponent {
 	}
 
 	////////////////////////////////////
+	filterReagents(recipe) {
+		let hasSource = true;
+		
+		return hasSource;
+	}
+
+	////////////////////////////////////
 	toggleDisplayClass(id, forceOn = null, forceOff = null) {
 		if (forceOn === true) document.getElementById(id).classList.remove("hidden");
 		else if (forceOff === false) document.getElementById(id).classList.add("hidden");
@@ -110,16 +120,7 @@ export class PageAlchemyComponent {
 			});
 		}
 	}
-
-	////////////////////////////////////
-	clearRecipeReagents() {
-		Object.keys(this.reagent_filters).forEach(key => {
-			this.reagent_filters[key] = 0;
-			this.reagentFilterForm.nativeElement.reset();
-		});
-		this.updateReagentFilter(null);
-	}
-
+	
 	////////////////////////////////////
 	prepareReagentCounter() {
 		return JSON.parse(JSON.stringify(this.reagent_properties));

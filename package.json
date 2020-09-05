@@ -6,7 +6,8 @@
 	"scripts": {
 		"serve_dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
 		"serve_prod": "tsc && node ./build/app.js",
-		"build_dev": "tsc; cd angular; ng build; cd ..; cp package.json ./build; cp package-lock.json ./build; cp .gitignore ./build; cp Procfile ./build"
+		"build_dev": "tsc; cd angular; ng build; cd ..; cp package.json ./build; cp package-lock.json ./build; cp .gitignore ./build; cp Procfile ./build",
+		"postinstall": "cd angulat; ng build;"
 	},
 	"author": "",
 	"license": "ISC",
