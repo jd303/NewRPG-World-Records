@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////  IMPORTS
-import { Component, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewChildren, ViewChild, QueryList } from '@angular/core';
 import { recipe, RecipeList } from '../../assets/json/alchemical_recipes';
 import { ReagentProperties, ReagentProperty, reagent, ReagentList }	from '../../assets/json/alchemical_reagents';
 
@@ -18,71 +18,42 @@ export class PageAlchemyReagentsComponent {
 
 	// CHILDREN
 	@ViewChildren('toggle') toggles: QueryList<any>;
+	@ViewChild('toggleForm', {static:false }) toggleForm: HTMLFormElement;
 
-	// CORE 
-	all_recipes: recipe[];
-	recipes: recipe[];
+	// CORE
 	all_reagents: reagent[];
 	reagents: reagent[];
 	reagent_properties: any;
-
-	reagent_filters: any;
+	
+	reagentPropertiesToggle = {}
 
 	////////////////////////////////////
 	constructor() {
-		this.all_recipes = RecipeList;
-		this.recipes = this.all_recipes.filter(_ => true);
+		this.reagent_properties = ReagentProperties;
+		Object.keys(this.reagent_properties).forEach(key => {
+			this.reagentPropertiesToggle[key] = { code:this.reagent_properties[key].code, name:this.reagent_properties[key].name, colour:this.reagent_properties[key].colour, toggled:true };
+		});
 
 		this.all_reagents = ReagentList;
-		this.reagents = this.all_reagents.filter(_ => true);
-		this.reagent_properties = ReagentProperties;
-
-		this.reagent_filters = {};
-		Object.keys(this.reagent_properties).forEach(key => {
-			this.reagent_filters[key] = 0;
-		});
+		this.reagents = this.all_reagents.filter(this.filterReagents.bind(this));
 	}
 
 	////////////////////////////////////
-	updateReagentFilter(event) {
-		if (event !== null) {
-			let key = event.target.getAttribute('data-reagentfilterkey');
-			this.reagent_filters[key] = parseInt(event.target.value);
-		}
-
-		if (!this.anyRecipeFiltersNonZero()) {
-			return this.recipes = this.all_recipes.filter(_ => true);
-		} else {
-			let reagentProps = this.prepareReagentCounter();
-			this.recipes = this.all_recipes.filter(this.filterRecipes.bind(this, reagentProps));
-		}
-		
+	updateReagentToggles() {
+		this.reagents = this.all_reagents.filter(this.filterReagents.bind(this));
 	}
 
 	////////////////////////////////////
-	filterRecipes(recipeReagents, recipe) {
-		this.resetReagentCounter(recipeReagents);
-		let satisfiesReagents = true;
-		
-		recipe.reagents.forEach(reag => {
-			recipeReagents[reag.code].count ++;
-		});
-
-		Object.keys(recipeReagents).forEach(propKey => {
-			if (recipeReagents[propKey].count > this.reagent_filters[propKey]) {
-				satisfiesReagents = false;
+	filterReagents(reagent) {
+		let satisfiesReagents = false;
+		Object.keys(this.reagentPropertiesToggle).forEach(key => {
+			if (this.reagentPropertiesToggle[key].toggled && reagent.properties.find(prop => prop.code == this.reagentPropertiesToggle[key].code)) {
+				satisfiesReagents = true;
 				return;
 			}
 		});
 
 		return satisfiesReagents;
-	}
-
-	////////////////////////////////////
-	filterReagents(recipe) {
-		let hasSource = true;
-		
-		return hasSource;
 	}
 
 	////////////////////////////////////
@@ -92,12 +63,6 @@ export class PageAlchemyReagentsComponent {
 		else {
 			document.getElementById(id).classList.toggle("hidden");
 		}
-	}
-
-	////////////////////////////////////
-	getShapeValue(shape) {
-		if (shape.value == null) return "-";
-		else return shape.value;
 	}
 
 	////////////////////////////////////
@@ -120,26 +85,10 @@ export class PageAlchemyReagentsComponent {
 			});
 		}
 	}
-	
-	////////////////////////////////////
-	prepareReagentCounter() {
-		return JSON.parse(JSON.stringify(this.reagent_properties));
-	}
 
-	////////////////////////////////////
-	resetReagentCounter(reagentCounter) {
-		Object.keys(reagentCounter).forEach(key => {
-			reagentCounter[key].count = 0;
-		});
-	}
-
-	////////////////////////////////////
-	anyRecipeFiltersNonZero() {
-		let val: number = 0;
-		Object.keys(this.reagent_filters).forEach(key => {
-			val += this.reagent_filters[key];
-		});
-
-		return val > 0;
+	//////////////////////////////
+	clearReagentFilter() {
+		this.toggleForm.nativeElement.reset();
+		this.updateReagentToggles();
 	}
 }

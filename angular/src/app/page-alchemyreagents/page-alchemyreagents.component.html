@@ -12,39 +12,28 @@
 </div>
 
 <div class="col" id="recipes">
-	<h1>Alchemy: Recipes</h1>
+	<h1>Alchemy: Reagents</h1>
 	<div class="ui">
 		<div class="option"><button (click)="flipToggles('recipe', true);" checked=checked>Toggle All</button></div>
 		<div class="option"><button (click)="flipToggles('recipe', false);" checked=checked>Toggle None</button></div>
-		<h2>Find Recipes with</h2>
-		<form name="recipeReagentForm" #reagentFilterForm>
-			<div class="recipe-filter" *ngFor="let rp of reagent_properties | keyvalue">
-				<span [ngStyle]="{ color: rp.value.colour }">{{rp.value.name}}</span> <input type="number" [attr.data-reagentfilterkey]="rp.key" value="0" (change)="updateReagentFilter($event)">
-			</div>
-			<button (click)="clearRecipeReagents();" checked=checked>Clear</button>
-		</form>
+		<h2>Find Reagents with</h2>
+		<form name="toggleForm" #toggleForm><div class="option" *ngFor="let prop of reagentPropertiesToggle | keyvalue"><input type="checkbox" [attr.id]="'prop-'+prop.value.code" name="input" (change)="updateReagentToggles(prop.value.code);" [(ngModel)]="prop.value.toggled"><label [attr.for]="'prop-'+prop.value.code"  [ngStyle]="{ color: prop.value.colour }">{{prop.value.name}}</label></div><button (click)="clearReagentFilter();" checked=checked>Clear</button></form>
 	</div>
-	<div class="alchemy_recipe" *ngFor="let rcp of recipes; let i = index" [id]="'se'+i">
+	<div class="alchemy_reagent" *ngFor="let rcp of reagents; let i = index" [id]="'se'+i">
 		<label [for]="'setoggle'+i">
 			<div class="main">
-				<div class="toggle"><input type="checkbox" checked="checked" (click)="toggleDisplayClass('se'+i)" [id]="'setoggle'+i" [attr.data-index]="i" data-type="recipe" #toggle></div>
-				<div class="name">{{rcp.name}}</div>
-				<div class="reagents">
-					<div class="reagent" *ngFor="let reagent of rcp.reagents" [ngStyle]="{ color:reagent.colour }">{{reagent.name}}</div>
+				<div class="left">
+					<div class="toggle"><input type="checkbox" checked="checked" (click)="toggleDisplayClass('se'+i)" [id]="'setoggle'+i" [attr.data-index]="i" data-type="recipe" #toggle></div>
+					<div class="name">{{rcp.name}}</div>
 				</div>
-				<div class="dc">{{rcp.dc}}</div>
-				<div class="time"><img src="assets/images/ico.time.svg">{{rcp.time}}</div>
+				<div class="right">
+					<div class="properties">
+						<div class="property" *ngFor="let prop of rcp.properties" [ngStyle]="{ color:prop.colour }">{{prop.name}}</div>
+					</div>
+					<div class="rar" [attr.data-rarity]="rcp.rarity">{{rcp.rarity}}</div>
+				</div>
 			</div>
 			<div class="desc">{{rcp.desc}}</div>
-			<div class="effect">{{rcp.effects}}</div> <div class="effect-superb" *ngIf="rcp.superb_effects">{{rcp.superb_effects}}</div>
 		</label>
-	</div>
-</div>
-<div class="col" id="reagents">
-	<h1>Alchemy: Reagents</h1>
-	<div class="ui">
-		<div class="option"><button (click)="flipToggles('reagents', true);" checked=checked>Toggle All</button></div>
-		<div class="option"><button (click)="flipToggles('reagents', false);" checked=checked>Toggle None</button></div>
-		<h2>Find Reagents with</h2>
 	</div>
 </div>

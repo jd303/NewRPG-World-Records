@@ -221,7 +221,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -235,7 +238,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -249,7 +255,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -263,7 +272,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -277,7 +289,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -291,7 +306,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -305,7 +323,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -319,7 +340,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -333,7 +357,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -347,7 +374,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -361,7 +391,10 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"1 damage + minor effect" },
 			{ dc:3, effect:"2 damage + minor effect" },
 			{ dc:4, effect:"3 damage + moderate effect" },
-			{ dc:5, effect:"4 damage + moderate effect" }
+			{ dc:4, effect:"1 damage + duration is extended to 6 hours" },
+			{ dc:5, effect:"4 damage + moderate effect" },
+			{ dc:5, effect:"2 damage + duration is extended to 6 hours" },
+			{ dc:6, effect:"3 damage + duration is extended to 6 hours" }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},

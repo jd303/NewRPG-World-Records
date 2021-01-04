@@ -16,7 +16,7 @@ export const RecipeList: recipe[] = [
 		name: "Vigor Tonic",
 		desc: "A Vigor Tonic is a small, lightly coloured solution that lasts a few months before settling into a sediment and becoming inert.",
 		time: "60m",
-		effects: "When consumed, restores 5 Stamina.  Counts as a Stamina Heal.",
+		effects: "When consumed, restores 4 Stamina.  Counts as a Stamina Heal.",
 		reagents: [ReagentProperties.Vig, ReagentProperties.Vig, ReagentProperties.Vig],
 		dc: 2
 	},
@@ -25,7 +25,7 @@ export const RecipeList: recipe[] = [
 		name: "Peptinne",
 		desc: "This thick solution creates a warmth in the stomach and lungs and puts pep in your step.",
 		time: "90m",
-		effects: "When consumed, applies 4 temporary Stamina.",
+		effects: "When consumed, applies 3 temporary Stamina.",
 		reagents: [ReagentProperties.Vig, ReagentProperties.The, ReagentProperties.Exc],
 		dc: 2
 	},
@@ -34,7 +34,7 @@ export const RecipeList: recipe[] = [
 		name: "Mediciner’s Solution",
 		desc: "A large, sipping solution that starts sweet and ends bitter.",
 		time: "120m",
-		effects: "When consumed, heals 1 more Wound and 6 more Stamina during a long rest.",
+		effects: "When consumed, heals 1 more Wound and 5 more Stamina during a long rest.",
 		reagents: [ReagentProperties.Vig, ReagentProperties.For, ReagentProperties.For],
 		dc: 3
 	},
@@ -235,6 +235,15 @@ export const RecipeList: recipe[] = [
 		effects: "Creates a hardy paint that fades and disappears within a specified time, up to 24 hours.  Has enough for 10 applications.",
 		reagents: [ReagentProperties.Hyd, ReagentProperties.Oil],
 		dc: 1
+	},
+	{
+		type: "Misc",
+		name: "Perfume",
+		desc: "A decorative bottle of sweetly scented perfume, with a small decorative stopper to dab it on key areas.",
+		time: "15m",
+		effects: "Smells lovely.",
+		reagents: [ReagentProperties.Sce, ReagentProperties.Hyd],
+		dc: 3
 	},
 	{
 		type: "Misc",

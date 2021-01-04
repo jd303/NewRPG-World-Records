@@ -85,12 +85,6 @@ export class PageAlchemyComponent {
 	}
 
 	////////////////////////////////////
-	getShapeValue(shape) {
-		if (shape.value == null) return "-";
-		else return shape.value;
-	}
-
-	////////////////////////////////////
 	flipToggles(which, state) {
 		if (state === true) {
 			this.toggles.forEach(toggl => {

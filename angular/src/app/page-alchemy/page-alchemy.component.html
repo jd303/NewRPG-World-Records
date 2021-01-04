@@ -16,10 +16,10 @@
 	<div class="ui">
 		<div class="option"><button (click)="flipToggles('recipe', true);" checked=checked>Toggle All</button></div>
 		<div class="option"><button (click)="flipToggles('recipe', false);" checked=checked>Toggle None</button></div>
-		<h2>Find Recipes with</h2>
+		<h2>Find Recipes with my Reagents</h2>
 		<form name="recipeReagentForm" #reagentFilterForm>
 			<div class="recipe-filter" *ngFor="let rp of reagent_properties | keyvalue">
-				<span [ngStyle]="{ color: rp.value.colour }">{{rp.value.name}}</span> <input type="number" [attr.data-reagentfilterkey]="rp.key" value="0" (change)="updateReagentFilter($event)">
+				<span [ngStyle]="{ color: rp.value.colour }">{{rp.value.name}}</span> <input type="number" [attr.data-reagentfilterkey]="rp.key" value="0" (change)="updateReagentFilter($event)" min=0>
 			</div>
 			<button (click)="clearRecipeReagents();" checked=checked>Clear</button>
 		</form>
@@ -36,7 +36,7 @@
 				<div class="time"><img src="assets/images/ico.time.svg">{{rcp.time}}</div>
 			</div>
 			<div class="desc">{{rcp.desc}}</div>
-			<div class="effect">{{rcp.effects}}</div> <div class="effect-superb" *ngIf="rcp.superb_effects">{{rcp.superb_effects}}</div>
+			<div class="effect">{{rcp.effects}}</div>
 		</label>
 	</div>
 </div>
