@@ -203,7 +203,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Inspired Shot",
-		desc: "If you beat the Total DC when using Volley resolve damage on that taret, then you may describe and resolve a new Multishot Move against any other targets."
+		desc: "If you beat the Total DC when using Volley resolve damage on that taret, then you may describe and resolve a new Multishot Move against any other targets.  This subsequent Multishot can only use Volley you have not yet expended this round."
 	},
 	{
 		category: "combat",
