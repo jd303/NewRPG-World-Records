@@ -157,6 +157,12 @@ export const ReagentList: reagent[] = [
 		rarity: Rarity.U
 	},
 	{
+		name: "Fallisroot",
+		desc: "A gnarled greyish root, which smells of pepper and smoke.  Once it grows past 6cms it is relatively useless.",
+		properties: [ReagentProperties.For, ReagentProperties.Exc, ReagentProperties.Vig],
+		rarity: Rarity.R
+	},
+	{
 		name: "Seekhale",
 		desc: "Also: Seekhalish Flower.  A small shrub which blooms into vivid white and gold mottled flowers.  An Elvish traditional flower used in political (peace making, crownings, diplomacy etc) and education which represents Political Groups.  Has a pleasant aquine, woody, forest smell.",
 		properties: [ReagentProperties.For, ReagentProperties.Soo, ReagentProperties.Sce, ReagentProperties.Oil, ReagentProperties.Hyd],
