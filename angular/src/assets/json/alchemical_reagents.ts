@@ -158,7 +158,7 @@ export const ReagentList: reagent[] = [
 	},
 	{
 		name: "Fallisroot",
-		desc: "A gnarled greyish root, which smells of pepper and smoke.  Once it grows past 6cms it is relatively useless.",
+		desc: "A gnarled greyish root, which smells of pepper and smoke.  Once it grows past 6cms it is relatively useless.  It is also considered illegal, as it incites rage and adrenal responses in consumers when prepared properly.",
 		properties: [ReagentProperties.For, ReagentProperties.Exc, ReagentProperties.Vig],
 		rarity: Rarity.R
 	},
