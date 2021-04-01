@@ -18,7 +18,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Multi-weapon fighting",
-		desc: "If you fight with two weapons, you may add +1 COMB to each of the attacks you declare."
+		desc: "If you fight with two or more weapons at once, you may add +1 COMB to each of the attacks you declare."
 	},
 	{
 		category: "combat",
@@ -33,7 +33,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Heightened Awareness",
-		desc: "When fighting invisible creatures they no longer gain a bonus to DR against you."
+		desc: "When fighting invisible creatures they no longer gain a bonus to DR against you.  You also gain +1 to Defy Danger Move rolls."
 	},
 	{
 		category: "combat",
@@ -78,7 +78,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Gritted Teeth",
-		desc: "Any time you would take a stamina damage, you may reduce it by up to 2 stamina by taking a Light Debility to a stat of the DM’s choice.  This does not work if you have 6 or more debilities."
+		desc: "Any time you would take a stamina damage, you may reduce it by up to 2 stamina by taking a Light Debility to a stat of the DM’s choice.  This does not work if you have 6 or more Debilities."
 	},
 	{
 		category: "combat",
@@ -98,7 +98,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Setup Strike",
-		desc: "When you successfully hit a target with a Combat or Ranged Combat move, nominate an ally.  Their next attack against your target gains +2 COMB."
+		desc: "When you successfully hit a target with a Combat or Ranged Combat Move, nominate an ally.  Their next attack against your target gains +2 COMB."
 	},
 	{
 		category: "combat",
@@ -113,7 +113,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Zen flow",
-		desc: "While you wear no armour, have an Acrobatics skill of 5 or higher, a COMB of 5 or higher, and a DEX bonus of 2 or higher, you gain 2 DR that acts as armour."
+		desc: "While you wear no armour and have an Acrobatics skill of 6 or higher, you gain 2 DR that acts as armour."
 	},
 	{
 		category: "combat",
@@ -123,7 +123,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Deflect Arrows",
-		desc: "If the DM hits you with a simple ranged attack that you could see coming and you have 5 points in the Acrobatics Skill or a DEX bonus of 3, you may attempt to Defy Danger against the ranged attack.  However your options are: * Reduce any damage by 2 Stamina or 1 Wound (this may be taken multiple times).  * Shrug off all damage but you are Disadvantaged for your next turn."
+		desc: "Once per combat, if the DM hits you with a simple ranged attack that you could see coming and you have 5 points in the Acrobatics Skill or a DEX bonus of 3, you may attempt to Defy Danger against the ranged attack with a +4 Bonus.  However your options are: * Reduce any damage by 3 Stamina or 1 Wound (this may be taken multiple times).  * Shrug off all damage but you are Disadvantaged for your next turn."
 	},
 	{
 		category: "combat",
@@ -143,7 +143,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Roaring Defense",
-		desc: "Once per combat, If an opponent attacks you and fails to deal any Wound damage, you may describe a free and immediate Provoke/Intimidate Move at them with a +3 bonus."
+		desc: "Once per combat, if an opponent attacks you and fails to deal any Wound damage, you may describe a free and immediate Provoke/Intimidate Move at them with a +3 bonus."
 	},
 	{
 		category: "combat",
@@ -168,7 +168,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Follow up",
-		desc: "After making a successful Trip/Disarm or Ranged Trip/Disarm you may immediately describe and resolve a Hack and Slash or Volley Move at a -2 Penalty."
+		desc: "After making a successful Trip/Disarm or Ranged Trip/Disarm you may immediately describe and resolve a Hack and Slash or Volley Move at a -3 Penalty."
 	},
 	{
 		category: "combat",
@@ -178,7 +178,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Exposed Weakpoint",
-		desc: "Once per combat you may describe and resolve a Backstab Move with a +2 bonus on creatures who are moved unwillingly by a Move."
+		desc: "Once per combat you may describe and resolve a Backstab Move with a +3 bonus on creatures who are moved unwillingly by a Move."
 	},
 	{
 		category: "combat",
@@ -187,8 +187,13 @@ export const perks: perk_def[] = [
 	},
 	{
 		category: "combat",
+		name: "King of the Hill",
+		desc: "When you move a combatant as part of a successful Hack and Slash, you may move them up to 2 squares instead of just 1, but you must still move with them."
+	},
+	{
+		category: "combat",
 		name: "Charging Manoeuvre",
-		desc: "When you engage a creature at least 15 foot from you, you gain +1 to rolls for the Trip/Disarm and Grapple Moves.  If you succeed, you may also move your target into an unoccupied adjacent square and you may follow even if it exceeds your movement."
+		desc: "When you engage a creature at least 15 foot from you, you gain +1 to rolls for the Trip/Disarm and Grapple Moves."
 	},
 	{
 		category: "combat",
@@ -198,17 +203,17 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Important Call",
-		desc: "If you only move in a turn, studying your target, you make resolve the Called Shot move on your next turn at a +3 bonus."
+		desc: "If you only move in a turn, studying your target, you may resolve the Called Shot move on your next turn at a +3 bonus."
 	},
 	{
 		category: "combat",
 		name: "Inspired Shot",
-		desc: "If you beat the Total DC when using Volley resolve damage on that taret, then you may describe and resolve a new Multishot Move against any other targets.  This subsequent Multishot can only use Volley you have not yet expended this round."
+		desc: "If you beat the Total DC when using Volley, resolve damage on that target, then you may describe and resolve a new Volley Move against any other targets.  This subsequent Move can only use Volley you have not yet expended this round."
 	},
 	{
 		category: "combat",
 		name: "Combat Dancer",
-		desc: "As part of another action, you may use the Physical Deception skill in combat to produce a deceptive action.  If you beat the Partial DC (your chosen DC must equal or exceed the opponent's SR, DR or MR (DM's choice)), you may reduce their DR, SR or MR by 1 (your choice) until the end of their next turn. They may not be easily fooled next time."
+		desc: "Once per combat, when using Hack and Slash against an opponent, or using Defend near one, you may use the Physical Deception skill to confuse them.  If you beat the Partial DC (your chosen DC must equal or exceed the opponent's SR, DR or MR (DM's choice)), your opponent is disadvantaged for 1 turn."
 	},
 	{
 		category: "combat",
@@ -246,7 +251,7 @@ export const perks: perk_def[] = [
 	{
 		category: "magic",
 		name: "One with the flow",
-		desc: "Your second source does not incur a -2 MAG."
+		desc: "Your second source incurs only -3 MAG instead of -4."
 	},
 	{
 		category: "magic",
@@ -276,22 +281,22 @@ export const perks: perk_def[] = [
 	{
 		category: "magic",
 		name: "Combat Wits",
-		desc: "You may use the Detect Magic Move rapidly during combat or in tense situations, and when you do, you gain +1.  You may also ask the question: “What source do magic users have access to?”"
+		desc: "Once per combat, you may use the Detect Magic Move rapidly during combat or in tense situations, and when you do, you gain +1.  You may also ask the question: “What source do magic users have access to?”"
 	},
 	{
 		category: "magic",
 		name: "Permanent Magics",
-		desc: "A Spell Effect and Shape that you’ve successfully cast no longer has a maximum duration.  You cannot cast another spell that has a duration while this Spell Effect lingers.  The spell will still end if you go to sleep, stop concentrating, if your shape is no longer satisfied (such as a Single Visible Target no longer being visible) or are knocked unconscious, and it still takes up a concentration slot.  You may not apply this to a spell effect that has an Instant duration.  You may not apply this perk to a Spell Effect and Shape Combination that is higher than 1/5th of your total MAG points.  For example, if you have 10 MAG points, you may apply this to a Spell Effect and Shape with a maximum DC combination of 2."
+		desc: "A Spell Effect and Shape that you’ve successfully cast no longer has a maximum duration.  You cannot cast another spell that has a duration while this Spell Effect lingers, even if you have multiple concentrations.  The spell will still end if you go to sleep, stop concentrating, if your shape is no longer satisfied (such as a Single Visible Target no longer being visible) or are knocked unconscious.  You may not apply this to a spell effect that has an Instant duration.  You may not apply this perk to a Spell Effect and Shape Combination that is higher than 1/5th of your total MAG points.  For example, if you have 10 MAG points, you may apply this to a Spell Effect and Shape with a maximum DC combination of 2."
 	},
 	{
 		category: "magic",
 		name: "Lay on Hands",
-		desc: "Once per day when you use the Knowledge: Medicine Move on a subject, you may spend a Stamina to also heal them of 4 stamina if you pass the Partial DC.  This requires the Granted or Yearns source."
+		desc: "Once per day when you use the Knowledge: Medicine Move on a subject, you may spend a Stamina to also heal them of 4 stamina if you pass the Partial DC.  This requires the Granted or Yearns source, and does not count as a Heal."
 	},
 	{
 		category: "magic",
 		name: "Ritualistic Casting",
-		desc: "For each 6 minutes you spend casting a spell, you cast your spell with +1 MAG.  This benefit can not raise the maximum DC you can attempt to cast."
+		desc: "For each 6 minutes you spend casting a spell, you cast your spell with +1 MAG, to a maximum of +5.  This benefit can not raise the maximum DC you can attempt to cast."
 	},
 	{
 		category: "magic",
@@ -300,8 +305,13 @@ export const perks: perk_def[] = [
 	},
 	{
 		category: "magic",
+		name: "Fluid Shape",
+		desc: "You maintain other shapes of form more easily. Instead of spending 1 Stamina per minute when shapechanged, you spend 1 Stamina per 5 minutes."
+	},
+	{
+		category: "magic",
 		name: "Shed Damage",
-		desc: "When receiving Stamina or Wound damage and you are in a different form provided by Shapeshifting, you may negate the damage by shifting back to your original form.  This uses a healing attempt for either Stamina or Wounds, depending on the damage negated."
+		desc: "When receiving Stamina or Wound damage and you are in a different form provided by Shapeshifting, you may negate the damage by shifting back to your original form.  Mark a Heal when negating this damage."
 	},
 	{
 		category: "magic",
@@ -361,12 +371,12 @@ export const perks: perk_def[] = [
 	{
 		category: "psionic",
 		name: "Mental Arithmetic",
-		desc: "When a Psionic Power's DC is calculated and ends in a 0.5, you may round it down instead of up."
+		desc: "When a Psionic Power's DC is calculated and ends in a fraction (such as 0.5), you may round it down instead of up."
 	},
 	{
 		category: "psionic",
 		name: "Physical Channels",
-		desc: "If you have at least 1 point in Psychometabolism then once per combat when you incur Stamina loss you may remove 1 Burnout point per Stamina you lost."
+		desc: "If you have at least 1 point in Psychometabolism then once per combat when you incur Stamina loss you may instead remove 1 Burnout point per Stamina you lost."
 	},
 
 
@@ -394,12 +404,12 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Light Sleeper",
-		desc: "You need 2 hours less sleep per night, and any ability that regenerates during rest requires 2 hours less (minimum of 1 hour)."
+		desc: "You need 2 hours less sleep per night, and any effect of sleeping requires 2 hours less (minimum of 4 hours)."
 	},
 	{
 		category: "general",
 		name: "Fast Healing",
-		desc: "When regaining Stamina, you regain an additional 1."
+		desc: "When regaining any amount of Stamina, you regain an additional 1."
 	},
 	{
 		category: "general",
@@ -414,7 +424,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Quick like the wind",
-		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain 1 Defensive Rating equivalent to Light Armour use."
+		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain +1 DR."
 	},
 	{
 		category: "general",
@@ -429,7 +439,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Danger seeker",
-		desc: "When you are below half your Wounds or below a third of your Stamina, all rolls gain +1."
+		desc: "When you are below half your Wounds or your Stamina, all rolls gain +1."
 	},
 	{
 		category: "general",
@@ -444,7 +454,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Healer",
-		desc: "When performing a Long Rest, you can forgo a full rest yourself to tend to up to 10 others.  You regain half your stamina, but each of the others regains an additional 4.  Alternatively your wounded can instead regain a wound if you can provide 3gp of medicinal herbs each."
+		desc: "When performing a Long Rest, you can forgo a full rest yourself to tend to up to 10 others.  You regain half your stamina, but each of the others regains an additional 6 or 1 Wound.  You need appropriate materials to provide this care, such as bandages, and perhaps even medicinal herbs."
 	},
 	{
 		category: "general",
