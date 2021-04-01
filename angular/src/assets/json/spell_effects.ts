@@ -14,389 +14,213 @@ interface spell_effect_def {
 export const spell_effects: spell_effect_def[] = [
 	{
 		name: "Create Energy: Fire",
-		desc: "Create fire in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to start to burn.",
-		save: null,
-		time: "1 Min",
+		desc: "Create fire in the shape you’ve chosen, dealing damage or creating a firey effect.",
+		save: "DEX (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:2, effect:"Effect: Target catches on fire" },
+			{ dc:2, effect:"Effect: Water evaporates and ice melts" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Acid",
-		desc: "Create acid in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to corrode and become damaged.",
-		save: null,
-		time: "1 Min",
+		desc: "Create acid in the shape you’ve chosen, dealing damage.  Effect is: targets or their gear have a percentage chance to corrode and become damaged.",
+		save: "DEX (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:2, effect:"Effect: Small or weak items near the target corrode and become difficult to touch" },
+			{ dc:3, effect:"Effect: Acid splashes to the floor, 1 Damage per second to anyone there" }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
 	{
-		name: "Create Energy: Necrotic",
-		desc: "Create necrotic energy in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to decay.",
-		save: null,
-		time: "1 Min",
+		name: "Create Energy: Negative",
+		desc: "Create negative, darkness or necrotic energy in the shape you’ve chosen, dealing damage.",
+		save: "CON (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:2, effect:"Effect: Fill your shape with magical darkness" },
+			{ dc:2, effect:"Effect: Plant, clothing and even flesh starts to decay slowly" }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Create Energy: Lightning",
-		desc: "Create lighting in the shape you’ve chosen, dealing damage.  May spread via conductive material and water.  Effect is: targets have a percentage chance to be stunned.",
-		save: null,
-		time: "1 Min",
+		desc: "Create lighting in the shape you’ve chosen, dealing damage.  May spread via conductive material and water.",
+		save: "WIS (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:3, effect:"Effect: Stun those affected" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
 	{
 		name: "Create Energy: Cold",
-		desc: "Create cold in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to be slowed or frozen.",
-		save: null,
-		time: "1 Min",
+		desc: "Create cold in the shape you’ve chosen, dealing damage.",
+		save: "STR (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:1, effect:"Effect: Nearby water and items freeze" },
+			{ dc:5, effect:"Effect: Living targets of your spell freeze for 2 rounds" }
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Sound",
-		desc: "Create sound in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to be deafened or to shatter, if they do not save.",
-		save: "CON",
-		time: "1 Min",
+		desc: "Create sound in the shape you’ve chosen, dealing damage.",
+		save: "CON (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:1, effect:"Effect: Nearby brittle items may shatter" },
+			{ dc:3, effect:"Effect: You deafen your targets for 4 rounds" }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Radiant",
 		desc: "Create radiant light in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to be blinded or to be scorched, if they do not save.",
-		save: "CON",
-		time: "1 Min",
+		save: "CON (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:1, effect:"Effect: Your target emits light in a 5 square radius" },
+			{ dc:3, effect:"Effect: You target(s) are blinded for 4 rounds" }
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Create Energy: Laceration",
-		desc: "Create kinetic lacerations in the shape you’ve chosen, dealing damage.  Effect is: targets have a chance to be shredded and damaged.",
-		save: null,
-		time: "1 Min",
+		desc: "Create kinetic lacerations in the shape you’ve chosen, dealing damage.",
+		save: "DEX (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:0, effect:"Effect: Small items and cloths rip and shred" },
+			{ dc:2, effect:"Effect: Your target starts to bleed: 1 Damage per round for 3 rounds" }
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
 	{
 		name: "Create Energy: Arcane",
-		desc: "Create arcane energy in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to experience random entropic effects.",
-		save: null,
-		time: "1 Min",
+		desc: "Create arcane energy in the shape you’ve chosen, dealing damage.",
+		save: "CHA (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:1, effect:"Effect: Your target takes D6/2 additional damage (rounded down)" }
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Create Energy: Wind",
-		desc: "Create wind in the shape you’ve chosen, dealing damage.  Effects are: targets have a percentage chance to be pushed or pulled around.",
-		save: null,
-		time: "1 Min",
+		desc: "Create wind in the shape you’ve chosen, dealing damage.",
+		save: "STR (Effect)",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
+			{ dc:1, effect:"1 Damage" },
+			{ dc:2, effect:"2 Damage" },
+			{ dc:3, effect:"4 Damage" },
+			{ dc:4, effect:"6 Damage" },
+			{ dc:5, effect:"8 Damage" },
+			{ dc:6, effect:"10 Damage" },
+			{ dc:4, effect:"2 Damage per round for 5 rounds" },
+			{ dc:6, effect:"3 Damage per round for 5 rounds" },
+			{ dc:2, effect:"Effect: Push your target with the wind up to 2 squares" },
+			{ dc:3, effect:"Effect: The wind continues for 1 minute, adding +2 DR when defending against projectiles" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
-		name: "Create Energy: Poison",
-		desc: "Create poison in the shape you’ve chosen, dealing damage.  Effect is: targets have a percentage chance to be sickened.",
+		name: "Imbue Energy",
+		desc: "You can imbue an item with a Create Energy spell effect's damage and effects.  That item applies the effects on strike or on touch by any living creature (your choice).",
 		save: null,
 		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
+		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"1 Damage or 15% effect chance" },
-			{ dc:1, effect:"2 Damage or 30% effect chance" },
-			{ dc:2, effect:"4 Damage or 45% effect chance" },
-			{ dc:3, effect:"6 Damage or 60% effect chance" },
-			{ dc:4, effect:"8 Damage or 75% effect chance" },
-			{ dc:5, effect:"10 Damage or 90% effect chance" },
-			{ dc:3, effect:"2 Damage per round for 5 rounds." },
-			{ dc:5, effect:"3 Damage per round for 5 rounds." }
-		],
-		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
-	},
-
-	{
-		name: "Imbue Item: Fire",
-		desc: "Embed fire into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to start to burn.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
+			{ dc:1, effect:"The item can expend the effect three times." },
+			{ dc:2, effect:"The item can expend the effect any number of times, at half the damage, half the effect, or twice the Save." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
-	},
-	{
-		name: "Imbue Item: Acid",
-		desc: "Embed acid into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to corrode and become damaged.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
-	},
-	{
-		name: "Imbue Item: Necrotic",
-		desc: "Embed necrotic into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to decay.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
-	},
-	{
-		name: "Imbue Item: Lightning",
-		desc: "Embed lightning into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to be stunned.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
-	},
-	{
-		name: "Imbue Item: Cold",
-		desc: "Embed cold into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to be slowed or frozen.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
-	},
-	{
-		name: "Imbue Item: Sound",
-		desc: "Embed sound into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to be deafened or to shatter, if they do not save.",
-		save: "CON",
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
-	},
-	{
-		name: "Imbue Item: Radiant",
-		desc: "Embed radiant into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to be blinded or to be scorched, if they do not save.",
-		save: "CON",
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
-	},
-	{
-		name: "Imbue Item: Laceration",
-		desc: "Embed lacerations into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a chance to be shredded and damaged.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
-	},
-	{
-		name: "Imbue Item: Arcane",
-		desc: "Embed arcane into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to experience random entropic effects.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
-	},
-	{
-		name: "Imbue Item: Wind",
-		desc: "Embed wind into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effects are: targets have a percentage chance to be pushed or pulled around.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
-	},
-	{
-		name: "Imbue Item: Poison",
-		desc: "Embed poison into an item or weapon, which expends itself on a creature or entities that satisfies a trigger, (e.g. touch, wounded by, a noise was made, or approached within a few meters).  Effect is: targets have a percentage chance to be sickened.",
-		save: null,
-		time: "1 Min",
-		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"1 damage or 15% effect chance" },
-			{ dc:3, effect:"2 damage or 30% effect chance" },
-			{ dc:4, effect:"3 damage or 45% effect chance" },
-			{ dc:5, effect:"4 damage or 60% effect chance" },
-			{ dc:4, effect:"1 damage and duration is extended to 6 hours" },
-			{ dc:5, effect:"2 damage and duration is extended to 6 hours" },
-			{ dc:6, effect:"3 damage and duration is extended to 6 hours" }
-		],
-		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
 
 	{
@@ -406,12 +230,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -422,12 +246,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -438,12 +262,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -454,12 +278,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -470,12 +294,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -486,12 +310,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -502,12 +326,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
@@ -518,12 +342,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
@@ -534,12 +358,12 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
@@ -550,24 +374,24 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Min",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:2, wll:2, bem:1, pln:null },
 		effects: [
-			{ dc:0, effect:"Reduce effects" },
-			{ dc:1, effect:"Reduce damage by 1" },
-			{ dc:2, effect:"Reduce damage by 2" },
-			{ dc:3, effect:"Reduce damage by 3" },
-			{ dc:4, effect:"Reduce damage by 4" },
-			{ dc:5, effect:"Reduce damage by 5" },
+			{ dc:1, effect:"Reduce effects" },
+			{ dc:2, effect:"Reduce damage by 1" },
+			{ dc:3, effect:"Reduce damage by 2" },
+			{ dc:4, effect:"Reduce damage by 3" },
+			{ dc:5, effect:"Reduce damage by 4" },
+			{ dc:6, effect:"Reduce damage by 5" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
 	
 	{
 		name: "Destroy Matter",
-		desc: "Destroy matter and life, disintegrating it’s fundamental makeup.  Applying this effect to life-based matter may be a slow effect, requiring concentration and withering it away over time.",
+		desc: "Destroy matter and life, disintegrating it’s fundamental makeup.  Applying this effect is slower on living matter and tough materials, requiring concentration and withering it away over time.",
 		save: "CON",	
 		time: "Moments",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:null, vol:null, wll:null, bem:2, pln:null },
 		effects: [
-			{ dc:2, effect:"You destroy non-life matter" },
+			{ dc:4, effect:"You destroy non-life matter" },
 			{ dc:5, effect:"You destroy living matter" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:false }
@@ -579,9 +403,21 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:null, tch:2, svt:3, cne:5, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:7, effect:"Target(s) die" },
+			{ dc:8, effect:"Target(s) die" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:true, yearns:false, granted:true }
+	},
+	{
+		name: "Poisoning",
+		desc: "Afflict those in the shape you’ve chosen with poison.",
+		save: "CON",
+		time: "60 Secs",
+		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:3, bem:2, pln:null },
+		effects: [
+			{ dc:4, effect:"2 Damage per round" },
+			{ dc:6, effect:"3 Damage per round" }
+		],
+		sources: { innate:false, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
 	{
 		name: "Heal Stamina",
@@ -607,9 +443,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Restore 1 Wound" },
-			{ dc:4, effect:"Restore 2 Wounds" },
-			{ dc:5, effect:"Restore 3 Wounds" },
+			{ dc:4, effect:"Restore 1 Wound" },
+			{ dc:5, effect:"Restore 2 Wounds" },
+			{ dc:6, effect:"Restore 3 Wounds" },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -620,9 +456,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Minute",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"Up to 5 stamina and 1 Wound are redirected to a target." },
-			{ dc:2, effect:"Up to 10 stamina and 2 Wounds are redirected to a target." },
-			{ dc:3, effect:"Up to 20 stamina and 5 Wounds are redirected to a target." }
+			{ dc:4, effect:"Up to 5 stamina and 1 Wound are redirected to a target." },
+			{ dc:5, effect:"Up to 10 stamina and 2 Wounds are redirected to a target." },
+			{ dc:6, effect:"Up to 20 stamina and 5 Wounds are redirected to a target." }
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -633,37 +469,37 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1 Minute",
 		shapes: { cst:null, tch:1, svt:2, cne:2, aur:3, vol:3, wll:3, bem:2, pln:5 },
 		effects: [
-			{ dc:3, effect:"You redirect 1 Stamina per source of pain." },
-			{ dc:5, effect:"You redirect 2 Stamina or 1 Wound per source of pain." },
-			{ dc:7, effect:"You redirect 3 Stamina or 2 Wounds per source of pain." }
+			{ dc:4, effect:"You redirect 1 Stamina per source of pain." },
+			{ dc:6, effect:"You redirect 2 Stamina or 1 Wound per source of pain." },
+			{ dc:8, effect:"You redirect 3 Stamina or 2 Wounds per source of pain." }
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
 	{
 		name: "Restoration",
-		desc: "Remove or suppress a reduction in a statistic, speed, or skill.",
+		desc: "Remove or suppress a debility.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"Maladies have no effect this turn." },
-			{ dc:2, effect:"Maladies go dormant for 4 hours." },
-			{ dc:3, effect:"Remove 1 malady.  Subject marks a heal." },
-			{ dc:4, effect:"Remove 1 malady.  Subject doesn't mark a heal." },
+			{ dc:0, effect:"1 Debility (or 3 Light ones) have no effect this turn." },
+			{ dc:2, effect:"1 Debility (or 3 Light ones) go dormant for 1 hour." },
+			{ dc:3, effect:"Remove 1 debility.  Subject marks a heal." },
+			{ dc:4, effect:"Remove 2 debilities.  Subject marks a heal." },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
 	{
 		name: "Purification",
-		desc: "Remove a mental effect, curse, poison or disease.",
-		save: null,	
+		desc: "Remove a Malady applied by magic, poison or disease.  The Malady may get a save, if powerful.",
+		save: "VAR",	
 		time: "Instant",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:0, effect:"Maladies have no effect this turn." },
-			{ dc:2, effect:"Maladies go dormant for 4 hours." },
+			{ dc:2, effect:"Maladies go dormant for 1 hour." },
 			{ dc:3, effect:"Remove 1 malady.  Subject marks a heal." },
-			{ dc:4, effect:"Remove 1 malady.  Subject doesn't mark a heal." },
+			{ dc:7, effect:"Remove 1 malady.  Subject doesb't mark a heal." },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -687,24 +523,25 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:0, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:0, effect:"Visual effect only" },
-			{ dc:1, effect:"Spider climb" },
-			{ dc:1, effect:"Limb weapons / shield" },
-			{ dc:2, effect:"Gaseous Form / etherealness" },
-			{ dc:2, effect:"Flesh to stone, Stone to Flesh" },
-			{ dc:3, effect:"Travel through stone wood, solid matter" },
+			{ dc:2, effect:"Spider climb" },
+			{ dc:2, effect:"Limb weapons / shield" },
+			{ dc:4, effect:"Gaseous Form / etherealness" },
+			{ dc:5, effect:"Travel through stone wood, solid matter" },
+			{ dc:5, effect:"Stone to Flesh" },
+			{ dc:7, effect:"Flesh to Stone" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:false }
 	},
 	{
 		name: "Polymorph",
-		desc: "You change the entire form of your target to that of another living creature.  Intellect is unaffected but physical stats are those of the new form.  Unwilling targets gain standard resistances.",
+		desc: "You change the entire form of your target to that of another living creature.  Intellect is unaffected but physical stats are those of the new form.",
 		save: "CON",	
 		time: "1 Hour",
 		shapes: { cst:0, tch:1, svt:2, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Change to a creature up to challenge 2" },
-			{ dc:4, effect:"Change to a creature up to challenge 4" },
-			{ dc:5, effect:"Change to a creature up to challenge 6" },
+			{ dc:4, effect:"Change to a creature up to Challenge Rating 2" },
+			{ dc:6, effect:"Change to a creature up to Challenge Rating 4" },
+			{ dc:8, effect:"Change to a creature up to Challenge Rating 6" },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:false, yearns:true, granted:false }
 	},
@@ -715,15 +552,15 @@ export const spell_effects: spell_effect_def[] = [
 		time: "20DC Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:0, vol:0, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Undead up to Challenge Rating 4" },
-			{ dc:4, effect:"Undead up to Challenge Rating 5" },
-			{ dc:5, effect:"Undead up to Challenge Rating 6" },
+			{ dc:4, effect:"Undead up to Challenge Rating 4" },
+			{ dc:5, effect:"Undead up to Challenge Rating 5" },
+			{ dc:6, effect:"Undead up to Challenge Rating 6" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Animate Object",
-		desc: "You animate an object to serve your commands.  The object cannot fly, but can balance on any surface it wishes, and can propel itself like a jump up to 2 meters.  It can use itself to attack by bashing or taking advantage of it’s sharp edges. If the object is broken or damaged greatly, the spell ends.  It can perform tasks that do not require dexterity or intelligence for you.",
+		desc: "You animate an object to serve your commands.  The object cannot fly, but can balance on any surface it wishes, and can propel itself like a jump up to 2 meters.  It can use itself to attack by bashing or taking advantage of it’s sharp edges. If the object is broken or damaged greatly, the spell ends.  It can perform tasks that only require low dexterity or intelligence.",
 		save: null,	
 		time: "10DC Mins",
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -741,8 +578,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -753,8 +590,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -765,8 +602,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -777,8 +614,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -789,8 +626,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -801,8 +638,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "1DC Minute",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:2, vol:1, wll:1, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic effects behave erratically." },
-			{ dc:4, effect:"The effect or entity is completely blocked." },
+			{ dc:3, effect:"Damage is halved, repulsed creatures are slowed and weakened, and magic may behave erratically." },
+			{ dc:5, effect:"The effect or entity is completely blocked." },
 		],
 		sources: { innate:false, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -820,12 +657,12 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Scry",
-		desc: "You gaze on a target remotely, seeing and hearing their activity. The difficulty changes depending on your familiarity with the target.	When casting this on an item you can see, the duration raises to 8 hours, and you can see and hear from that item as if you were there.",
+		desc: "You gaze on a target remotely, seeing and hearing their activity. The difficulty changes depending on your familiarity with the target.	When casting this on an item the duration raises to 8 hours, and you can see and hear from that item as if you were there.",
 		save: null,	
 		time: "10 Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:2 },
 		effects: [
-			{ dc:3, effect:"Cast on item only (lasts 30 mins)" },
+			{ dc:4, effect:"Your target is an item" },
 			{ dc:4, effect:"You’ve met this entity." },
 			{ dc:5, effect:"You know a great deal about this entity, but haven’t met." },
 			{ dc:6, effect:"You’ve neither met nor know much about this entity" },
@@ -839,11 +676,11 @@ export const spell_effects: spell_effect_def[] = [
 		time: "3DC Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:2, vol:3, wll:2, bem:2, pln:4 },
 		effects: [
-			{ dc:0, effect:"Create a sound or sight that you’ve experienced before" },
-			{ dc:1, effect:"Create a few sights and sounds that you’ve experienced before" },
-			{ dc:2, effect:"You create mirror images of yourself" },
-			{ dc:3, effect:"Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance)." },
-			{ dc:6, effect:"Create complex illusion" },
+			{ dc:0, effect:"Create a simple sound or sight that you’ve experienced before" },
+			{ dc:2, effect:"Create a few sights and sounds that you’ve experienced before" },
+			{ dc:3, effect:"You create mirror images of yourself" },
+			{ dc:4, effect:"Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance)." },
+			{ dc:6, effect:"Create a complex illusion" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -857,7 +694,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"Travel up to 50 meters" },
 			{ dc:3, effect:"Travel up to 1 kilometer" },
 			{ dc:4, effect:"Travel to a space marked by Teleport Destination" },
-			{ dc:5, effect:"Travel up to 500km" },
+			{ dc:6, effect:"Travel up to 500km" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
@@ -874,7 +711,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Teleportal",
-		desc: "You create a portal that can move willing creatures from one place to somewhere you can either see or have visited before.",
+		desc: "You create a portal that can move creatures from one place to somewhere you can either see or have visited before.",
 		save: null,	
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
@@ -882,7 +719,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:3, effect:"Travel up to 50 meters" },
 			{ dc:4, effect:"Travel up to 1 kilometer" },
 			{ dc:5, effect:"Travel to a space marked by Teleport Destination" },
-			{ dc:6, effect:"Travel up to 500km" },
+			{ dc:7, effect:"Travel up to 500km" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:false, granted:true }
 	},
@@ -896,19 +733,19 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"Travel up to 5 meters" },
 			{ dc:3, effect:"Travel up to 50 metres" },
 			{ dc:4, effect:"Travel up to 250 metres" },
-			{ dc:5, effect:"Travel up to 1 kilometre" },
+			{ dc:6, effect:"Travel up to 1 kilometre" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Planar Portal",
-		desc: "You create a portal that can move willing creatures from one place to another plane of existence.",
+		desc: "You create a portal that can move willing creatures from one place to another plane of existence.  Depending on the state of the world, you may need to sacrifice a powerful or expensive reagent to open a Planar Portal.",
 		save: null,	
 		time: "Varies",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
 		effects: [
-			{ dc:4, effect:"You travel to a random place on a plane that you’ve visited before." },
-			{ dc:5, effect:"You travel to a random place on a plane that you know a lot about." },
+			{ dc:7, effect:"You travel to a random place on a plane that you’ve visited before." },
+			{ dc:8, effect:"You travel to a random place on a plane that you know a lot about." },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:false, yearns:true, granted:true }
 	},
@@ -916,12 +753,12 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Lock / Seal",
 		desc: "You seal tight a container or door so that mundane methods cannot open it.  You can also create a passcode which, when spoken, allows the door to open.",
 		save: null,	
-		time: "24 Hours",
+		time: "24DC Hours",
 		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
 		effects: [
 			{ dc:1, effect:"Create a pickable lock." },
-			{ dc:2, effect:"Create a picakble lock with a passcode." },
-			{ dc:5, effect:"Create an unpicakble lock with a passcode." },
+			{ dc:2, effect:"Create a pickable lock with a passcode." },
+			{ dc:6, effect:"Create an unpickable lock with a passcode." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -932,9 +769,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Instant",
 		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:1, pln:null },
 		effects: [
-			{ dc:1, effect:"Unseal simple mundane locks" },
-			{ dc:2, effect:"Unseal moderate mundane locks" },
-			{ dc:3, effect:"Unseal superior mundane locks" },
+			{ dc:2, effect:"Unseal simple mundane locks" },
+			{ dc:3, effect:"Unseal moderate mundane locks" },
+			{ dc:4, effect:"Unseal superior mundane locks" },
 			{ dc:0, effect:"Beat the spell’s DC to unseal magical locks" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
@@ -943,7 +780,7 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Conjure Mundane Item",
 		desc: "You call forth a mundane item such as a weapon, rope, food or a torch to your hands.  The DM will decide the DC of the spell based on the item.",
 		save: null,	
-		time: "1 Hour",
+		time: "30 Mins",
 		shapes: { cst:0, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:0, effect:"Conjure an item" },
@@ -952,7 +789,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Conjure Magical Servant",
-		desc: "You call forth a sentient magical servant in a shape you choose to perform simple to moderate tasks for you.  Higher DCs grant additional abilities which stack with previous DCs.",
+		desc: "You call forth a small or medium sentient magical servant to perform tasks for you, commanded with single words.  Higher DCs grant additional abilities which stack with previous DCs.",
 		save: null,	
 		time: "30 Mins",
 		shapes: { cst:null, tch:null, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -960,7 +797,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"Small, agile." },
 			{ dc:3, effect:"Medium, 1 Damage. Spider climb." },
 			{ dc:4, effect:"Medium, 2 Damage." },
-			{ dc:5, effect:"Large, 3 Damage. Flying." },
+			{ dc:5, effect:"Large. Flying." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -968,13 +805,13 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Conjure Animals / Swarms",
 		desc: "You call forth animals or a swarms.  They can be directed to go places, and can be given basic commands such as defend, attack.",
 		save: null,	
-		time: "Varies",
+		time: "10 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:null, vol:0, wll:0, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"5 Small animals or Small Swarm" },
 			{ dc:3, effect:"2 Medium animals or medium swarm" },
 			{ dc:4, effect:"1 Large animal or swarm" },
-			{ dc:5, effect:"4 Medium or 2 large animals" },
+			{ dc:6, effect:"4 Medium or 2 large animals" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -985,15 +822,15 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:0, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Summon up to CR 4 creatures." },
-			{ dc:4, effect:"Summon up to CR 5 creatures." },
-			{ dc:5, effect:"Summon up to CR 6 creatures." },
+			{ dc:4, effect:"Summon up to CR 4 creatures." },
+			{ dc:5, effect:"Summon up to CR 5 creatures." },
+			{ dc:7, effect:"Summon up to CR 6 creatures." },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
 	{
 		name: "Conjure Fog / Mist",
-		desc: "You conjure a rolling fog that streams out from your shaped magics.  As long as you maintain the spell, the fog gets bigger.  Visibility is limited to 5 metres in the fog.",
+		desc: "You conjure a rolling fog that streams out from your shaped magics.  As long as you maintain the spell, the fog gets bigger.  Visibility is limited to 3 squares through fog.",
 		save: null,	
 		time: "20 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:null, vol:0, wll:0, bem:null, pln:null },
@@ -1040,7 +877,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Purpose",
-		desc: "Through magical means you can divine the present and future of a situation.  Use the Discern Realities Move as if passing the Total DC.  Your DM will answer your questions with responses not achievable using mundane means.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
+		desc: "Through magical means you can divine the present and future of a situation.  Use the Discern Realities Move as if passing the Total DC.  Your DM will answer your questions with responses not achievable using mundane means.  All divinations require a sacrifice of a gem, totem or gift worth 15GP and to cast the spell as a ritual over 10 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -1051,7 +888,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Item Location",
-		desc: "Through magical means, you can divine the location of an item, if it is still within 50 km of you.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
+		desc: "Through magical means, you can divine the location of an item, if it is still within 50 km of you.   All divinations require a sacrifice of a gem, totem or gift worth 15GP and to cast the spell as a ritual over 10 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
@@ -1064,7 +901,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Divine: Intention",
-		desc: "Through magical means you divine the alignment and 1-3 words describing a target you can see's intentions for the near future.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
+		desc: "Through magical means you divine the alignment and 1-3 words describing a target you can see's intentions for the near future.   All divinations require a sacrifice of a gem, totem or gift worth 15GP and to cast the spell as a ritual over 10 minutes.",
 		save: null,	
 		time: "Instant",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:0, vol:null, wll:null, bem:null, pln:null },
@@ -1074,8 +911,31 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
-		name: "Divine: Illusion",
-		desc: "Through magical means you, or you and other willing creatures see through magical illusions and invisibility.   All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
+		name: "Divine: The Truth",
+		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a truth spell has been cast on them.  All divinations require a sacrifice of a gem, totem or gift worth 15GP and to cast the spell as a ritual over 10 minutes.",
+		save: "WIS",	
+		time: "1 Mins",
+		shapes: { cst:null, tch:0, svt:0, cne:2, aur:2, vol:2, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:4, effect:"Divine the spoken truth." },
+			{ dc:5, effect:"Divine the magical enchantments of an item." },
+		],
+		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
+	},
+	{
+		name: "Sense: The Near Future",
+		desc: "Through magical means, you, or you and other creatures can see the immediate future 1 second before it happens.  You gain +1 DR, enemies do not get advantage on you, and you cannot be surprised.",
+		save: null,	
+		time: "1 Min",
+		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:2, effect:"Divine the near future" },
+		],
+		sources: { innate:true, flow:false, tapped:false, life:false, yearns:true, granted:true }
+	},
+	{
+		name: "Detect: Illusion",
+		desc: "Through magical means, your targets see through magical illusions and invisibility.",
 		save: null,	
 		time: "1 Minute",
 		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
@@ -1087,29 +947,6 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
-		name: "Divine: The Near Future",
-		desc: "Through magical means, you, or you and other creatures can see the immediate future 1 second before it happens.  You gain +1 DR, require one more point to be disadvantaged and cannot be surprised.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
-		save: null,	
-		time: "1 Min",
-		shapes: { cst:0, tch:null, svt:null, cne:null, aur:2, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"Divine the near future" },
-		],
-		sources: { innate:true, flow:false, tapped:false, life:false, yearns:true, granted:true }
-	},
-	{
-		name: "Divine: The Truth",
-		desc: "Through magical means you know when a creature speaks a lie, or the purpose and means to use an item.  Your target will know that a truth spell has been cast on them.  All divinations require a sacrifice of a gem, totem or gift worth 15GP, or to cast the spell as a ritual over 15 minutes.",
-		save: "WIS",	
-		time: "1 Mins",
-		shapes: { cst:null, tch:0, svt:0, cne:2, aur:2, vol:2, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:4, effect:"Divine the spoken truth." },
-			{ dc:5, effect:"Divine the magical enchantments of an item." },
-		],
-		sources: { innate:true, flow:false, tapped:true, life:false, yearns:true, granted:true }
-	},
-	{
 		name: "Detect Poisons and Diseases",
 		desc: "You detect the existence of poisons, diseases and plagues in creatures, water sources or the area around you within sight.",
 		save: null,	
@@ -1117,7 +954,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:1, vol:0, wll:0, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"Choose to Detect Poisons OR Diseases" },
-			{ dc:3, effect:"Detect Poisons AND Diseases" },
+			{ dc:4, effect:"Detect Poisons AND Diseases" },
 		],
 		sources: { innate:true, flow:false, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1126,10 +963,10 @@ export const spell_effects: spell_effect_def[] = [
 		desc: "You detect the existence of traps and machinery in the around you within sight.",
 		save: null,	
 		time: "5 Mins",
-		shapes: { cst:null, tch:null, svt:null, cne:0, aur:1, vol:0, wll:0, bem:null, pln:null },
+		shapes: { cst:null, tch:null, svt:null, cne:0, aur:1, vol:0, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Choose to Detect Traps OR machinery" },
-			{ dc:3, effect:"Detect Traps and machinery" },
+			{ dc:3, effect:"Choose to Detect Traps OR machinery" },
+			{ dc:4, effect:"Detect Traps and machinery" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
@@ -1137,11 +974,11 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Weaken",
 		desc: "You sap the strength of your target(s), lowering it’s combat damage and lifting capacity.",
 		save: "STR",	
-		time: "2DC Mins",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 STR" },
-			{ dc:2, effect:"-2 STR" },
+			{ dc:1, effect:"1 Light STR Debility" },
+			{ dc:3, effect:"2 Light STR Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1149,23 +986,23 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Clumsy",
 		desc: "You sap the dexterity and nimbleness of your target(s), lowering their dexterity and Defensive Rating.",
 		save: "DEX",	
-		time: "2DC Mins",
+		time: "Instant",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 DEX" },
-			{ dc:2, effect:"-2 DEX" },
+			{ dc:1, effect:"1 Light DEX Debility" },
+			{ dc:3, effect:"2 Light DEX Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Sickly",
-		desc: "You sap the constitution and heartiness of your target(s), lowering their constitution and hit points.",
+		desc: "You sap the constitution and heartiness of your target(s), lowering their constitution and resilience.",
 		save: "CON",	
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 CON" },
-			{ dc:2, effect:"-2 CON" },
+			{ dc:1, effect:"1 Light CON Debility" },
+			{ dc:3, effect:"2 Light CON Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1176,8 +1013,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 INT" },
-			{ dc:2, effect:"-2 INT" },
+			{ dc:1, effect:"1 Light INT Debility" },
+			{ dc:3, effect:"2 Light INT Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1188,8 +1025,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 WIS" },
-			{ dc:2, effect:"-2 WIS" },
+			{ dc:1, effect:"1 Light WIS Debility" },
+			{ dc:3, effect:"2 Light WIS Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1200,26 +1037,14 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"-1 CHA" },
-			{ dc:2, effect:"-2 CHA" },
+			{ dc:1, effect:"1 Light CHA Debility" },
+			{ dc:3, effect:"2 Light CHA Debilities" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
 	{
-		name: "Blindness / Deafness",
-		desc: "You disconnect your target’s senses from their cognition, making them temporarily blind or deaf.",
-		save: "CON",	
-		time: "2DC Mins",
-		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:3, effect:"Your target becomes blind." },
-			{ dc:4, effect:"Your target becomes deaf" },
-		],
-		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:false }
-	},
-	{
 		name: "Plague",
-		desc: "You infuse a creature, water source or conducive entity with a disease that you know.  If cast at a creature, the speed at which the disease affects the target is based on the DC of the effect.",
+		desc: "You infuse a creature, water source or conducive entity with a mundane disease that you know.  If cast at a creature, the speed at which the disease affects the target is based on the DC of the effect.",
 		save: "CON",	
 		time: "Varies",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
@@ -1250,7 +1075,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"-1 DR, Target's speed is reduced to 75%" },
-			{ dc:5, effect:"-1 DR, Target's speed is reduced to 75% and it skips every second turn" }
+			{ dc:5, effect:"-1 DR, Target's speed is reduced to 75% and it loses an action every second turn" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1262,7 +1087,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"+1 DR, Target's speed is raised to 150%" },
-			{ dc:5, effect:"+1 DR, Target's speed is raised to 150% and it takes two moves every second turn" }
+			{ dc:5, effect:"+1 DR, Target's speed is raised to 150% and it gains an extra action every second turn" }
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1285,14 +1110,14 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"-1 Magic Damage, +1 Defy Danger (and Wits adds your WIS)" },
-			{ dc:3, effect:"-2 Magic Damage, +2 Defy Danger (and Wits adds your WIS)" },
+			{ dc:2, effect:"-1 Magic Damage, +1 to saves against magic" },
+			{ dc:3, effect:"-2 Magic Damage, +1 to saves against magic" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
 		name: "Blur",
-		desc: "You create a distortion of light around you, blurring your vision and hiding your whereabouts.  You gain +1 DR (and +2 against Ranged attacks) and attackers need one more point to gain advantage on you.  Your identity is also kept secret during the spell’s effect.",
+		desc: "You create a distortion of light around you, blurring your vision and hiding your whereabouts.  You gain +1 DR (and +2 against Ranged attacks) and attackers cannot gain advantage on you.  Your identity is also kept secret during the spell’s effect.",
 		save: null,	
 		time: "10 Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:3, vol:3, wll:null, bem:null, pln:null },
@@ -1303,38 +1128,14 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:false, granted:false }
 	},
 	{
-		name: "Light",
-		desc: "You create light of any colour in the shape you create or on an object you touch, casting brilliant light up to 6 metres, and dimmer light for an additional 9.",
-		save: null,	
-		time: "1 hour",
-		shapes: { cst:0, tch:1, svt:0, cne:0, aur:1, vol:0, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"Your spell illuminates in the shape or on the object you've chosen." },
-			{ dc:0, effect:"Your spell illuminates in the shape or on the object you've chosen, and you attempt to use it to dispel unnatural darkness.  The DC will be 2 plus a DC appropriate to the darkness that stops you." },
-		],
-		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
-	},
-	{
-		name: "Darkness",
-		desc: "You create inky blackness that light cannot enter or escape.  It spreads 10 metres from an object you touch or fills the shape you have chosen.",
-		save: null,	
-		time: "1 hour",
-		shapes: { cst:0, tch:1, svt:0, cne:0, aur:1, vol:0, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:2, effect:"Creatures without special sensory abilities are blind while in the darkness effect, including yourself." },
-			{ dc:4, effect:"Even creatures with no special sensory abilities are blind, but you are immune to the effect." },
-		],
-		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:true }
-	},
-	{
 		name: "Enlarge",
 		desc: "You twist the molecules of your target, growing in size and stature.  Each size category the target increases grants them +1 STR, CON and maximum Stamina (doesn’t count as stamina healing), but -1 DR.",
 		save: "STR",	
 		time: "2 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"+1 Size category" },
-			{ dc:3, effect:"+2 Size category" },
+			{ dc:3, effect:"+1 Size category" },
+			{ dc:4, effect:"+2 Size category" },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:true, yearns:true, granted:false }
 	},
@@ -1345,8 +1146,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"-1 Size category" },
-			{ dc:3, effect:"-2 Size category" },
+			{ dc:3, effect:"-1 Size category" },
+			{ dc:4, effect:"-2 Size category" },
 		],
 		sources: { innate:true, flow:true, tapped:false, life:true, yearns:true, granted:false }
 	},
@@ -1358,7 +1159,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 STR" },
-			{ dc:2, effect:"+2 STR" },
+			{ dc:3, effect:"+2 STR" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1370,7 +1171,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 DEX" },
-			{ dc:2, effect:"+2 DEX" },
+			{ dc:3, effect:"+2 DEX" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1382,7 +1183,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 CON" },
-			{ dc:2, effect:"+2 CON" },
+			{ dc:3, effect:"+2 CON" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1394,7 +1195,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 INT" },
-			{ dc:2, effect:"+2 INT" },
+			{ dc:3, effect:"+2 INT" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1406,7 +1207,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 WIS" },
-			{ dc:2, effect:"+2 WIS" },
+			{ dc:3, effect:"+2 WIS" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1418,7 +1219,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 CHA" },
-			{ dc:2, effect:"+2 CHA" },
+			{ dc:3, effect:"+2 CHA" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1430,7 +1231,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 COMB" },
-			{ dc:2, effect:"+2 COMB" },
+			{ dc:3, effect:"+2 COMB" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1442,7 +1243,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"+1 DAM" },
-			{ dc:2, effect:"+2 DAM" },
+			{ dc:3, effect:"+2 DAM" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1466,7 +1267,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:2, effect:"Enhance one sense." },
-			{ dc:3, effect:"Enhance up to 5 senses." },
+			{ dc:4, effect:"Enhance up to 5 senses." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1478,8 +1279,8 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:0, vol:0, wll:0, bem:0, pln:null },
 		effects: [
 			{ dc:2, effect:"Minor shift / movement of terrain" },
-			{ dc:3, effect:"Shape earth and plantlife" },
-			{ dc:5, effect:"Shape stone" },
+			{ dc:4, effect:"Shape earth and plantlife" },
+			{ dc:6, effect:"Shape stone" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:true, granted:true }
 	},
@@ -1491,7 +1292,7 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:0, vol:0, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:1, effect:"Slight tremors, rattling" },
-			{ dc:3, effect:"An earthquake causing 3 damage and unsafe terrain" },
+			{ dc:4, effect:"An earthquake causing 3 damage and unsafe terrain" },
 			{ dc:6, effect:"A mighty earthquake causing 8 damage and damaging structures" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
@@ -1526,14 +1327,15 @@ export const spell_effects: spell_effect_def[] = [
 		time: "5 Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"Fascination in a creature or item." },
-			{ dc:4, effect:"Enthrallment in a creature or item." },
+			{ dc:1, effect:"Interest in a creature or item." },
+			{ dc:3, effect:"Fascination in a creature or item." },
+			{ dc:5, effect:"Enthrallment in a creature or item." },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:true }
 	},
 	{
 		name: "Calm",
-		desc: "Your magics slow the heartbeat, adrenaline and thoughts of your subject(s), calming them down and removing all fear.  Targets in combat may not stop attacking, but will be more likely to converse rationally.  Targets in a rage are thrust out of their rage.",
+		desc: "Your magics slow the heartbeat, adrenaline and thoughts of your subject(s), calming them down and removing all fear.  Targets in combat may not stop attacking, but will be more likely to converse rationally.  Targets in a rage lose rage.",
 		save: "WIS",	
 		time: "5 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
@@ -1562,11 +1364,11 @@ export const spell_effects: spell_effect_def[] = [
 		effects: [
 			{ dc:3, effect:"Subjects experience no emotions" },
 		],
-		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:false }
+		sources: { innate:true, flow:true, tapped:false, life:false, yearns:false, granted:false }
 	},
 	{
 		name: "Charm",
-		desc: "The subject(s) of your magic look upon you favourably, as your magic plays with their opinions of you.  You are treated as if you were good friends, even if you have never met.  People who are already antagonistic or mistrustful of you may only have their opinion slightly raised.  When the spell wears off, your subjects will be suspicious or outright angry.",
+		desc: "The subject(s) of your magic look upon you favourably, as your magic plays with their opinions of you.  People who are already antagonistic or mistrustful of you may only have their opinion slightly raised.  When the spell wears off, your subjects will be suspicious or outright angry.",
 		save: "CHA",	
 		time: "5 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
@@ -1606,7 +1408,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:0, tch:0, svt:0, cne:null, aur:3, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"0 Feet per second, weightless" },
+			{ dc:2, effect:"0 Feet per second, weightless" },
 			{ dc:3, effect:"1/2 foot per second" },
 			{ dc:4, effect:"5 feet per second" },
 			{ dc:5, effect:"25 feet per second" },
@@ -1627,18 +1429,18 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:4, effect:"Hold a large creature" },
 			{ dc:5, effect:"Hold a Huge creature" },
 		],
-		sources: { innate:false, flow:false, tapped:false, life:false, yearns:false, granted:false }
+		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
 	{
 		name: "Command",
-		desc: "You issue a verbal command up to 5 words to a subject, and your magics make it painful, distasteful, or unappealing not to comply.  The target will automatically resist if the command given is wholly against their nature, and may find creative ways to comply otherwise.",
+		desc: "You issue a verbal command up to 5 words to a subject, and your magics make it painful, distasteful, or unappealing not to comply.  The target will automatically resist if the command given is wholly against their nature, or may find creative ways to comply otherwise.",
 		save: "CHA",	
 		time: "1 Min",
 		shapes: { cst:null, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:3, effect:"Command the same race" },
-			{ dc:4, effect:"Command any sentient race" },
-			{ dc:6, effect:"Command any sentient race for 7 days" },
+			{ dc:4, effect:"Command any sentient creature" },
+			{ dc:7, effect:"Command any sentient creature, and the duration extends to 7 days" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:true }
 	},
@@ -1669,7 +1471,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Dream",
-		desc: "You invade the dreams of your target, and can communicate with the most intense of visuals.  Optionally, you can also disrupt their rest, reducing their stamina and placing debuffs on each of their stats for the day.  You must have met the creature to target them with this effect.",
+		desc: "You invade the dreams of your target, and can communicate with the most intense of visuals.  Optionally, you can also disrupt their rest, reducing their stamina and giving them a regular Debilities to each of their stats.  You must have met the creature to target them with this effect.",
 		save: "WIS",	
 		time: "4 Hours",
 		shapes: { cst:null, tch:null, svt:0, cne:null, aur:null, vol:3, wll:null, bem:null, pln:2 },
@@ -1700,7 +1502,7 @@ export const spell_effects: spell_effect_def[] = [
 		effects: [
 			{ dc:0, effect:"You create a little wonder" },
 			{ dc:1, effect:"You can turn one mundane form of food or drink into another." },
-			{ dc:2, effect:"Your subjects can walk on water" },
+			{ dc:3, effect:"Your subjects can walk on water" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	},
@@ -1711,10 +1513,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "Varies",
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:3, effect:"Lasts 15 seconds." },
+			{ dc:3, effect:"Lasts 2 turns" },
 			{ dc:4, effect:"Lasts 15 minutes" },
 			{ dc:6, effect:"Lasts 1 day" },
-			{ dc:8, effect:"Permanent" },
+			{ dc:10, effect:"Permanent" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:true, yearns:true, granted:false }
 	},
@@ -1726,7 +1528,9 @@ export const spell_effects: spell_effect_def[] = [
 		shapes: { cst:null, tch:0, svt:0, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
 		effects: [
 			{ dc:0, effect:"Minor mending" },
-			{ dc:1, effect:"Mend and refresh as if new" },
+			{ dc:1, effect:"Mend an item up to 5gp in value" },
+			{ dc:3, effect:"Mend an item up to 10gp in value" },
+			{ dc:5, effect:"Mend an item up to 20gp in value" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -1737,7 +1541,7 @@ export const spell_effects: spell_effect_def[] = [
 		time: "20 Secs",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:0, vol:null, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:7, effect:"Stop time" },
+			{ dc:10, effect:"Stop time" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:false, granted:true }
 	},
@@ -1746,12 +1550,12 @@ export const spell_effects: spell_effect_def[] = [
 		desc: "You create an effect to endure elements around you.  The DC you choose determines the abilities you receive using this spell effect, as you gain the effect of each DC up to the one you choose.",
 		save: null,	
 		time: "20DC Mins",
-		shapes: { cst:null, tch:null, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
+		shapes: { cst:0, tch:0, svt:0, cne:1, aur:3, vol:2, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:0, effect:"Ignore temperatures 5 to 45 degrees" },
-			{ dc:1, effect:"Water breathing" },
-			{ dc:2, effect:"Elemental effects and damage reduced, such as not catching fire" },
-			{ dc:3, effect:"Poison resistance" },
+			{ dc:1, effect:"Ignore temperatures 5 to 45 degrees" },
+			{ dc:3, effect:"Water breathing" },
+			{ dc:4, effect:"Elemental effects and damage reduced, such as not catching fire" },
+			{ dc:5, effect:"Resist poisons, diseases and toxic / alien environments" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:true, yearns:true, granted:true }
 	}

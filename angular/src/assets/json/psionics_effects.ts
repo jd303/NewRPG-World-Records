@@ -47,7 +47,7 @@ export const psionics_effects: spell_effect_def[] = [
 		modifiers: [
 			{ dc:0.5, repeatable:true, effect:"Add a target that this Power can protect" },
 			{ dc:0.5, repeatable:true, effect:"Increase the Stamina Loss protection by 1." },
-			{ dc:0.5, repeatable:true, effect:"Increase the number of attacks this applies to by 1 - this power now ends once all attacks have been protected." },
+			{ dc:1, repeatable:true, effect:"Increase the number of attacks this applies to by 1 - this power now ends once all attacks have been protected." },
 			{ dc:3, repeatable:true, effect:"Add a Wound to the Protection effect - such that a single protection can prevent both the Wound(s) and Stamina." }
 		],
 		talent: "psychokinesis",
@@ -59,7 +59,7 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "STR",
 		time: "30s",
 		modifiers: [
-			{ dc:4, repeatable:false, effect:"You create a small wall (6sq wide).  Physical projectiles cannot pass through and creatures take 5 - SR rounds to force their way through." }
+			{ dc:4, repeatable:false, effect:"You create a small wall (6sq wide).  Physical projectiles cannot pass through and creatures take 5 - STR rounds to force their way through." }
 		],
 		talent: "psychokinesis",
 		min: 3
@@ -70,20 +70,23 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "STR",
 		time: "20s",
 		modifiers: [
-			{ dc:3, repeatable:false, effect:"Your Medium or smaller target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." },
-			{ dc:5, repeatable:false, effect:"Your Large target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." },
-			{ dc:8, repeatable:false, effect:"Your Huge target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." }
+			{ dc:4, repeatable:false, effect:"Your Medium or smaller target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." },
+			{ dc:6, repeatable:false, effect:"Your Large target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." },
+			{ dc:9, repeatable:false, effect:"Your Huge target stops completely, halving armoured target's DR and completely removing the DR of unarmoured targets.  If flying, it falls from the air." }
 		],
 		talent: "psychokinesis",
 		min: 4
 	},
 	{
 		name: "Move Self",
-		desc: "While active, you can move Telekinetically at 1sq per round in any direction.  You cannot move more than 5m above a surface.",
+		desc: "While active, you can move Telekinetically at 1sq per round in any direction, in addition to your normal move.  You cannot move more than 1m above a surface.",
 		save: null,
-		time: "10m",
+		time: "20m",
 		modifiers: [
-			{ dc:0.5, repeatable: true, effect:"Increase your movement by 1sq" }
+			{ dc:1, repeatable: true, effect:"Increase your movement by 1sq" },
+			{ dc:1, repeatable: false, effect:"You can move up to 10m above any surface" },
+			{ dc:3, repeatable: false, effect:"You can move up to 50m above any surface" },
+			{ dc:5, repeatable: false, effect:"You can move up to 500m above any surface" },
 		],
 		talent: "psychokinesis",
 		min: 5
@@ -94,8 +97,8 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "STR",
 		time: "30s",
 		modifiers: [
-			{ dc:0.5, repeatable:true, effect:"Increase the movement of targets by 1sq/r and optional DAM by 1/2" },
-			{ dc:0.25, repeatable:true, effect:"Increase the duration by 30s" },
+			{ dc:1, repeatable:true, effect:"Increase the movement of targets by 1sq/r and optional DAM by 0.5" },
+			{ dc:0.5, repeatable:true, effect:"Increase the duration by 30s" },
 			{ dc:1, repeatable:true, effect:"Add a Medium or smaller target" },
 			{ dc:2, repeatable:true, effect:"Add a Large target" },
 			{ dc:2, repeatable:true, effect:"Add a Huge target" }
@@ -105,11 +108,11 @@ export const psionics_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Manoeuvre",
-		desc: "While active, you can perform a remote manoeuvre that requires careful movement, such as Trip, Lockpick or writing.  You must still roll against your SKILL for the attempted Move.  Your roll may be disadvantaged, such as lockpicking being harder with no audio clues.  You cannot use more than 2 of your SKILL for this manoeuvre.",
+		desc: "While active, you can perform a remote manoeuvre that requires careful movement, such as Trip, Lockpick or writing.  You must still roll against your SKILL for the attempted Move.  Because of the distance, you can only employ 1/2 your normal maximum SKILL.",
 		save: "VARS",
 		time: "Inst",
 		modifiers: [
-			{ dc:0.5, repeatable:true, effect:"+2 to the maximum SKILL you can use." }
+			{ dc:0.5, repeatable:true, effect:"+1 to the maximum SKILL you can use." }
 		],
 		talent: "psychokinesis",
 		min: 7
@@ -120,7 +123,7 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "STR",
 		time: "30s",
 		modifiers: [
-			{ dc:4, repeatable:false, effect:"You can choose the result of their movement or action each round." },
+			{ dc:4, repeatable:false, effect:"You can choose the result of your target's movement or action each round." },
 			{ dc:5, repeatable:false, effect:"You can completely control the movement and physical actions of your target.  You cannot make them draw on their Source or Psionics." },
 		],
 		talent: "psychokinesis",
@@ -138,7 +141,7 @@ export const psionics_effects: spell_effect_def[] = [
 			{ dc:2, repeatable:false, effect:"You may reroll a roll, even after working out if it succeeded or not - however this power then ends." },
 			{ dc:3, repeatable:false, effect:"Your Defy Danger bonus increases to +3, and you may use it against regular attacks - however this power then ends." },
 			{ dc:4, repeatable:false, effect:"You are warned by your potential failures - you gain +3 to any skill roll - however this power then ends." },
-			{ dc:8, repeatable:false, effect:"You look into the future, catching faint glimpses and images of a subject you are aware of - however this power then ends." }
+			{ dc:8, repeatable:false, effect:"You look into the future, catching faint glimpses and images of the future of a subject you are aware of - however this power then ends." }
 		],
 		talent: "clairsentience",
 		min: 1
@@ -149,40 +152,40 @@ export const psionics_effects: spell_effect_def[] = [
 		save: null,
 		time: "10m",
 		modifiers: [
-			{ dc:3, repeatable:false, effect:"When you touch an item, you can determine who has touched it in the last week." },
-			{ dc:4, repeatable:false, effect:"You you regard your surrounding, you can determine who has been in the area in the last 2 days." },
-			{ dc:5, repeatable:false, effect:"When you touch a creature, you can surface terrible memories and memories of pain.  The creature takes 4 damage (reduced by their MR) and is dazed for 3 rounds (reducing their DR and MR by 2)." }
+			{ dc:4, repeatable:false, effect:"When you touch an item, you can determine who has touched it in the last week." },
+			{ dc:5, repeatable:false, effect:"You you regard your surrounding, you can determine who has been in the area in the last 2 days." },
+			{ dc:6, repeatable:false, effect:"When you touch a creature, you can surface terrible memories and memories of pain.  The creature takes 5 damage (reduced by their MR) and is then dazed for 3 rounds (reducing their DR and MR by 2)." }
 		],
 		talent: "clairsentience",
 		min: 2
 	},
 	{
 		name: "Detection",
-		desc: "While active, you senses are heightened with psionic power, you gain +1 the to Investigate / Perception Skill.",
+		desc: "While active, you senses are heightened with psionic power, you gain +1 the to Investigate / Perception Skill.  You can use your detection as far as 1km in the outdoors, or 500m in urban settings.",
 		save: null,
 		time: "2m",
 		modifiers: [
-			{ dc:1, repeatable:false, effect:"You can detect the general presence of current and lingering Psionic energies, can discern the talent that generated them, and may be able to discern their use." },
-			{ dc:2, repeatable:false, effect:"You can detect the general presence of creatures, items and energies originating not of this world, or displaced by magical or psionic means." },
-			{ dc:2, repeatable:false, effect:"You can detect the general presence of instinctual thoughts, such as those from animals and dumn beasts." },
-			{ dc:3, repeatable:false, effect:"You can detect the general presence of thoughts of intelligent creatures." },
-			{ dc:3, repeatable:false, effect:"You can detect clairvoyance and remote viewing on yourself or those near you." },
-			{ dc:3, repeatable:false, effect:"You can disrupt clairvoyance and remote viewing on yourself and those near you - this effect lingers for 1 hour and can extend past the normal power's duration." },
+			{ dc:2, repeatable:false, effect:"You can detect the general presence of current and lingering Psionic energies, can discern the talent that generated them, and may be able to discern their use." },
+			{ dc:3, repeatable:false, effect:"You can detect the general presence of creatures, items and energies originating not of this world, or displaced by magical or psionic means." },
+			{ dc:3, repeatable:false, effect:"You can detect the general presence of instinctual thoughts, such as those from animals and dumn beasts." },
+			{ dc:4, repeatable:false, effect:"You can detect the general presence of thoughts of intelligent creatures." },
+			{ dc:4, repeatable:false, effect:"You can detect clairvoyance and remote viewing on yourself or those near you." },
+			{ dc:5, repeatable:false, effect:"You can disrupt clairvoyance and remote viewing on yourself and those near you - this effect lingers for 1 hour and can extend past the normal power's duration." },
 		],
 		talent: "clairsentience",
 		min: 3
 	},
 	{
 		name: "Remote Viewing",
-		desc: "While active, you can see (but not hear) a willing and friendly target that you've met, or an area that you've visited within 5km.  If targeting a person and they are not within distance, the power fails.  If the power fails because of the target saving by WIS / MR, you know whether they are within the distance regardless.",
+		desc: "While active, you can see (but not hear) a willing and friendly target that you've met, or an area that you've visited within 1km.  If targeting a person and they are not within distance, the power fails.  If the power fails because of the target saving by WIS / MR, you know whether they are within the distance regardless.",
 		save: "WIS",
 		time: "5m",
 		modifiers: [
 			{ dc:0.5, repeatable:true, effect:"You extend the distance by 1km" },
 			{ dc:0.5, repeatable:true, effect:"You extend the duration by 5m" },
 			{ dc:1, repeatable:false, effect:"You can also hear your target and their near surroundings." },
-			{ dc:2, repeatable:false, effect:"You do not have to have met the target, but need an adequate description of them." },
-			{ dc:2, repeatable:false, effect:"Your target does not have to be willing and friendly." }
+			{ dc:2, repeatable:false, effect:"Your target does not have to be willing and friendly." },
+			{ dc:3, repeatable:false, effect:"You do not have to have met the target, but need an adequate description of them." }
 		],
 		talent: "clairsentience",
 		min: 4
@@ -198,14 +201,14 @@ export const psionics_effects: spell_effect_def[] = [
 		modifiers: [
 			{ dc:1, repeatable:false, effect:"You can modify the charm effect to be negative, adding +1 to Intimidate and the Provoke/Intimate Combat Skill." },
 			{ dc:2, repeatable:false, effect:"Your modifier raises to +3 - however using this successfully ends this power." },
-			{ dc:3, repeatable:false, effect:"Your modifier raises to +3." }
+			{ dc:4, repeatable:false, effect:"Your modifier raises to +3." }
 		],
 		talent: "telepathy",
 		min: 1
 	},
 	{
 		name: "Communication",
-		desc: "While active, you can send (but not receive) single word messages to friendly targets you have met within 1km. After each word you cannot speak for 30 seconds.",
+		desc: "While active, you can send (but not receive) single word messages to friendly targets you have met within 1km. When using this as a talent, you cannot speak for 30 seconds between each communication.",
 		save: "WIS",
 		time: "10m",
 		modifiers: [
@@ -213,8 +216,8 @@ export const psionics_effects: spell_effect_def[] = [
 			{ dc:0.5, repeatable:true, effect:"You can extend the duration by 10m" },
 			{ dc:1, repeatable:false, effect:"Your target can communicate back with you" },
 			{ dc:1, repeatable:false, effect:"You (and your target if they can communicate back) can speak freely, rather than in single words." },
-			{ dc:2, repeatable:false, effect:"You do not have to have met the target, but need an adequate description of them." },
 			{ dc:2, repeatable:false, effect:"Your target does not have to be willing and friendly." },
+			{ dc:3, repeatable:false, effect:"You do not have to have met the target, but need an adequate description of them." },
 			{ dc:4, repeatable:false, effect:"You and your target can understand each other's language, even if you do not speak it." }
 		],
 		talent: "telepathy",
@@ -222,13 +225,13 @@ export const psionics_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Mind Reading",
-		desc: "While active, you gain +1 to COMB against a single target.  You can switch targets freely once per round.",
+		desc: "While active, you gain +1 to COMB against a single target.  You can switch targets as a free action once per round.",
 		save: "WIS",
 		time: "5m",
 		modifiers: [
-			{ dc:1, repeatable:false, effect:"You can detect your target's mood and drives" },
-			{ dc:3, repeatable:false, effect:"You can subtly detect abstract thoughts of your target.  You can ask about their intentions, needs and drives, and also gain +3 to the Persuade, Intimidate, Physical Deception, Stealth and Performance skills." },
-			{ dc:4, repeatable:false, effect:"By studying an intelligent target for a few minutes, you read their surface thoughts, but they can tell and can leave your sight to break the effect." }
+			{ dc:1, repeatable:false, effect:"You can detect your target's mood and emotional state" },
+			{ dc:3, repeatable:false, effect:"You can subtly detect abstract thoughts of your target.  You can ask about their intentions, needs and drives, and also gain +2 to the Persuade, Intimidate, Physical Deception, Stealth and Performance skills." },
+			{ dc:5, repeatable:false, effect:"By studying an intelligent target for a few minutes, you read their surface thoughts, but they can tell and can leave your sight to break the effect." }
 		],
 		talent: "telepathy",
 		min: 3
@@ -241,16 +244,18 @@ export const psionics_effects: spell_effect_def[] = [
 		modifiers: [
 			{ dc:0.5, repeatable:true, effect:"Your power affects an additional target." },
 			{ dc:0.5, repeatable:true, effect:"An ally gains the same benefit(s) that you do." },
-			{ dc:1, repeatable:false, effect:"Your target(s) becomes blind." },
-			{ dc:1, repeatable:false, effect:"Your target(s) becomes deaf." },
-			{ dc:2, repeatable:false, effect:"Your target(s) cannot perceive you by any non-magical or non-psionic sense." }
+			{ dc:1, repeatable:true, effect:"The benefit raises to +2 Stealth" },
+			{ dc:3, repeatable:false, effect:"Your target(s) becomes blind to you." },
+			{ dc:3, repeatable:false, effect:"Your target(s) becomes deaf to you." },
+			{ dc:3, repeatable:false, effect:"Your target(s) cannot smell you." },
+			{ dc:5, repeatable:false, effect:"Your target(s) cannot perceive you by any non-magical or non-psionic sense." }
 		],
 		talent: "telepathy",
 		min: 4
 	},
 	{
 		name: "Suggestion",
-		desc: "While active, you do not need something the target wants when using Persuade, and can drop a target's MR by 1. You can switch targets freely once per round.",
+		desc: "While active, you do not need something the target wants when using Persuade, and can drop a target's MR by 1. You can switch targets freely once per round and you do not need to understand that creature's language.",
 		save: "WIS",
 		time: "2m",
 		modifiers: [
@@ -268,7 +273,7 @@ export const psionics_effects: spell_effect_def[] = [
 		time: "2m",
 		modifiers: [
 			{ dc:1, repeatable:true, effect:"Your power affects an additional target." },
-			{ dc:2, repeatable:false, effect:"You modify your target(s) mood to one of your choosing, such as calmed, angry and joyous; as long as the change would not endanger the target(s)." },
+			{ dc:2, repeatable:false, effect:"You modify your target(s) mood to one of your choosing, such as calmed, angry or joyous; as long as the change would not endanger the target(s)." },
 			{ dc:4, repeatable:false, effect:"Your forcefully anger your target(s), driving them to anger and violence." }
 		],
 		talent: "telepathy",
@@ -282,8 +287,8 @@ export const psionics_effects: spell_effect_def[] = [
 		modifiers: [
 			{ dc:2, repeatable:false, effect:"Your target prefers to engage with or deal with a target of your choosing." },
 			{ dc:2, repeatable:false, effect:"Your target prefers to not engage with or deal with a target of your choosing." },
-			{ dc:3, repeatable:false, effect:"Your target has an aversion to something they hold.  However if it is very dear to them they may get a bonus to their save." },
-			{ dc:4, repeatable:false, effect:"Your target has a strong attraction to an item or person of your choice.  While there will be no romantic feelings, your target will want to be near or hold the attraction." }
+			{ dc:3, repeatable:false, effect:"Your target has an aversion to something they hold.  However if it is very dear to them, or a weapon or shield they need right now, they may get a bonus to their save." },
+			{ dc:5, repeatable:false, effect:"Your target has a strong attraction to an item or person of your choice.  Your target will want to be near or hold the source of their attraction." }
 		],
 		talent: "telepathy",
 		min: 7
@@ -294,9 +299,9 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "WIS",
 		time: "5m",
 		modifiers: [
-			{ dc:2, repeatable:false, effect:"You temporarily alter one memory that you know your target has, however the true memory will return after the power ends and they will be aware of the deception." },
-			{ dc:4, repeatable:false, effect:"You permanently alter one memory that you know your target has.  If something defies their false memory, such as being told the truth, the true memory will be reinstated." },
-			{ dc:6, repeatable:false, effect:"You implant a memory into a target of your choosing.  They will believe this to be true unless irrefutable found to be false." }
+			{ dc:3, repeatable:false, effect:"You temporarily alter one memory that you know your target has, however the true memory will return after the power ends and they will be aware of the deception." },
+			{ dc:5, repeatable:false, effect:"You permanently alter one memory that you know your target has.  If something defies their false memory, such as being told the truth, the true memory will be reinstated." },
+			{ dc:7, repeatable:false, effect:"You implant a memory into a target of your choosing.  They will believe this to be true unless irrefutable found to be false." }
 		],
 		talent: "telepathy",
 		min: 8
@@ -307,7 +312,7 @@ export const psionics_effects: spell_effect_def[] = [
 		save: "WIS",
 		time: "5m",
 		modifiers: [
-			{ dc:6, repeatable:false, effect:"Your target stands prone and unmoving losing all DR and MR - however this ends the power and the effect lasts for 1 round." }
+			{ dc:6, repeatable:false, effect:"Your target stands prone and unmoving losing all DR and MR (but not resistances) - however this ends the power and the effect lasts for 1 round." }
 		],
 		talent: "telepathy",
 		min: 9
@@ -333,9 +338,9 @@ export const psionics_effects: spell_effect_def[] = [
 		save: null,
 		time: "1h",
 		modifiers: [
-			{ dc:2, repeatable:false, effect:"Your sight is increased and you can see three as far, and can see in near-total darkness" },
-			{ dc:2, repeatable:false, effect:"Your hearing is increased and you can hear three times as far, and can perhaps hear even through walls" },
-			{ dc:2, repeatable:false, effect:"Your smell and taste is increased and you smell three times as far, and can see even detect subtle poisons, some traps and impurities." },
+			{ dc:2, repeatable:false, effect:"Your sight is increased and you can see three times as far, even in low light" },
+			{ dc:2, repeatable:false, effect:"Your hearing is increased and you can hear three times as far, and even through some thinner walls" },
+			{ dc:2, repeatable:false, effect:"Your smell and taste is increased and you smell three times as far, and can see even detect some poisons and impurities." },
 			{ dc:3, repeatable:false, effect:"You get tremor sense, and can see even in total darkness, and can detect movement through stone and other hard substances." }
 		],
 		talent: "psychometabolism",
@@ -347,10 +352,10 @@ export const psionics_effects: spell_effect_def[] = [
 		save: null,
 		time: "8h",
 		modifiers: [
-			{ dc:1, repeatable:false, effect:"When sleeping, you remove twice the number of Light Debilities as normal." },
-			{ dc:2, repeatable:false, effect:"Energies that effect you deal 2 less damage, and you can stand extreme heat and cold much easier." },
-			{ dc:2, repeatable:false, effect:"When receiving a debility that saves against CON, your CON bonus is treated as 2 higher.  Has no effect on debilities already received." },
-			{ dc:3, repeatable:false, effect:"When sleeping, you remove twice the number of Light Debilities and Debilities as normal." }
+			{ dc:2, repeatable:false, effect:"When sleeping, you remove twice the number of Debilities as normal." },
+			{ dc:2, repeatable:false, effect:"Energies that effect you deal 2 less damage, and you take half the effect of extreme cold or heat environments." },
+			{ dc:2, repeatable:false, effect:"When receiving a Debility that saves against CON or DEX, your CON or DEX bonus is treated as 2 higher.  Has no effect on debilities already received." },
+			{ dc:3, repeatable:false, effect:"You can take a long rest for only 4 hours." }
 		],
 		talent: "psychometabolism",
 		min: 3

@@ -125,6 +125,15 @@ h1 { font-size:1.35rem; font-weight:bold; font-style:italic; margin-bottom:2px; 
 	.spell_effect.hidden { display:none; }
 	.spell_effect { page-break-inside:avoid; }
 	.spell_effect input { display:none; }
+
+	.spell_effect .row-effects .shapes {
+		display:block;
+		min-width:200px; max-width:200px;
+		.shape {
+			width:36px;
+			margin-bottom:3px;
+		}
+	}
 }
 
 .ct-shapes {

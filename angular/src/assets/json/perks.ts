@@ -88,7 +88,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Dissed Advantage",
-		desc: "Being disadvantaged provides only half the penalties to DR and rolls."
+		desc: "You may expend 2 Stamina to shrug off Disadvantage."
 	},
 	{
 		category: "combat",
@@ -123,7 +123,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Deflect Arrows",
-		desc: "If the DM hits you with a simple ranged attack that you could see coming and you have 5 points in the Acrobatics Skill or a DEX bonus of 3, you may attempt to Defy Danger against the ranged attack.  However your options are: * Reduce any damage by 2 Stamina or 1 Wound (this may be taken multiple times).  * Shrug off all damage but you are now Disadvantaged."
+		desc: "If the DM hits you with a simple ranged attack that you could see coming and you have 5 points in the Acrobatics Skill or a DEX bonus of 3, you may attempt to Defy Danger against the ranged attack.  However your options are: * Reduce any damage by 2 Stamina or 1 Wound (this may be taken multiple times).  * Shrug off all damage but you are Disadvantaged for your next turn."
 	},
 	{
 		category: "combat",
@@ -456,6 +456,11 @@ export const perks: perk_def[] = [
 		name: "Fleet of Foot",
 		desc: "Your base speed is increased by 1"
 	},
+	{
+		category: "general",
+		name: "Exceptional",
+		desc: "The maximum number of points you can spend in Statistics is raised from 15 to 18"
+	},
 
 
 
@@ -464,36 +469,36 @@ export const perks: perk_def[] = [
 		category: "profession",
 		name: "Inspiring Creation",
 		desc: [
-			"If you have a Source, you can inspire allies who see or hear one of your creations with courage.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
+			"If you have a Source, you can inspire allies who see or hear one of your creations with courage.  DC 2 to inspire 1 person, DC 3 to inspire 3, DC 5 to inspire 7 and DC 7 to inspire up to 12 people.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
 			"Effects: Allies gain +2 Temporary Stamina and gain +1 Resistance to Fear effects.  The stamina bonus does not count towards magical Stamina healing limits.",
 			"Creations:",
-			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC.  The effects last 5 minutes.",
+			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC, and you expend 2 Stamina to perform.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
-			"Crafting / Art: You spend days or weeks painting, sculpting, woodcarving or crafting something of wonderful inspiration.  Use your Art / Craft skill to check against the DC.  People who take a minute to regard your work gain the effects for 5 minutes.  Any time you create a new work with these effects, any previous work no longer provides the effects."
+			"Crafting / Art: You present a painting, sculpting, woodcarving or other crafted item that you have created that took at least 6 hours to create, or used at least 5GP worth of material.  Use your Art / Craft skill to justify and explain your artistic expression against the DC.  If you succeed, the effect lasts for 6 hours.  Your inspiration can only reside in one item at a time, and may only be used on an individual once."
 		]
 	},
 	{
 		category: "profession",
 		name: "Uplifting Performance",
 		desc: [
-			"If you have a Source, you can inspire allies who see or hear one of your creations with ferocity.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation\.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
+			"If you have a Source, you can inspire allies who see or hear one of your creations with ferocity.  DC 2 to inspire 1 person, DC 3 to inspire 3, DC 5 to inspire 7 and DC 7 to inspire up to 12 people.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
 			"Allies gain +2 COMB, +2 RANG and gain +2 to the Defy Danger Move.",
 			"Creations:",
-			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC.  The effects last 5 minutes.",
+			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC, and you expend 2 Stamina to perform.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
-			"Crafting / Art: You spend days or weeks painting, sculpting, woodcarving or crafting something of wonderful inspiration.  Use your Art / Craft skill to check against the DC.  People who take a minute to regard your work gain the effects for 5 minutes.  Any time you create a new work with these effects, any previous work no longer provides the effects."
+			"Crafting / Art: You present a painting, sculpting, woodcarving or other crafted item that you have created that took at least 6 hours to create, or used at least 5GP worth of material.  Use your Art / Craft skill to justify and explain your artistic expression against the DC.  If you succeed, the effect lasts for 6 hours.  Your inspiration can only reside in one item at a time, and may only be used on an individual once."
 		]
 	},
 	{
 		category: "profession",
 		name: "Sympathetic Performance",
 		desc: [
-			"If you have a Source, you can inspire allies who see or hear one of your creations with sympathy.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation\.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
+			"If you have a Source, you can inspire allies who see or hear one of your creations with sympathy.  DC 2 to inspire 1 person, DC 3 to inspire 3, DC 5 to inspire 7 and DC 7 to inspire up to 12 people.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
 			"Allies gain +1 DR and gain +2 COMB when using the Defense skill.",
 			"Creations:",
-			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC.  The effects last 5 minutes.",
+			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC, and you expend 2 Stamina to perform.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
-			"Crafting / Art: You spend days or weeks painting, sculpting, woodcarving or crafting something of wonderful inspiration.  Use your Art / Craft skill to check against the DC.  People who take a minute to regard your work gain the effects for 5 minutes.  Any time you create a new work with these effects, any previous work no longer provides the effects."
+			"Crafting / Art: You present a painting, sculpting, woodcarving or other crafted item that you have created that took at least 6 hours to create, or used at least 5GP worth of material.  Use your Art / Craft skill to justify and explain your artistic expression against the DC.  If you succeed, the effect lasts for 6 hours.  Your inspiration can only reside in one item at a time, and may only be used on an individual once."
 		]			
 	},
 	{
