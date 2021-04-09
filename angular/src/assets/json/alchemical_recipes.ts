@@ -16,7 +16,7 @@ export const RecipeList: recipe[] = [
 		name: "Vigor Tonic",
 		desc: "A Vigor Tonic is a small, lightly coloured solution that lasts a few months before settling into a sediment and becoming inert.",
 		time: "60m",
-		effects: "When consumed, restores 4 Stamina.  Counts as a Stamina Heal.",
+		effects: "When consumed, restores 5 Stamina.  When you use it, mark a Heal.",
 		reagents: [ReagentProperties.Vig, ReagentProperties.Vig, ReagentProperties.Vig],
 		dc: 2
 	},
@@ -34,7 +34,7 @@ export const RecipeList: recipe[] = [
 		name: "Mediciner’s Solution",
 		desc: "A large, sipping solution that starts sweet and ends bitter.",
 		time: "120m",
-		effects: "When consumed, heals 1 more Wound and 5 more Stamina during a long rest.",
+		effects: "When consumed, heals 1 more Wound and 10 more Stamina during a long rest.",
 		reagents: [ReagentProperties.Vig, ReagentProperties.For, ReagentProperties.For],
 		dc: 3
 	},
@@ -52,7 +52,7 @@ export const RecipeList: recipe[] = [
 		name: "Antitoxin",
 		desc: "Possibly worse than the toxin, at least according to the flavour, the Antitoxin causes immediate flushes of heat, intense sweats and weakness, but this soon passes.",
 		time: "60m",
-		effects: "When consumed, removes a Light / Regular Debility applied by non-magical poisons and protects the user from poisons for 2 hours.",
+		effects: "When consumed, removes up to 4 Light Debilities and 1 Regular Debility applied by non-magical poisons and protects the user from poisons for 2 hours.  However the subject also marks a Heal.",
 		reagents: [ReagentProperties.Poi, ReagentProperties.The, ReagentProperties.For],
 		dc: 2
 	},
