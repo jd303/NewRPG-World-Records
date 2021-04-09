@@ -974,11 +974,11 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Weaken",
 		desc: "You sap the strength of your target(s), lowering it’s combat damage and lifting capacity.",
 		save: "STR",	
-		time: "Instant",
+		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light STR Debility" },
-			{ dc:3, effect:"2 Light STR Debilities" },
+			{ dc:1, effect:"-1 STR" },
+			{ dc:2, effect:"-2 STR" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -986,23 +986,23 @@ export const spell_effects: spell_effect_def[] = [
 		name: "Clumsy",
 		desc: "You sap the dexterity and nimbleness of your target(s), lowering their dexterity and Defensive Rating.",
 		save: "DEX",	
-		time: "Instant",
+		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light DEX Debility" },
-			{ dc:3, effect:"2 Light DEX Debilities" },
+			{ dc:1, effect:"-1 DEX" },
+			{ dc:2, effect:"-2 DEX" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
 	{
 		name: "Sickly",
-		desc: "You sap the constitution and heartiness of your target(s), lowering their constitution and resilience.",
+		desc: "You sap the constitution and heartiness of your target(s), lowering their constitution and hit points.",
 		save: "CON",	
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light CON Debility" },
-			{ dc:3, effect:"2 Light CON Debilities" },
+			{ dc:1, effect:"-1 CON" },
+			{ dc:2, effect:"-2 CON" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1013,8 +1013,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light INT Debility" },
-			{ dc:3, effect:"2 Light INT Debilities" },
+			{ dc:1, effect:"-1 INT" },
+			{ dc:2, effect:"-2 INT" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1025,8 +1025,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light WIS Debility" },
-			{ dc:3, effect:"2 Light WIS Debilities" },
+			{ dc:1, effect:"-1 WIS" },
+			{ dc:2, effect:"-2 WIS" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
@@ -1037,8 +1037,8 @@ export const spell_effects: spell_effect_def[] = [
 		time: "2DC Mins",
 		shapes: { cst:null, tch:0, svt:1, cne:2, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"1 Light CHA Debility" },
-			{ dc:3, effect:"2 Light CHA Debilities" },
+			{ dc:1, effect:"-1 CHA" },
+			{ dc:2, effect:"-2 CHA" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:true, yearns:false, granted:true }
 	},
