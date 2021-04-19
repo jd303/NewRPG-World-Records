@@ -108,12 +108,12 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Zen Deflection",
-		desc: "At the start of each turn of combat you may gain +1 DR for each 3 COMB you sacrifice, until the start of your next turn.  You cannot use this if you are wearing Heavy Armour."
+		desc: "At the start of each turn of combat you may gain +1 DR for each 6 COMB you sacrifice, until the start of your next turn.  You cannot use this if you are wearing Heavy Armour."
 	},
 	{
 		category: "combat",
 		name: "Zen flow",
-		desc: "While you wear no armour and have an Acrobatics skill of 6 or higher, you gain 2 DR that acts as armour."
+		desc: "While you wear no armour and have an Acrobatics skill of 6 or higher, you gain +1 DR and your maximum increases to 5."
 	},
 	{
 		category: "combat",
@@ -213,7 +213,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Combat Dancer",
-		desc: "Once per combat, when using Hack and Slash against an opponent, or using Defend near one, you may use the Physical Deception skill to confuse them.  If you beat the Partial DC (your chosen DC must equal or exceed the opponent's SR, DR or MR (DM's choice)), your opponent is disadvantaged for 1 turn."
+		desc: "Once per combat, when using Hack and Slash against an opponent, or using Defend near one, you may perform a Physical Deception Move to confuse them.  If you beat the Partial DC (your chosen DC must equal or exceed the opponent's SR, DR or MR (DM's choice)), your opponent is disadvantaged for 1 turn."
 	},
 	{
 		category: "combat",
@@ -419,12 +419,12 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Advanced Armour training",
-		desc: "Wearing any armour for long periods does not tire you.  You can put on and take off armour much faster than most.  You may swim in Leather or Chainmail with no consequences."
+		desc: "Wearing any armour for long periods does not tire you.  You can put on and take off armour much faster than most.  You may swim in Light or Medium Armour with no consequences.  You consider having the Armour Skills of any lower than those you have already paid for, such as gaining Light Armour Skill if you have paid for Medium Armour."
 	},
 	{
 		category: "general",
 		name: "Quick like the wind",
-		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain +1 DR."
+		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain +1 AR that does not modify your total DR."
 	},
 	{
 		category: "general",
@@ -469,7 +469,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Exceptional",
-		desc: "The maximum number of points you can spend in Statistics is raised from 15 to 18"
+		desc: "The maximum number of points you can spend in Statistics is raised from 15 to 17"
 	},
 
 

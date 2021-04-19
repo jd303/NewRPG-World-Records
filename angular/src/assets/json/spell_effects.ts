@@ -499,7 +499,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:0, effect:"Maladies have no effect this turn." },
 			{ dc:2, effect:"Maladies go dormant for 1 hour." },
 			{ dc:3, effect:"Remove 1 malady.  Subject marks a heal." },
-			{ dc:7, effect:"Remove 1 malady.  Subject doesb't mark a heal." },
+			{ dc:7, effect:"Remove 1 malady.  Subject doesn't mark a heal." },
 		],
 		sources: { innate:true, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -1093,13 +1093,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Armour",
-		desc: "You create a field of armour around you or your subjects’ bodies.  You gain a new DR, which superceded any armour you are wearing if lower than the spell’s DR.",
+		desc: "You create a field of armour around you or your subjects’ bodies.  You improve your AR, which is superceded if you are wearing better armour.",
 		save: null,	
 		time: "10 Mins",
 		shapes: { cst:0, tch:1, svt:1, cne:null, aur:3, vol:3, wll:null, bem:null, pln:null },
 		effects: [
-			{ dc:1, effect:"+1 DR, +1 Defend" },
-			{ dc:2, effect:"+1 DR, +2 Defend, +1 Defy Danger" },
+			{ dc:1, effect:"+1 AR, +1 Defend" },
+			{ dc:2, effect:"+1 AR, +2 Defend, +1 Defy Danger" },
 		],
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
