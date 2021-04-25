@@ -13,7 +13,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Eye for weaponry",
-		desc: "You may use the Knowledge move during combat or in a tense situation to determine what the SR or DR of a creature is."
+		desc: "You may use the Knowledge move during combat or in a tense situation to determine what the CR, MR or Bonus Damage of a creature is."
 	},
 	{
 		category: "combat",
@@ -68,7 +68,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Human Shield",
-		desc: "When engaged with 3 or more creatures, you gain +1 DR."
+		desc: "When engaged with 3 or more creatures, you gain +1 Bonus DR."
 	},
 	{
 		category: "combat",
@@ -93,7 +93,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Staunch Defender",
-		desc: "When you use the Defend Move and fail or only Partially Succeed, you may pay a Stamina to convert it to a Partial Success (failure) or a Total Success (Partial Success)."
+		desc: "When you use the Defend Move and fail or only Partially Succeed, you may pay a Stamina to convert it to a Partial Success (failure) or a Total Success (Partial Success) if you contributed at least 5 COMB to the Move."
 	},
 	{
 		category: "combat",
@@ -108,12 +108,12 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Zen Deflection",
-		desc: "At the start of each turn of combat you may gain +1 DR for each 6 COMB you sacrifice, until the start of your next turn.  You cannot use this if you are wearing Heavy Armour."
+		desc: "At the start of each turn of combat you may gain +1 Bonus DR for each 6 COMB you sacrifice, until the start of your next turn.  You cannot use this if you are wearing Heavy Armour."
 	},
 	{
 		category: "combat",
 		name: "Zen flow",
-		desc: "While you wear no armour and have an Acrobatics skill of 6 or higher, you gain +1 DR and your maximum increases to 5."
+		desc: "While you wear no armour and have an Acrobatics skill of 6 or higher, you gain +1 Bonus DR."
 	},
 	{
 		category: "combat",
@@ -128,7 +128,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Retreating Shot",
-		desc: "If you retreat at least 15 feet from a creature and use Volley but spare 3 RANG, you gain +1 DR against it until the start of your next turn."
+		desc: "If you retreat at least 15 feet from a creature and use Volley but spare 3 RANG, you gain +1 Bonus DR against it until the start of your next turn."
 	},
 	{
 		category: "combat",
@@ -183,7 +183,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Charge",
-		desc: "When you engage a creature at least 15 foot from you, you deal +2 damage on all hits this round."
+		desc: "When you engage a creature at least 15 foot from you, you deal +2 damage on the first hit this round."
 	},
 	{
 		category: "combat",
@@ -208,7 +208,7 @@ export const perks: perk_def[] = [
 	{
 		category: "combat",
 		name: "Inspired Shot",
-		desc: "If you beat the Total DC when using Volley, resolve damage on that target, then you may describe and resolve a new Volley Move against any other targets.  This subsequent Move can only use Volley you have not yet expended this round."
+		desc: "If you beat the Total DC when using Volley, resolve damage on that target, then you may describe and resolve a new Volley Move against any other targets.  This subsequent Move can only use Volley you have not yet expended this round, but with a +4 bonus."
 	},
 	{
 		category: "combat",
@@ -419,12 +419,12 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Advanced Armour training",
-		desc: "Wearing any armour for long periods does not tire you.  You can put on and take off armour much faster than most.  You may swim in Light or Medium Armour with no consequences.  You consider having the Armour Skills of any lower than those you have already paid for, such as gaining Light Armour Skill if you have paid for Medium Armour."
+		desc: "Wearing any armour for long periods does not tire you.  You can put on and take off armour much faster than most.  You ignore any disadvantage applied to Athletics from armour use.  You consider having the Armour Skills of any lower than those you have already paid for, such as gaining Light Armour Skill if you have paid for Medium Armour."
 	},
 	{
 		category: "general",
 		name: "Quick like the wind",
-		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain +1 AR that does not modify your total DR."
+		desc: "When not wearing any armour and you have at least a +1 Wisdom modifier, you gain +1 Bonus AR."
 	},
 	{
 		category: "general",
@@ -469,7 +469,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Exceptional",
-		desc: "The maximum number of points you can spend in Statistics is raised from 15 to 17"
+		desc: "The maximum number of points you can spend in Statistics is raised from 14 to 17"
 	},
 
 
@@ -504,7 +504,7 @@ export const perks: perk_def[] = [
 		name: "Sympathetic Performance",
 		desc: [
 			"If you have a Source, you can inspire allies who see or hear one of your creations with sympathy.  DC 2 to inspire 1 person, DC 3 to inspire 3, DC 5 to inspire 7 and DC 7 to inspire up to 12 people.  If you beat the Total DC, add the below bonuses.  If you only beat the Partial DC, halve the effects (round down).  You may only create this effect in this way once per 10 minutes.  Your creation grants it’s benefits for a variable time, depending on the type of creation.  The effect of your creation takes up a concentration slot, as if you were maintaining a spell.",
-			"Allies gain +1 DR and gain +2 COMB when using the Defense skill.",
+			"Allies gain +1 Bonus DR and gain +2 COMB when using the Defense skill.",
 			"Creations:",
 			"Performance: You perform poetry, music, or a rousing speech.  Use your performance skill to check against the DC, and you expend 2 Stamina to perform.  The effects last 5 minutes.",
 			"Cooking: You take 30 minutes to cook something from ingredients you have. Use your Alchemy skill to check against the DC.  The effects last 30 minutes.  You can create enough food or drink for 4 people to feel the effects.",
