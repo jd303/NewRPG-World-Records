@@ -808,10 +808,10 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:null, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:2, effect:"5 Small animals or Small Swarm" },
-			{ dc:3, effect:"2 Medium animals or medium swarm" },
-			{ dc:4, effect:"1 Large animal or swarm" },
-			{ dc:6, effect:"4 Medium or 2 large animals" },
+			{ dc:2, effect:"4 CR0 Small animals or 1 CR1 Small Swarm" },
+			{ dc:3, effect:"2 CR2 Medium animals or 1 CR3 Medium swarm" },
+			{ dc:4, effect:"1 CR 4 Large animal or 1 CR 4 Medium Swarm" },
+			{ dc:6, effect:"4 CR2 Medium or 2 CR4 Large animals" },
 		],
 		sources: { innate:false, flow:true, tapped:true, life:false, yearns:true, granted:true }
 	},
@@ -822,9 +822,9 @@ export const spell_effects: spell_effect_def[] = [
 		time: "10 Mins",
 		shapes: { cst:null, tch:null, svt:null, cne:null, aur:0, vol:0, wll:0, bem:null, pln:null },
 		effects: [
-			{ dc:4, effect:"Summon up to CR 4 creatures." },
-			{ dc:5, effect:"Summon up to CR 5 creatures." },
-			{ dc:7, effect:"Summon up to CR 6 creatures." },
+			{ dc:4, effect:"Summon creatures up to CR total of 4." },
+			{ dc:5, effect:"Summon creatures up to CR total of 5." },
+			{ dc:7, effect:"Summon creatures up to CR total of 6." },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:true, yearns:true, granted:true }
 	},
@@ -1129,7 +1129,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Enlarge",
-		desc: "You twist the molecules of your target, growing in size and stature.  Each size category the target increases grants them +1 STR, CON and maximum Stamina (doesn’t count as stamina healing), but -1 DR.",
+		desc: "You twist the molecules of your target, growing in size and stature.  Each size category the target increases grants them +1 STR, CON and maximum Stamina (doesn’t count as stamina healing), but -1 DR and your Max DR allowed by Armour drops by 1.",
 		save: "STR",	
 		time: "2 Mins",
 		shapes: { cst:0, tch:0, svt:1, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },

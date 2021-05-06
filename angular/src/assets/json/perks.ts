@@ -439,7 +439,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Danger seeker",
-		desc: "When you are below half your Wounds or your Stamina, all rolls gain +1."
+		desc: "When you are below half your Stamina, all Move rolls except Defy Danger gain +1.  When you are at fewer than 3 Wounds remaining, all Move rolls including Defy Danger gain +1."
 	},
 	{
 		category: "general",
@@ -454,7 +454,7 @@ export const perks: perk_def[] = [
 	{
 		category: "general",
 		name: "Healer",
-		desc: "When performing a Long Rest, you can forgo a full rest yourself to tend to up to 10 others.  You regain half your stamina, but each of the others regains an additional 6 or 1 Wound.  You need appropriate materials to provide this care, such as bandages, and perhaps even medicinal herbs."
+		desc: "When performing a Long Rest, you can forgo a full rest yourself to tend to up to 10 others.  You regain half your stamina, but each of the others regains an additional 6 or 1 Wound.  You need 3 Silver Pieces per person of appropriate materials to provide this care, such as bandages and medicinal herbs."
 	},
 	{
 		category: "general",
