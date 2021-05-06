@@ -865,6 +865,19 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
 	{
+		name: "Command: Plants",
+		desc: "You command plants to move and shift themselves.  They cannot grow or shrink, but will move slowly into your chosen shape if they can.  You can use this to create a wall of foliage, to grapple and bind creatures (if they do not move away), or to create natural bridges and ladders. When using this to Grapple, perform a Grapple Move against your targets with a COMB equal to the DC of the spell you cast.",
+		save: null,	
+		time: "Various",
+		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:3, effect:"Takes 5 Minutes." },
+			{ dc:4, effect:"Takes 1 minute." },
+			{ dc:6, effect:"Takes 1 full round." },
+		],
+		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
+	},
+	{
 		name: "Banish",
 		desc: "You banish a creature or item that has been conjured, or return to it’s starting location a creature that has teleported in the last 5 minutes.",
 		save: "CHA",	
