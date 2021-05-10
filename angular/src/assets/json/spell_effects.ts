@@ -865,19 +865,6 @@ export const spell_effects: spell_effect_def[] = [
 		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
 	},
 	{
-		name: "Command: Plants",
-		desc: "You command plants to move and shift themselves.  They cannot grow or shrink, but will move slowly into your chosen shape if they can.  You can use this to create a wall of foliage, to grapple and bind creatures (if they do not move away), or to create natural bridges and ladders. When using this to Grapple, perform a Grapple Move against your targets with a COMB equal to the DC of the spell you cast.",
-		save: null,	
-		time: "Various",
-		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
-		effects: [
-			{ dc:3, effect:"Takes 5 Minutes." },
-			{ dc:4, effect:"Takes 1 minute." },
-			{ dc:6, effect:"Takes 1 full round." },
-		],
-		sources: { innate:true, flow:true, tapped:true, life:false, yearns:false, granted:false }
-	},
-	{
 		name: "Banish",
 		desc: "You banish a creature or item that has been conjured, or return to it’s starting location a creature that has teleported in the last 5 minutes.",
 		save: "CHA",	
@@ -1286,13 +1273,13 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: "Terrain modification",
-		desc: "Your magics flow through the very lands around you, changing them to your whim. Casting this spell requires concentration and can take 1-10 minutes per DC of the spell, depending on the complexity of the change.  You can target roughly 30’ cube per DC of the spell.",
+		desc: "Your magics flow through the very earth around you, changing it to your whim. Casting this spell requires concentration and can take 1-10 minutes per DC of the spell, depending on the complexity of the change.  You can target a cube roughly 2 squares per DC of the spell.",
 		save: null,	
 		time: "Varies",
 		shapes: { cst:null, tch:null, svt:null, cne:0, aur:0, vol:0, wll:0, bem:0, pln:null },
 		effects: [
 			{ dc:2, effect:"Minor shift / movement of terrain" },
-			{ dc:4, effect:"Shape earth and plantlife" },
+			{ dc:4, effect:"Shape earth" },
 			{ dc:6, effect:"Shape stone" },
 		],
 		sources: { innate:false, flow:true, tapped:false, life:false, yearns:true, granted:true }
@@ -1321,6 +1308,19 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc:2, effect:"3 Months growth takes 20 minutes of concentration" },
 		],
 		sources: { innate:false, flow:false, tapped:false, life:false, yearns:true, granted:false }
+	},
+	{
+		name: "Command: Plants",
+		desc: "You command plants to move and shift themselves.  They cannot grow or shrink, but will move slowly into your chosen shape if they can.  You can use this to create a wall of foliage, to grapple and bind creatures (if they do not move away), or to create natural bridges and ladders. When using this to Grapple, perform a Grapple Move against your targets with a COMB equal to the DC of the spell you cast.",
+		save: null,	
+		time: "Various",
+		shapes: { cst:null, tch:0, svt:null, cne:null, aur:null, vol:null, wll:null, bem:null, pln:null },
+		effects: [
+			{ dc:3, effect:"Takes 5 Minutes." },
+			{ dc:4, effect:"Takes 1 minute." },
+			{ dc:6, effect:"Takes 1 full round." },
+		],
+		sources: { innate:false, flow:false, tapped:true, life:true, yearns:true, granted:false }
 	},
 	{
 		name: "Fear / Revulsion",
