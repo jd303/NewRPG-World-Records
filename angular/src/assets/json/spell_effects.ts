@@ -2457,7 +2457,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: 'Slow',
-		desc: 'You create a slight time distortion, slowing targeted creatures.  As part of the slow effect, targets fall at a safe speed.',
+		desc: 'You create a slight time distortion, slowing targeted creatures.',
 		save: 'STR',
 		time: '1 Min',
 		shapes: {
@@ -2473,6 +2473,7 @@ export const spell_effects: spell_effect_def[] = [
 		},
 		effects: [
 			{ dc: 2, effect: "-1 DR, Target's speed is reduced to 75%" },
+			{ dc: 2, effect: 'Target(s) fall at a rate of 1 metre per second, taking no damage on landing.' },
 			{
 				dc: 5,
 				effect: "-1 DR, Target's speed is reduced to 75% and it loses an action every second turn",
