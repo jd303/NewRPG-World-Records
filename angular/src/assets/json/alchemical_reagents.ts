@@ -53,6 +53,12 @@ export const ReagentList: reagent[] = [
 		rarity: Rarity.C,
 	},
 	{
+		name: 'Starkth Nettle',
+		desc: 'Long thin shoots that clumb in large numbers.  Older shoots die at the base, and can be collected and crushed into flakes.  Grows in grassy areas.',
+		properties: [ReagentProperties.The],
+		rarity: Rarity.C,
+	},
+	{
 		name: 'Eastern Silverbarb',
 		desc: 'A shrub with long green and grey ferrugated leaves.  Its sap is thin and lightly tacky.  Grows commonly in the East of the Civil Holds.',
 		properties: [ReagentProperties.Vig],
@@ -61,13 +67,13 @@ export const ReagentList: reagent[] = [
 	{
 		name: 'Western Silverbarb',
 		desc: 'A shrub with long green and grey ferrugated leaves.  Its sap is thick and tacky.  Grows commonly in the West of the Civil Holds.',
-		properties: [ReagentProperties.For],
+		properties: [ReagentProperties.Exc],
 		rarity: Rarity.C,
 	},
 	{
 		name: 'Gillyweed',
 		desc: 'A small grass that grows in dryer climates. Has a sickly yellow-green colour and the leaves always appear dry.',
-		properties: [ReagentProperties.Exc],
+		properties: [ReagentProperties.Con],
 		rarity: Rarity.C,
 	},
 	{
