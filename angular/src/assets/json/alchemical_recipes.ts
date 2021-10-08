@@ -44,7 +44,7 @@ export const RecipeList: recipe[] = [
 		desc: "A combination of rare herbs and ingredients, this potion requires a large investment, but alchemists agree the results are short of magical.  Due to it's expense, this elixir is stored in strong, well stoppered flat flasks.",
 		time: '120m',
 		effects:
-			'When consumed, the drinker heals a temporary Wound.  After 8 hours, the Wound returns unless healed using conventional or magical means.',
+			'When consumed, the drinker heals a temporary Wound.  After 8 hours, the Wound returns unless healed using conventional or magical means.  Immediately after drinking, mark a Heal.',
 		reagents: [
 			ReagentProperties.Vig,
 			ReagentProperties.Vig,
@@ -78,9 +78,10 @@ export const RecipeList: recipe[] = [
 	{
 		type: 'Potion',
 		name: 'Red Blossom Cural',
-		desc: 'A potion taken 5 times, once per day, that alleviates and cures the effect of the Red Blossom Disease.',
+		desc: 'A concentrated, sickly red potion in a large round container that seems to bubble thickly and intermittently.  Can alleviates and cure the effect of the Red Blossom Disease.',
 		time: '8h',
-		effects: 'When consumed, cures Red Blossom and protects the imbiber from contracting it for 2 days.',
+		effects:
+			'1 fifth of the potion taken five time over five days cures Red Blossom.  One fifth of the potion protects the imbiber from contracting it for 2 days, as well as making them unable to spread it.',
 		reagents: [ReagentProperties.Poi, ReagentProperties.Cor, ReagentProperties.Soo, ReagentProperties.For],
 		dc: 6,
 	},

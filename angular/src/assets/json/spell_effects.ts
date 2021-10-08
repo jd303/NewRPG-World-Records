@@ -447,7 +447,8 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 1, effect: 'The item can expend the effect three times.' },
 			{
 				dc: 2,
-				effect: 'The item can expend the effect any number of times, at half the damage, half the effect, or twice the Save.',
+				effect:
+					'The item can expend the effect any number of times, at half the damage, half the effect, or twice the Save.',
 			},
 		],
 		sources: {
@@ -1524,7 +1525,8 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 3, effect: 'You create mirror images of yourself' },
 			{
 				dc: 4,
-				effect: 'Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance).',
+				effect:
+					'Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance).',
 			},
 			{ dc: 6, effect: 'Create a complex illusion' },
 		],
@@ -1599,7 +1601,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: 'Teleportal',
-		desc: 'You create a portal that can move creatures from one place to somewhere you can either see or have visited before.',
+		desc: 'You create a portal that can move creatures who are moved into the portal from one place to another.  Requires that you be able to see the location with the naked eye, otherwise depending on how familiar you are with the location, the spell may send individual targets to somewhere similar instead.',
 		save: null,
 		time: '1 Min',
 		shapes: {
@@ -1618,7 +1620,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 4, effect: 'Travel up to 1 kilometer' },
 			{
 				dc: 5,
-				effect: 'Travel to a space marked by Teleport Destination',
+				effect: 'Travel precisely to a space marked by Teleport Destination',
 			},
 			{ dc: 7, effect: 'Travel up to 500km' },
 		],
@@ -2160,7 +2162,7 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: 'Detect Poisons and Diseases',
-		desc: 'You detect the existence of poisons, diseases and plagues in creatures, water sources or the area around you within sight.',
+		desc: "You detect the existence of poisons, diseases and plagues in creatures, water sources or the area around you within sight.  If you spend a few minutes watching the aura of a Poison or Disease, you could work out how strong it is and what it's effects are.",
 		save: null,
 		time: '5 Mins',
 		shapes: {
