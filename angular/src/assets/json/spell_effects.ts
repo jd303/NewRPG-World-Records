@@ -1651,13 +1651,13 @@ export const spell_effects: spell_effect_def[] = [
 		},
 		effects: [
 			{ dc: 2, effect: 'Teleport up to 3 squares' },
-			{ dc: 3, effect: 'Teleport up to 20 squares' },
+			{ dc: 3, effect: 'Teleport up to 12 squares' },
 			{
 				dc: 4,
-				effect: 'Teleport instead vertically up to 10 metres, dealing 6 falling Damage',
+				effect: 'Teleport instead vertically up to 10 metres, dealing 6 Crushing Damage',
 			},
-			{ dc: 5, effect: 'Teleport up to 150 metres' },
-			{ dc: 7, effect: 'Teleport up to 1 kilometre' },
+			{ dc: 6, effect: 'Teleport up to 150 metres' },
+			{ dc: 8, effect: 'Teleport up to 1 kilometre' },
 		],
 		sources: {
 			innate: false,
