@@ -1635,15 +1635,15 @@ export const spell_effects: spell_effect_def[] = [
 	},
 	{
 		name: 'Baleful Teleportation',
-		desc: 'You forcefully teleport one or more Large or smaller creatures from their current location to a different point on the ground.  They must be able to fit where you send them.',
+		desc: 'You forcefully teleport one or more Large or smaller creatures from their current location to a different point on the ground that you can see with the naked eye.  They also must be able to fit where you send them.',
 		save: 'WIS',
 		time: 'Instant',
 		shapes: {
 			cst: null,
 			tch: 0,
 			svt: 1,
-			cne: 2,
-			aur: 3,
+			cne: 3,
+			aur: 4,
 			vol: null,
 			wll: null,
 			bem: null,
@@ -1651,7 +1651,7 @@ export const spell_effects: spell_effect_def[] = [
 		},
 		effects: [
 			{ dc: 2, effect: 'Teleport up to 3 squares' },
-			{ dc: 3, effect: 'Teleport up to 12 squares' },
+			{ dc: 3, effect: 'Teleport up to 15 squares' },
 			{
 				dc: 4,
 				effect: 'Teleport instead vertically up to 10 metres, dealing 6 Crushing Damage',
