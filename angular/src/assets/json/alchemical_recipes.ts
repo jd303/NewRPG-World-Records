@@ -44,7 +44,7 @@ export const RecipeList: recipe[] = [
 		desc: "A combination of rare herbs and ingredients, this potion requires a large investment, but alchemists agree the results are short of magical.  Due to it's expense, this elixir is stored in strong, well stoppered flat flasks.",
 		time: '120m',
 		effects:
-			'When consumed, the drinker heals a temporary Wound.  After 8 hours, the Wound returns unless healed using conventional or magical means.  Immediately after drinking, mark a Heal.',
+			'When consumed, the drinker heals a temporary Wound.  Replace a wound with a strikethrough to indicate that it is temporarily removed.  After 8 hours, the Wound returns unless healed using conventional or magical means.  Immediately after drinking, mark a Heal.',
 		reagents: [
 			ReagentProperties.Vig,
 			ReagentProperties.Vig,

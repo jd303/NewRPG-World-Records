@@ -148,7 +148,7 @@ export const perks: perk_def[] = [
 	{
 		category: 'combat',
 		name: 'Just a warning',
-		desc: 'Once per combat, if you fail to hit your intended target with any Hack and Slash or Volley Move, you may describe a free and immediate Provoke/Intimidate Move against them with a +3 bonus.',
+		desc: 'Once per combat, if you fail to hit your intended target with any Hack and Slash or Volley Move, you may describe a free and immediate Provoke/Intimidate Move against them.  This roll has a +8 bonus, on top of any remaining COMB you have.',
 	},
 	{
 		category: 'combat',
@@ -466,6 +466,11 @@ export const perks: perk_def[] = [
 		category: 'general',
 		name: 'Exceptional',
 		desc: 'The maximum number of points you can spend in Statistics is raised from 14 to 17',
+	},
+	{
+		category: 'general',
+		name: 'Excuisitely Exfoliated Skin',
+		desc: 'If you maintain a skin regime, have bathed recently, and have applied an exfoliant, you gain +1 to rolls to convince the nobility, waxwork model makers, and strange creeps who enjoy supple skin.',
 	},
 
 	{
