@@ -447,8 +447,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 1, effect: 'The item can expend the effect three times.' },
 			{
 				dc: 2,
-				effect:
-					'The item can expend the effect any number of times, at half the damage, half the effect, or twice the Save.',
+				effect: 'The item can expend the effect any number of times, at half the damage, half the effect, or twice the Save.',
 			},
 		],
 		sources: {
@@ -1525,8 +1524,7 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 3, effect: 'You create mirror images of yourself' },
 			{
 				dc: 4,
-				effect:
-					'Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance).',
+				effect: 'Creatures or objects become invisible, or take on visual or audio properties (altered voice, altered appearance).',
 			},
 			{ dc: 6, effect: 'Create a complex illusion' },
 		],
@@ -2507,15 +2505,45 @@ export const spell_effects: spell_effect_def[] = [
 			pln: null,
 		},
 		effects: [
-			{ dc: 2, effect: "+1 DR, Target's speed is 150%" },
+			{ dc: 2, effect: "+1 DR, Target's gains +1 movement Speed" },
 			{
 				dc: 4,
-				effect: "+1 DR, Target's speed is 150% and they gain 25% bonus COMB, RANG and MAG each turn (rounded up).",
+				effect: "+1 DR, Target's gains +1 movement Speed and they gain 25% bonus COMB, RANG and MAG each turn (rounded up).",
 			},
 			{
 				dc: 8,
-				effect: "+1 DR, Target's speed is 200% and they gain 50% bonus COMB, RANG and MAG each turn (rounded up).",
+				effect: "+1 DR, Target's gains +2 movement Speed and they gain 50% bonus COMB, RANG and MAG each turn (rounded up).",
 			},
+		],
+		sources: {
+			innate: true,
+			flow: true,
+			tapped: true,
+			life: true,
+			yearns: false,
+			granted: true,
+		},
+	},
+	{
+		name: 'Quick Stride',
+		desc: 'You energise and propel your target with additional movement.',
+		save: 'STR',
+		time: '1 Min',
+		shapes: {
+			cst: null,
+			tch: 0,
+			svt: 1,
+			cne: 2,
+			aur: 3,
+			vol: 3,
+			wll: null,
+			bem: null,
+			pln: null,
+		},
+		effects: [
+			{ dc: 2, effect: '+2 Squares of movement' },
+			{ dc: 4, effect: '+3 Squares of movement' },
+			{ dc: 6, effect: '+4 Squares of movement' },
 		],
 		sources: {
 			innate: true,
