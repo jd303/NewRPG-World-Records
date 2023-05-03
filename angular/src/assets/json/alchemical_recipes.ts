@@ -248,6 +248,15 @@ export const RecipeList: recipe[] = [
 	},
 	{
 		type: 'Misc',
+		name: 'Perception Poweder',
+		desc: "Two vials.  One with a ruddy, thick granuled activator powder, flecked with sparkling motes.  One with a thin, grey base powder that seems to disappear when spread thinly.",
+		time: '15m',
+		effects: 'Used together, the powder can be spread in a cone, and the activating powder highlights invisible creatures or grants +1 to the Tracking Move.  Used separately, and the base powder can be applied in a cone - if then activated with the activating powder, shows any disturbances to the base powder.',
+		reagents: [ReagentProperties.The, ReagentProperties.Oil],
+		dc: 1,
+	},
+	{
+		type: 'Misc',
 		name: 'Torchburn',
 		desc: "An oily black substance only distinguished from regular oil by it's thickness when undisturbed, and thinness when worked with.",
 		time: '15m',
