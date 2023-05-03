@@ -2508,11 +2508,11 @@ export const spell_effects: spell_effect_def[] = [
 			{ dc: 2, effect: "+1 DR, Target's gains +1 movement Speed" },
 			{
 				dc: 4,
-				effect: "+1 DR, Target's gains +1 movement Speed and they gain 25% bonus COMB, RANG and MAG each turn (rounded up).",
+				effect: "+1 DR, Target's gains +2 movement Speed and they gain +3 bonus COMB, RANG or MAG each turn (rounded up).",
 			},
 			{
 				dc: 8,
-				effect: "+1 DR, Target's gains +2 movement Speed and they gain 50% bonus COMB, RANG and MAG each turn (rounded up).",
+				effect: "+1 DR, Target's gains +3 movement Speed and they gain +6 bonus COMB, RANG and MAG each turn (rounded up).",
 			},
 		],
 		sources: {
